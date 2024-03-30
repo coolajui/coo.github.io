@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="https://coolajui.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://coolajui.github.io/"/>
+  <updated>2024-03-30T04:26:56.582Z</updated>
+  <id>https://coolajui.github.io/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Hexo搭建个人博客</title>
+    <link href="https://coolajui.github.io/2024/03/30/My-Blog/"/>
+    <id>https://coolajui.github.io/2024/03/30/My-Blog/</id>
+    <published>2024-03-30T03:50:41.000Z</published>
+    <updated>2024-03-30T04:26:56.582Z</updated>
+    
+    
+    <summary type="html">生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞。</summary>
+    
+    
+    
+    <category term="Blog" scheme="https://coolajui.github.io/categories/Blog/"/>
+    
+    
+    <category term="Hexo" scheme="https://coolajui.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://coolajui.github.io/2024/03/30/hello-world/"/>
+    <id>https://coolajui.github.io/2024/03/30/hello-world/</id>
+    <published>2024-03-30T03:24:45.728Z</published>
+    <updated>2024-03-30T03:24:45.728Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
