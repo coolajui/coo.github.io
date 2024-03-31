@@ -6,7 +6,7 @@
   <link href="https://coolajui.github.io/atom.xml" rel="self"/>
   
   <link href="https://coolajui.github.io/"/>
-  <updated>2024-03-30T04:26:56.582Z</updated>
+  <updated>2024-03-31T08:31:39.139Z</updated>
   <id>https://coolajui.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>好杂</title>
+    <link href="https://coolajui.github.io/2024/03/31/ni-hao/"/>
+    <id>https://coolajui.github.io/2024/03/31/ni-hao/</id>
+    <published>2024-03-31T08:28:32.934Z</published>
+    <updated>2024-03-31T08:31:39.139Z</updated>
+    
+    
+    <summary type="html">生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞。</summary>
+    
+    
+    
+    <category term="Blog" scheme="https://coolajui.github.io/categories/Blog/"/>
+    
+    
+    <category term="Hexo" scheme="https://coolajui.github.io/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Hexo搭建个人博客</title>
