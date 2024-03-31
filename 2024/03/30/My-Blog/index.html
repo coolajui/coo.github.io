@@ -66,13 +66,13 @@
 
     </div>
     
-
+    
     
     
 <div class="tocbot"></div>
 
     
-
+    
     <div class="article-entry" itemprop="articleBody">
       
       
@@ -84,7 +84,7 @@
     </div>
     <footer class="article-footer">
       <a data-url="https://coolajui.github.io/2024/03/30/My-Blog/" data-id="cludww37j0000xwvkdbf4e12e" class="article-share-link">
-        Share
+        分享
       </a>
       
 <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
@@ -98,7 +98,7 @@
 <nav class="article-nav">
   
   <a href="/2024/03/31/ni-hao/" class="article-nav-link">
-    <strong class="article-nav-caption">Newer</strong>
+    <strong class="article-nav-caption">前一篇</strong>
     <div class="article-nav-title">
       
       好杂
@@ -108,7 +108,7 @@
   
   
   <a href="/2024/03/30/hello-world/" class="article-nav-link">
-    <strong class="article-nav-caption">Older</strong>
+    <strong class="article-nav-caption">后一篇</strong>
     <div class="article-nav-title">Hello World</div>
   </a>
   
@@ -119,9 +119,65 @@
   
   
   
+<div class="gitalk" id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '25d929f25106c760a4f5',
+    clientSecret: 'd6db6f5f88adab4fa6933c36c3c794d0c9f9d4a6',
+    repo: 'gitalk',
+    owner: 'coolajui',
+    admin: ['coolajui'],
+    // id: location.pathname,      // Ensure uniqueness and length less than 50
+    id: md5(location.pathname),
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    pagerDirection: 'last'
+  })
+
+  gitalk.render('gitalk-container')
+</script>
+
   
 
 </article>
+
+```ejs
+  
+<div class="gitalk" id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '25d929f25106c760a4f5',
+    clientSecret: 'd6db6f5f88adab4fa6933c36c3c794d0c9f9d4a6',
+    repo: 'gitalk',
+    owner: 'coolajui',
+    admin: ['coolajui'],
+    // id: location.pathname,      // Ensure uniqueness and length less than 50
+    id: md5(location.pathname),
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    pagerDirection: 'last'
+  })
+
+  gitalk.render('gitalk-container')
+</script>
+
+```
 </section>
     <footer class="footer">
   <div class="outer">
@@ -174,9 +230,9 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link nav-item-search" title="Search">
+      <a class="nav-item-link nav-item-search" title="搜索">
         <i class="fe fe-search"></i>
-        Search
+        搜索
       </a>
     </li>
   </ul>
