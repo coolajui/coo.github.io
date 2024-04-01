@@ -6,7 +6,7 @@
   <link href="https://coolajui.github.io/atom.xml" rel="self"/>
   
   <link href="https://coolajui.github.io/"/>
-  <updated>2024-03-31T16:33:23.173Z</updated>
+  <updated>2024-04-01T13:19:32.217Z</updated>
   <id>https://coolajui.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安全面试题</title>
+    <link href="https://coolajui.github.io/2024/04/01/%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93/"/>
+    <id>https://coolajui.github.io/2024/04/01/%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93/</id>
+    <published>2024-04-01T12:45:02.000Z</published>
+    <updated>2024-04-01T13:19:32.217Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;面试安全题&quot;&gt;&lt;a href=&quot;#面试安全题&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="安全知识，题库" scheme="https://coolajui.github.io/categories/%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%EF%BC%8C%E9%A2%98%E5%BA%93/"/>
+    
+    
+    <category term="面试，护网" scheme="https://coolajui.github.io/tags/%E9%9D%A2%E8%AF%95%EF%BC%8C%E6%8A%A4%E7%BD%91/"/>
+    
+  </entry>
   
   <entry>
     <title>DC-1</title>
