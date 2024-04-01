@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>菜站</title>
   
   
   <link href="https://coolajui.github.io/atom.xml" rel="self"/>
   
   <link href="https://coolajui.github.io/"/>
-  <updated>2024-03-31T12:27:03.760Z</updated>
+  <updated>2024-03-31T16:33:23.173Z</updated>
   <id>https://coolajui.github.io/</id>
   
   <author>
@@ -17,14 +17,49 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>me neo</title>
-    <link href="https://coolajui.github.io/2024/03/31/me-neo/"/>
-    <id>https://coolajui.github.io/2024/03/31/me-neo/</id>
-    <published>2024-03-31T12:27:03.000Z</published>
-    <updated>2024-03-31T12:27:03.760Z</updated>
+    <title>DC-1</title>
+    <link href="https://coolajui.github.io/2024/04/01/la/"/>
+    <id>https://coolajui.github.io/2024/04/01/la/</id>
+    <published>2024-03-31T16:29:01.000Z</published>
+    <updated>2024-03-31T16:33:23.173Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;h1 id=&quot;环境搭建&quot;&gt;&lt;a href=&quot;#环境搭建&quot; class=&quot;headerlink&quot; title=&quot;环境搭建&quot;&gt;&lt;/a&gt;环境搭建&lt;/h1&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h2 id=&quot;准备工具&quot;&gt;&lt;a href=&quot;#准备工具&quot;</summary>
+        
+      
     
     
     
+    <category term="靶场，DC系列" scheme="https://coolajui.github.io/categories/%E9%9D%B6%E5%9C%BA%EF%BC%8CDC%E7%B3%BB%E5%88%97/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>DC-9</title>
+    <link href="https://coolajui.github.io/2024/04/01/DC-9/"/>
+    <id>https://coolajui.github.io/2024/04/01/DC-9/</id>
+    <published>2024-03-31T16:10:31.000Z</published>
+    <updated>2024-04-01T01:10:16.302Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;信息收集&quot;&gt;&lt;a href=&quot;#信息收集&quot; class=&quot;headerlink&quot; title=&quot;信息收集&quot;&gt;&lt;/a&gt;信息收集&lt;/h1&gt;&lt;h2 id=&quot;主机扫描&quot;&gt;&lt;a href=&quot;#主机扫描&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="靶场，DC系列" scheme="https://coolajui.github.io/categories/%E9%9D%B6%E5%9C%BA%EF%BC%8CDC%E7%B3%BB%E5%88%97/"/>
     
     
   </entry>
@@ -34,7 +69,7 @@
     <link href="https://coolajui.github.io/2024/03/31/ni-hao/"/>
     <id>https://coolajui.github.io/2024/03/31/ni-hao/</id>
     <published>2024-03-31T08:28:32.934Z</published>
-    <updated>2024-03-31T08:31:39.139Z</updated>
+    <updated>2024-03-31T15:30:54.194Z</updated>
     
     
     <summary type="html">生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞。</summary>

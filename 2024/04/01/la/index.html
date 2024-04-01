@@ -1,0 +1,673 @@
+
+<!DOCTYPE html><html lang="-zh-CN -en -zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0" theme-name="Stellar" theme-version="1.27.0">
+  
+  <meta name="generator" content="Hexo 7.1.1">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>DC-1 - 菜站</title>
+
+  
+    <meta name="description" content="环境搭建 准备工具 Kali  DC-1靶场机安装   安装链接：https:&#x2F;&#x2F;www.vulnhub.com&#x2F;entry&#x2F;dc-1,292&#x2F;  安装过程  下载文件进行解压  解压完成直接使用虚拟机打开  提示导入失败，不过没有关系点重试就好，导入完成后，打开DC-1虚拟机并等待，过程中别点进虚拟机里面  出现这个界面就表示开启成功 （渗透完得到密码就能登入啦） 注意！！！！靶机和kali的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DC-1">
+<meta property="og:url" content="https://coolajui.github.io/2024/04/01/la/index.html">
+<meta property="og:site_name" content="菜站">
+<meta property="og:description" content="环境搭建 准备工具 Kali  DC-1靶场机安装   安装链接：https:&#x2F;&#x2F;www.vulnhub.com&#x2F;entry&#x2F;dc-1,292&#x2F;  安装过程  下载文件进行解压  解压完成直接使用虚拟机打开  提示导入失败，不过没有关系点重试就好，导入完成后，打开DC-1虚拟机并等待，过程中别点进虚拟机里面  出现这个界面就表示开启成功 （渗透完得到密码就能登入啦） 注意！！！！靶机和kali的">
+<meta property="og:locale">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2FiOTE0ZDZiOWQwZjBhMGFlYTljMmYzNTA0NzAyZTJfQU1Ya3dVeE9XSGZ3cHZDdTUxTUVjTjNJeTB4Q3R3MWxfVG9rZW46UzEyTGJyZVg5b3E4UWx4WXhoVGNJYnlCbk5kXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzNmYmZmOGEwZGY5ZjY3NTdiNDU5Mzc2YmQ0OGY0ZDBfS1U5QnozaWtzcElWaUxtdWpsWEV4NHprRWpWSnczT0VfVG9rZW46RWt5c2J4QUxNb3NsOG14NFAzRWM2ankzbmVmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWY1ZjcwYjUyNjUwZDM3MjRkZjM1YjlkZGNlYTc4MjBfbWVGY0NFeWVXSVY0dDBrSlZ3cHpHTTdpeVBHN21QRFFfVG9rZW46VTVZM2I1bk5Jb3ZMd2l4UEsybGNsTjljbmhoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NmVlMjM1YWI5NjJkOGE3NDYwNjA0MmYyMDRiYzI4YWNfc2dwNGRrU2Y0Ylh3N2VPR25Va3BOd21NN2ZSZ1EwMkZfVG9rZW46RTBaUGJ6TlE5b2M0alp4bjhnNGNXYnFvblNoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ODQzNDYyNGM3ODczZjkyZGMzY2JhMzAzMTY3NDE4YjJfcTZKUG5aWnZ6ZU9PUHo0cjFyMWY4S2hYcGExdkpFY3hfVG9rZW46SmNXc2J4NHZIb2pJZlp4ZW9yWmNuakNJbmplXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWY1MDJlOTVmYmM4YmIwMjNlY2QwOWFjMWMwYzliZWRfSnNyQVhmYk84M3BBdk5jdXZ4M05xY2g5Rk56UHVDVUlfVG9rZW46TFVFQWJJTkNZb0prelV4UElsSmNOUVgxbkxmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzM5NmM0M2E0YzY0YmNlNzMyYThlNjRjODIzYjdmNGJfTERsTkUyTlJaTWt3bW9hU2FyTXZ4UG9HQ3NyZ21LTjNfVG9rZW46R3BYM2I1bHdib0FDY3p4SncxTGNZSFg3bkJoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OTA0YjAwODMyYTVlMDQwYzcwZjY2N2YwYjE2ODNjMDJfamN2Smpya3hiTDlKZXFlNExBbUVqM1AxVGdERkY0ZXJfVG9rZW46U3d4cmJBREZ1b3ZZQ0t4TmliS2NlajF3bnBlXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Yzg4ZjhmNjMzYmVkNTM2YjUzYTFjNjZiZDM0YmY0NWVfZ1hYSVFFUEh6cmdZUE5JTjlZOGVTSk1meGxYRkhQRnpfVG9rZW46SUVtZGJrVzZxb0IyYXp4cEVjZWNQSlRZbklrXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MTljNzEzZDY2ZGIzNjVjZjE0NTFjNGRhMDI3ZmYzNTRfZkdCZDE5OWRXd1daQWdZYmxHc2l5MUJKZnlyRlczbnNfVG9rZW46UkwyUWJKZnRwb1VGdHZ4VG12NGNnTTQ5bkppXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YzlmOTVjNGFiZTc4MzE1MDEyOWU4YzRhMTgwYTRjNDNfV2pVVXZMamgyNnlzVFpRTTY3N0pReW5qd283WEw3TDRfVG9rZW46SzNYQWJOVGphbzZwcDR4T2VhZmN4WDl2bllkXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzhhOTBhOGM2MTA5MTc1MzgyODZjNTY1ZWY4MmIxNDRfSGVSMFFkdFNWanhGSXptNTdjTnFiRndiUUZQclFQYm9fVG9rZW46SVFFdWJyZk05bzVCdWl4ZXhHdGNDRU1XbkpiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NTQwZWNjZjZhNTQwZDQwNDE4MWUxNTkwZDhjYzIyNTJfZEo3N0tjelA5UlM4MGl5QmRzb1gyQzFDRXRjcXFtQVFfVG9rZW46QTNvZGI3ak5qbzRONnZ4NzQyVGMxelVrbnBjXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YjZiM2M3OThiYjcxMTI5MTkxMDkxZWRmNTY3ZWM1YWVfalJOa1ZnaEJMdW5HNGZoN2FreXNRb1owSVNHcmpyVmNfVG9rZW46VkFvQmJ3aWFKb0J5Q2x4Z1dQZ2Nkb0V2bkNmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzgzM2I4ZDRlOGI4OGY1YzEyOWMyMDQ4Njc3NTNlZGZfSHNlOEZHMWxYdERoU2JPVnlhYmdUQlhmZXlXNHhuUWhfVG9rZW46RGZDRmJaNnJZb0RKTXZ4SUxnMWMxcGFPbjFnXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjUwODgwMWFlNmExNzBiMzcwNjE5YzFhN2I2N2EzMmNfYVp0N25KSDVKQVZseDJYdG1ORzFHRXRIU1MxNGp6bUlfVG9rZW46Q3Q5UGJGajNPb1NPaW54Mnh0d2NrR0p1bnpkXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MTI4YjQ5YThjYmU0YmE2NjA0NTBjMjE3OWNiOTA1MmRfenpmZXU2MUg1eGdJMmh3a3JLd051UnJxV0htVlV5UU9fVG9rZW46UjVaRmJuNmpEb3U0bGR4OVJ0UmNtaWNNbjRiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTVlMTY3NDlhMmFlOGY1ZmFiNjkxYzc5YjY3MzM2YTZfcURnM0VncmpRR1VyS20zVmhKR0lPUHRDZTBvY0ZuSlpfVG9rZW46SlE4bWJQMllZb0FrU1F4WmxWd2M3RWpjbmVoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OWE3MjBjZjUyNDljMDhhNGVjN2ZiZjNhMGQwZTFhOGVfUWNFOWhtcnlVVFlCdFZic0I0anF5WDhRdjlIMmo0STRfVG9rZW46SHJpSWJyUkVpbzhVNDZ4T1M3bWNVTlhUbnlmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTA4MzU1ZWVlODk2NmExNGRjYTQ3NmVkODZkNWU1NGJfNFdQTEhQRFRBUFl4SVR0VXhPeGc5TnN4c3BRVkVNVFNfVG9rZW46VmNHNGJCRjZFb1ZVRGN4cXNva2NJVjVlbmdoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YmIzYTQ5ZjYwYmIwNTViZDA3MDFlOTNmNjg2MzU3YmRfaE9VT1RvSnpMZERYTWRlT3RZclBHdnU2ek83UW94YzdfVG9rZW46UzdqUGJ3YkZPb1JvVnF4YklYUGN5QUZZblM2XzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWQzY2ZhNjcwMWVkYzlkY2UyOTg3ZTBmN2YxZjVmNWFfbkU2RnBtZnVjMWNtRkdzU3VQVHhPU0hGa1liYnhFR2JfVG9rZW46U3NQVGIwQ1dabzRIVDN4c2kwbmM5OUl2bjFmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTlkMTRkNWM3MTIzNDgyNGViZWRkZDU3ZDE3M2Q5YTdfTnBnb1RjSWRXcHJhOWowUXc0OXpNWVBJb1lSS1dKYVNfVG9rZW46T0VyTmJPNUFpb2szeVR4WEZ6amNINURGbmNoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OGZhNzJiYmJhZjMzMGU0MTZkMzNmYTQzMjM4NmE1N2ZfRDloODRWRjJ3OVlSY2FTcW5Xc2VVa0RKSTI5NlUxQkpfVG9rZW46SlhqOWJ6Mjdqb0p6QVZ4TmJqTGNMbmxjblZnXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmUxZjBhMjIwOWNkMDM2MzUwMGNkZmQ5ZTczOWZlZDFfUjUwMUI0bWljVU9QaGNyUkV1TmNqU3A3SFhQOEU4RjNfVG9rZW46RllPUWJkZUc5b25QQlN4VXlJN2M4Y29vblNmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NmQ1ZWFhNDFjNzlmMjk1NWNkNzdmZmNjOWY4NWNhMWRfY3FRaFRYVzlDMElVcnlHanlCOWxzakE2d1pKMlBrODlfVG9rZW46U0V2bWJFZGkyb0lIYmx4NElBb2NGY0p0bmtiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzFiMzZiMjUyODY2Y2UwYmI3YjY5N2YyNTA0NjczNDBfdUx4VEJWU2ZSUWlyanFwU0liakptaUtSVjBXcTBodElfVG9rZW46VHFZa2I1Vzg4b2haZDJ4WEFkOGNweXpYbndFXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YTVjYThhM2M0YmM1ZTJiOTViMjk0OTZmMzQxZjdjZWNfTmJDNlJLdUR6SUFQWkdtSXNtb1VUanFGZW4zMDJPc0lfVG9rZW46SXVkQ2JVNHIxbzJ1TWd4Y01namM4d0FwbjF5XzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWI3NDJmM2Q3NWVjOWZlN2E1Mjg4NGU3NGVlYzJkNzRfMzZsYkhWVkpGUGZCUnJ1ODVxbmdhTzNRMlFBYW9PbWRfVG9rZW46UTB3Y2J2S1Exb0M1bVF4dkYxR2NLVDZWbmhiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OTc4ZGE4MTEwMDUwNTA3OWIyNzI5ZGY1YjUxNTlkZWVfOXFqSzBRWGEyYXV5b05WekNUdHZ4ZWxyU0RJYzNNV3BfVG9rZW46RllLemJUVE11bzRzbEp4WE5ZSWNhbEs1bkVmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NDA1MWNhOGM4NzU4ZjdjZTMxMmNmOGZkMGYyNGZmYjFfYkhuTWo4NXk0bkg4dVl0bFM4cVBvMWprMHNPblA4bnlfVG9rZW46R0tUT2I5dk1qb0F3UmZ4SUdJVmM0UlF2bldDXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OGY0YzgyNjcwNDVjYWUxNmFiODk5YTNiZjRmMjJkMjhfYjZzbnc4WFlvb2pENDlyU3lXajJIUHNMSVE3YzlRTVhfVG9rZW46UVFLOGJjQ3Zzb0x2NW54dDdGcWNhYmpLbnNlXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YWYzYTY4ZmM3MWY5ZjUwOTUwOWJjZTkxYzQxNjZjNzNfZWFIenJyZ2dUa0s1a0t6QXpkY1FLTGZoRzJSWlhQbkRfVG9rZW46UHlsWGJ2czl0b3RnMmF4MlA0Z2NkdjRrblRiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NGJmMDU4NTRkMGQ0ODI3ZGJiYWEzNjliMWVhZmQ4ZGFfdTgyOUFJS2ROWkRrOHpUMUpoR0cwdVlqTjFXcEpCazBfVG9rZW46SE5wMmJZTVdMb0ZMVDV4MWVVQmMyTnZvbnJlXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmNlYzUyMzI0MDY3MzI3MDAxOTA0MDUzMzMxNjUwZWNfVGphTEdkeDdLTHlJc09mTk1tSDFIenYyZmtLT1pQNVdfVG9rZW46QVNJbmJmclNVb3RnVGx4NGtLZGM5WUp3bmdlXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MGQyYWUzYzVlOWRmNjM1NDJhZjk1YWU1N2ZlOThiY2JfNkd4ZURwaG1XZGpKblg3ZEVtVU5rbjV2dUdHcjFMRDFfVG9rZW46Qlgzc2IxTUFGb1FNbmt4YklqVmMxcE81bnNoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+<meta property="article:published_time" content="2024-03-31T16:29:01.000Z">
+<meta property="article:modified_time" content="2024-03-31T16:33:23.173Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2FiOTE0ZDZiOWQwZjBhMGFlYTljMmYzNTA0NzAyZTJfQU1Ya3dVeE9XSGZ3cHZDdTUxTUVjTjNJeTB4Q3R3MWxfVG9rZW46UzEyTGJyZVg5b3E4UWx4WXhoVGNJYnlCbk5kXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA">
+  
+  
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="菜站" type="application/atom+xml">
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.27.0">
+
+  
+
+  
+
+  
+</head>
+<body>
+
+<div class="l_body s:aa index tech" id="start" layout="[layout]" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://pic1.zhimg.com/v2-dcda957b71759ebad5d2afaf3579bfb2_r.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">菜站</div><div class="sub cap">上班的动力是什么？ / 没钱~</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="Search"></form><div id="search-result"></div><div class="search-no-result">No Results!</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets"></div>
+
+</div></aside><div class="l_main" id="main">
+
+<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://pic1.zhimg.com/v2-dcda957b71759ebad5d2afaf3579bfb2_r.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">菜站</div><div class="sub cap">上班的动力是什么？ / 没钱~</div></a></div></header>
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a>
+
+  <span class="sep"></span>
+  <a class="cap breadcrumb" href="/2024/04/01/la/">DC-1</a>
+  </div>
+<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2024-03-31T16:29:01.000Z">2024-04-01</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2024-03-31T16:33:23.173Z">2024-04-01</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>DC-1</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><ol>
+<li><h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1></li>
+<li><h2 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h2></li>
+<li><p>Kali</p>
+</li>
+<li><p>DC-1靶场机安装</p>
+</li>
+</ol>
+<p>安装链接：<a target="_blank" rel="noopener" href="https://www.vulnhub.com/entry/dc-1,292/">https://www.vulnhub.com/entry/dc-1,292/</a></p>
+<ol>
+<li><h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2></li>
+</ol>
+<p>下载文件进行解压</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2FiOTE0ZDZiOWQwZjBhMGFlYTljMmYzNTA0NzAyZTJfQU1Ya3dVeE9XSGZ3cHZDdTUxTUVjTjNJeTB4Q3R3MWxfVG9rZW46UzEyTGJyZVg5b3E4UWx4WXhoVGNJYnlCbk5kXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>解压完成直接使用虚拟机打开</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzNmYmZmOGEwZGY5ZjY3NTdiNDU5Mzc2YmQ0OGY0ZDBfS1U5QnozaWtzcElWaUxtdWpsWEV4NHprRWpWSnczT0VfVG9rZW46RWt5c2J4QUxNb3NsOG14NFAzRWM2ankzbmVmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>提示导入失败，不过没有关系点重试就好，导入完成后，打开DC-1虚拟机并等待，过程中别点进虚拟机里面</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWY1ZjcwYjUyNjUwZDM3MjRkZjM1YjlkZGNlYTc4MjBfbWVGY0NFeWVXSVY0dDBrSlZ3cHpHTTdpeVBHN21QRFFfVG9rZW46VTVZM2I1bk5Jb3ZMd2l4UEsybGNsTjljbmhoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>出现这个界面就表示开启成功 （渗透完得到密码就能登入啦）</p>
+<h4 id="注意！！！！靶机和kali的接入模式必须要一致，比如都用net或者都用桥接，不懂的可以看这个（https-zhuanlan-zhihu-com-p-65103100）"><a href="#注意！！！！靶机和kali的接入模式必须要一致，比如都用net或者都用桥接，不懂的可以看这个（https-zhuanlan-zhihu-com-p-65103100）" class="headerlink" title="注意！！！！靶机和kali的接入模式必须要一致，比如都用net或者都用桥接，不懂的可以看这个（https://zhuanlan.zhihu.com/p/65103100）"></a>注意！！！！<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E9%9D%B6%E6%9C%BA&spm=1001.2101.3001.7020">靶机</a>和kali的接入模式必须要一致，比如都用net或者都用桥接，不懂的可以看这个（<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/65103100%EF%BC%89">https://zhuanlan.zhihu.com/p/65103100）</a></h4><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NmVlMjM1YWI5NjJkOGE3NDYwNjA0MmYyMDRiYzI4YWNfc2dwNGRrU2Y0Ylh3N2VPR25Va3BOd21NN2ZSZ1EwMkZfVG9rZW46RTBaUGJ6TlE5b2M0alp4bjhnNGNXYnFvblNoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<ol>
+<li><h1 id="渗透过程"><a href="#渗透过程" class="headerlink" title="渗透过程"></a>渗透过程</h1></li>
+</ol>
+<p>这个过程需要用到kali，打开kali</p>
+<ol>
+<li><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2></li>
+</ol>
+<h3 id="①探测主机ip"><a href="#①探测主机ip" class="headerlink" title="①探测主机ip"></a>①探测主机ip</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip a</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ODQzNDYyNGM3ODczZjkyZGMzY2JhMzAzMTY3NDE4YjJfcTZKUG5aWnZ6ZU9PUHo0cjFyMWY4S2hYcGExdkpFY3hfVG9rZW46SmNXc2J4NHZIb2pJZlp4ZW9yWmNuakNJbmplXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<h3 id="②探测目标ip开放端口"><a href="#②探测目标ip开放端口" class="headerlink" title="②探测目标ip开放端口"></a>②探测目标ip开放端口</h3><p>用nmap来探测</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sP</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWY1MDJlOTVmYmM4YmIwMjNlY2QwOWFjMWMwYzliZWRfSnNyQVhmYk84M3BBdk5jdXZ4M05xY2g5Rk56UHVDVUlfVG9rZW46TFVFQWJJTkNZb0prelV4UElsSmNOUVgxbkxmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>进行端口的扫描</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Nmap -P</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzM5NmM0M2E0YzY0YmNlNzMyYThlNjRjODIzYjdmNGJfTERsTkUyTlJaTWt3bW9hU2FyTXZ4UG9HQ3NyZ21LTjNfVG9rZW46R3BYM2I1bHdib0FDY3p4SncxTGNZSFg3bkJoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<h5 id="③收集网页信息"><a href="#③收集网页信息" class="headerlink" title="③收集网页信息"></a>③收集网页信息</h5><p>浏览器输入地址</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OTA0YjAwODMyYTVlMDQwYzcwZjY2N2YwYjE2ODNjMDJfamN2Smpya3hiTDlKZXFlNExBbUVqM1AxVGdERkY0ZXJfVG9rZW46U3d4cmJBREZ1b3ZZQ0t4TmliS2NlajF3bnBlXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>利用火绒插件<strong>wappalyzer</strong>，查看站点信息，也可以自己判断，网页一看cms就是drupal</p>
+<h5 id="什么是cms？"><a href="#什么是cms？" class="headerlink" title="什么是cms？"></a>什么是cms？</h5><blockquote>
+<p>CMS是”Content Management System”的缩写，意为”内容管理系统”。 它采用统一的信息组织的方法即分类，对同一类型的信息进行分类，且每一类信息都可以进行新建（Add）、查看（View）、编辑（Edit）和删除（Delete）四种不同的操作。除了使用分类的方式组织信息以外，又采用了统一的用户和权限管理对信息的使用进行控制，即构成了一个完整的信息组织和管理的体系。内容管理系统是企业信息化建设和电子政务的新宠，也是一个相对较新的市场.</p>
+</blockquote>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Yzg4ZjhmNjMzYmVkNTM2YjUzYTFjNjZiZDM0YmY0NWVfZ1hYSVFFUEh6cmdZUE5JTjlZOGVTSk1meGxYRkhQRnpfVG9rZW46SUVtZGJrVzZxb0IyYXp4cEVjZWNQSlRZbklrXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<ol>
+<li><h2 id="漏洞查找与利用"><a href="#漏洞查找与利用" class="headerlink" title="漏洞查找与利用"></a>漏洞查找与利用</h2></li>
+</ol>
+<p>什么是Drupal</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MTljNzEzZDY2ZGIzNjVjZjE0NTFjNGRhMDI3ZmYzNTRfZkdCZDE5OWRXd1daQWdZYmxHc2l5MUJKZnlyRlczbnNfVG9rZW46UkwyUWJKZnRwb1VGdHZ4VG12NGNnTTQ5bkppXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>知道cms，我们一般从cms出发找漏洞，百度一下drupal漏洞</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YzlmOTVjNGFiZTc4MzE1MDEyOWU4YzRhMTgwYTRjNDNfV2pVVXZMamgyNnlzVFpRTTY3N0pReW5qd283WEw3TDRfVG9rZW46SzNYQWJOVGphbzZwcDR4T2VhZmN4WDl2bllkXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>或者在工具中打开</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzhhOTBhOGM2MTA5MTc1MzgyODZjNTY1ZWY4MmIxNDRfSGVSMFFkdFNWanhGSXptNTdjTnFiRndiUUZQclFQYm9fVG9rZW46SVFFdWJyZk05bzVCdWl4ZXhHdGNDRU1XbkpiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>代开之后在里面搜索drupal</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NTQwZWNjZjZhNTQwZDQwNDE4MWUxNTkwZDhjYzIyNTJfZEo3N0tjelA5UlM4MGl5QmRzb1gyQzFDRXRjcXFtQVFfVG9rZW46QTNvZGI3ak5qbzRONnZ4NzQyVGMxelVrbnBjXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>这里是drupal的漏洞</p>
+<h3 id="①漏洞查找"><a href="#①漏洞查找" class="headerlink" title="①漏洞查找"></a>①漏洞查找</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YjZiM2M3OThiYjcxMTI5MTkxMDkxZWRmNTY3ZWM1YWVfalJOa1ZnaEJMdW5HNGZoN2FreXNRb1owSVNHcmpyVmNfVG9rZW46VkFvQmJ3aWFKb0J5Q2x4Z1dQZ2Nkb0V2bkNmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>用工具Metasploit（目前世界上领先的<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95&spm=1001.2101.3001.7020">渗透测试</a>工具，也是信息安全与渗透测试领域最大的开源项目之一），找一下漏洞，先打开工具</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">metasploit</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzgzM2I4ZDRlOGI4OGY1YzEyOWMyMDQ4Njc3NTNlZGZfSHNlOEZHMWxYdERoU2JPVnlhYmdUQlhmZXlXNHhuUWhfVG9rZW46RGZDRmJaNnJZb0RKTXZ4SUxnMWMxcGFPbjFnXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>然后输入命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">search Drupal</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjUwODgwMWFlNmExNzBiMzcwNjE5YzFhN2I2N2EzMmNfYVp0N25KSDVKQVZseDJYdG1ORzFHRXRIU1MxNGp6bUlfVG9rZW46Q3Q5UGJGajNPb1NPaW54Mnh0d2NrR0p1bnpkXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>这些就是Drupal的漏洞，可以看到漏洞还挺多的</p>
+<p>在这里面使用 1  exploit&#x2F;unix&#x2F;webapp&#x2F;drupal_drupalgeddon2       2018-03-28       excellent  Yes    Drupal Drupalgeddon 2 Forms API Property Injection  这个脚本</p>
+<p>输入：<code>use 1</code></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MTI4YjQ5YThjYmU0YmE2NjA0NTBjMjE3OWNiOTA1MmRfenpmZXU2MUg1eGdJMmh3a3JLd051UnJxV0htVlV5UU9fVG9rZW46UjVaRmJuNmpEb3U0bGR4OVJ0UmNtaWNNbjRiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>接着看一下该漏洞模块参数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show options</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTVlMTY3NDlhMmFlOGY1ZmFiNjkxYzc5YjY3MzM2YTZfcURnM0VncmpRR1VyS20zVmhKR0lPUHRDZTBvY0ZuSlpfVG9rZW46SlE4bWJQMllZb0FrU1F4WmxWd2M3RWpjbmVoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<blockquote>
+<p>Current Setting是目前设置的内容 Required表示是否需要设置内容，yes为必须设置，no可以设置也可不设置 就上面来说RHOSTS需要set，但是没有内容</p>
+</blockquote>
+<p>所以接着我们来设置一下RHOSTS内容（就是攻击目标IP地址，靶场地址）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set RHOSTS 192.168.217.18</span><br></pre></td></tr></table></figure>
+
+<p>然后再show一下模块参数</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OWE3MjBjZjUyNDljMDhhNGVjN2ZiZjNhMGQwZTFhOGVfUWNFOWhtcnlVVFlCdFZic0I0anF5WDhRdjlIMmo0STRfVG9rZW46SHJpSWJyUkVpbzhVNDZ4T1M3bWNVTlhUbnlmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>设置好参数后开始攻击</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exploit</span><br></pre></td></tr></table></figure>
+
+<p>exploit和run是一样的，用run也可以</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTA4MzU1ZWVlODk2NmExNGRjYTQ3NmVkODZkNWU1NGJfNFdQTEhQRFRBUFl4SVR0VXhPeGc5TnN4c3BRVkVNVFNfVG9rZW46VmNHNGJCRjZFb1ZVRGN4cXNva2NJVjVlbmdoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>出现Meterpreter session 1 opened（kali和目标ip的连接）就说明攻击成功啦，接下来我们可以直接上shell</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YmIzYTQ5ZjYwYmIwNTViZDA3MDFlOTNmNjg2MzU3YmRfaE9VT1RvSnpMZERYTWRlT3RZclBHdnU2ek83UW94YzdfVG9rZW46UzdqUGJ3YkZPb1JvVnF4YklYUGN5QUZZblM2XzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<ol>
+<li><h2 id="Getshell"><a href="#Getshell" class="headerlink" title="Getshell"></a>Getshell</h2></li>
+</ol>
+<h3 id="①获取普通shell"><a href="#①获取普通shell" class="headerlink" title="①获取普通shell"></a>①获取普通shell</h3><p>然后执行ls命令</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWQzY2ZhNjcwMWVkYzlkY2UyOTg3ZTBmN2YxZjVmNWFfbkU2RnBtZnVjMWNtRkdzU3VQVHhPU0hGa1liYnhFR2JfVG9rZW46U3NQVGIwQ1dabzRIVDN4c2kwbmM5OUl2bjFmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<h3 id="②获取交互shell"><a href="#②获取交互shell" class="headerlink" title="②获取交互shell"></a>②获取交互shell</h3><p>这样看起来有点费劲，不过我们可以利用python实现互交shell，这样就好看一点，使用的前提是攻击主机上必须装有python</p>
+<p>“我不会安装python”</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -c &quot;import pty;pty.spawn(&#x27;/bin/bash&#x27;)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>这是一个固定姿势，直接复制就能用</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTlkMTRkNWM3MTIzNDgyNGViZWRkZDU3ZDE3M2Q5YTdfTnBnb1RjSWRXcHJhOWowUXc0OXpNWVBJb1lSS1dKYVNfVG9rZW46T0VyTmJPNUFpb2szeVR4WEZ6amNINURGbmNoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>可以看到这个shell的权限只是普通权限，还不是root，不过还能看看文件啦，先看一下发现的flag1.txt文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat flag1.txt</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OGZhNzJiYmJhZjMzMGU0MTZkMzNmYTQzMjM4NmE1N2ZfRDloODRWRjJ3OVlSY2FTcW5Xc2VVa0RKSTI5NlUxQkpfVG9rZW46SlhqOWJ6Mjdqb0p6QVZ4TmJqTGNMbmxjblZnXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>翻译过来就是：每个好的CMS都需要一个配置文件，你也一样，emmm，这个先放着，看看还有没有其他flag文件</p>
+<p>我们再看看有没有其他flag文件 <code>find / -name flag*</code></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmUxZjBhMjIwOWNkMDM2MzUwMGNkZmQ5ZTczOWZlZDFfUjUwMUI0bWljVU9QaGNyUkV1TmNqU3A3SFhQOEU4RjNfVG9rZW46RllPUWJkZUc5b25QQlN4VXlJN2M4Y29vblNmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>好吧只有一个，我们再看看他的配置文件，一般来说配置文件都有一些特别重要的信息在里面，搞不好还能提权，百度Drupal配置文件（每一个好的CMS都需要一个配置文件）</p>
+<p>下一个攻克点提示在配置文件中</p>
+<p>百度找到的durpal的配置文件是 &#x2F;vsr&#x2F;www&#x2F;sites&#x2F;default&#x2F;settings.php</p>
+<p>进入durpal配置文件</p>
+<p>逐层解剖 找到flag2文件 进行读取</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NmQ1ZWFhNDFjNzlmMjk1NWNkNzdmZmNjOWY4NWNhMWRfY3FRaFRYVzlDMElVcnlHanlCOWxzakE2d1pKMlBrODlfVG9rZW46U0V2bWJFZGkyb0lIYmx4NElBb2NGY0p0bmtiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzFiMzZiMjUyODY2Y2UwYmI3YjY5N2YyNTA0NjczNDBfdUx4VEJWU2ZSUWlyanFwU0liakptaUtSVjBXcTBodElfVG9rZW46VHFZa2I1Vzg4b2haZDJ4WEFkOGNweXpYbndFXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<ol>
+<li><h2 id="数据库渗透"><a href="#数据库渗透" class="headerlink" title="数据库渗透"></a>数据库渗透</h2></li>
+</ol>
+<p>发现第二个flag以及数据可以账号密码、咱们登录一下</p>
+<p><code>mysql -udbuser -pR0ck3t</code>  mysql -u dbuser -p </p>
+<p>mysql -u dbuser -p </p>
+<p>Enter password: R0ck3t</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YTVjYThhM2M0YmM1ZTJiOTViMjk0OTZmMzQxZjdjZWNfTmJDNlJLdUR6SUFQWkdtSXNtb1VUanFGZW4zMDJPc0lfVG9rZW46SXVkQ2JVNHIxbzJ1TWd4Y01namM4d0FwbjF5XzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>登进去了，这样我们就可以为所欲为修改数据库了，先看看有啥好东西</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWI3NDJmM2Q3NWVjOWZlN2E1Mjg4NGU3NGVlYzJkNzRfMzZsYkhWVkpGUGZCUnJ1ODVxbmdhTzNRMlFBYW9PbWRfVG9rZW46UTB3Y2J2S1Exb0M1bVF4dkYxR2NLVDZWbmhiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>接着使用该数据库，并查看表 <code>use drupaldb;show tables;</code></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OTc4ZGE4MTEwMDUwNTA3OWIyNzI5ZGY1YjUxNTlkZWVfOXFqSzBRWGEyYXV5b05WekNUdHZ4ZWxyU0RJYzNNV3BfVG9rZW46RllLemJUVE11bzRzbEp4WE5ZSWNhbEs1bkVmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>注意到users这个表，看一下有啥，先改小一点字体，不然可能会挤爆不美观</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from users;</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NDA1MWNhOGM4NzU4ZjdjZTMxMmNmOGZkMGYyNGZmYjFfYkhuTWo4NXk0bkg4dVl0bFM4cVBvMWprMHNPblA4bnlfVG9rZW46R0tUT2I5dk1qb0F3UmZ4SUdJVmM0UlF2bldDXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>得到两个用户</p>
+<p>1 | admin | S SSDvQI6Y600iNeXRIeEMF94Y6FvN8nujJcEDTCP9nS5.i38jnEKuDR</p>
+<p>2 | Fred | S SSDWGrxef6.D0cwB5Ts.GlnLw15chRRWH2s1R3QBwC0EkvBQ&#x2F;9TCGg</p>
+<p>密码好复杂，应该不是明文，那想登进后台就很难了就很难了，我们可以通过修改admin的密码，或者是新加一个admin</p>
+<p><strong>方法一：修改admin密码</strong></p>
+<p>我们得先找到加密文件，Drupal的加密脚本在</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/var/www/scripts/password-hash.sh</span><br></pre></td></tr></table></figure>
+
+<p>首先我推出mysql</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit;</span><br></pre></td></tr></table></figure>
+
+<p>打开加密脚本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /var/www/scripts/password-hash.sh</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OGY0YzgyNjcwNDVjYWUxNmFiODk5YTNiZjRmMjJkMjhfYjZzbnc4WFlvb2pENDlyU3lXajJIUHNMSVE3YzlRTVhfVG9rZW46UVFLOGJjQ3Zzb0x2NW54dDdGcWNhYmpLbnNlXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>这个脚本是用php写的，而且还能用php加参数运行，直接得到加密后的密码，这里我们设置一个密码123456</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php /var/www/scripts/password-hash.sh 123456</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YWYzYTY4ZmM3MWY5ZjUwOTUwOWJjZTkxYzQxNjZjNzNfZWFIenJyZ2dUa0s1a0t6QXpkY1FLTGZoRzJSWlhQbkRfVG9rZW46UHlsWGJ2czl0b3RnMmF4MlA0Z2NkdjRrblRiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>得到加密后的密码， 接着我们登入mysql修改一下admin跟Fred的密码</p>
+<p>mysql -udbuser -pR0ck3t</p>
+<p>use drupaldb;update users set pass &#x3D; “S SSD1UQvb3x7lKoCSX6S9K.r.wB202Lsa&#x2F;r7fkOj7CelJsSEMFDJjGv” where name &#x3D; ‘admin’ or name &#x3D; ‘Fred’;</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NGJmMDU4NTRkMGQ0ODI3ZGJiYWEzNjliMWVhZmQ4ZGFfdTgyOUFJS2ROWkRrOHpUMUpoR0cwdVlqTjFXcEpCazBfVG9rZW46SE5wMmJZTVdMb0ZMVDV4MWVVQmMyTnZvbnJlXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>接着我们用修改好的密码登入</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmNlYzUyMzI0MDY3MzI3MDAxOTA0MDUzMzMxNjUwZWNfVGphTEdkeDdLTHlJc09mTk1tSDFIenYyZmtLT1pQNVdfVG9rZW46QVNJbmJmclNVb3RnVGx4NGtLZGM5WUp3bmdlXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>登进去就找到了flag3，提示了我们一些信息passwd和shadow，明显就是linux的文件</p>
+<p>&#x2F;etc&#x2F;passwd</p>
+<p>该文件存储了系统用户的基本信息，所有用户都可以对其进行文件操作读</p>
+<p>Linux &#x2F;etc&#x2F;passwd内容解释（超详细）</p>
+<p>&#x2F;etc&#x2F;shadow</p>
+<p>该文件存储了系统用户的密码等信息，只有root权限用户才能读取</p>
+<p>Linux &#x2F;etc&#x2F;shadow（影子文件）内容解析（超详细）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tac /etc/passwd</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MGQyYWUzYzVlOWRmNjM1NDJhZjk1YWU1N2ZlOThiY2JfNkd4ZURwaG1XZGpKblg3ZEVtVU5rbjV2dUdHcjFMRDFfVG9rZW46Qlgzc2IxTUFGb1FNbmt4YklqVmMxcE81bnNoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
+<p>可以看到有flag4这个用户，我们有两个方法拿到这个用户的密码，一个是爆破，另一个就是提权打开shadow文件查看密码</p>
+</article>
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">John Doe</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0">Stellar 1.27.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+</aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `Just`,
+      min: `minutes ago`,
+      hour: `hours ago`,
+      day: `days ago`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js`,
+    marked: `https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+
+<!-- required -->
+<script src="/js/main.js?v=1.27.0" async></script>
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
+    js: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || null
+        }
+      });
+    })
+  }
+</script><script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script><script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>

