@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>安全面试题</title>
+    <title>网络安全题库</title>
     <url>/2024/04/02/%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93/</url>
     <content><![CDATA[<h1 id="网络安全面试题"><a href="#网络安全面试题" class="headerlink" title="网络安全面试题"></a>网络安全面试题</h1><h2 id="1-php爆绝对路径的方法？"><a href="#1-php爆绝对路径的方法？" class="headerlink" title="1.php爆绝对路径的方法？"></a>1.php爆绝对路径的方法？</h2><h3 id="1-1单引号引起数据库报错"><a href="#1-1单引号引起数据库报错" class="headerlink" title="1.1单引号引起数据库报错"></a>1.1单引号引起数据库报错</h3><ul>
 <li>说明：直接在URL后面加单引号，要求单引号没有被过滤(gpc&#x3D;off)且服务器默认返回错误信息。</li>
@@ -775,7 +775,7 @@
 <p>第二次挥手：被动关闭方收到FIN包后，发送一个ACK给对方，确认序号为收到序号+1（与SYN相同，一 个FIN占用一个序号）。 </p>
 <p>第三次挥手：被动关闭方发送一个FIN，用来关闭被动关闭方到主动关闭方的数据传送，也就是告诉主动 关闭方，我的数据也发送完了，不会再给你发数据了。</p>
 <p> 第四次挥手：主动关闭方收到FIN后，发送一个ACK给被动关闭方，确认序号为收到序号+1，至此，完成 四次挥手</p>
-<p><img src="D:\图片\四次挥手.png" alt="image-20240402105325904"></p>
+<p><img src="D:\图片\四次挥手.md" alt="image-20240402105325904"></p>
 <h2 id="85-GET-和-POST-的区别"><a href="#85-GET-和-POST-的区别" class="headerlink" title="85.GET 和 POST 的区别"></a>85.GET 和 POST 的区别</h2><p>get是获取数据，post是修改数据 </p>
 <p>get把请求的数据放在url上， 以?分割URL和传输数据，参数之间以&amp;相连，所以get不太安全。而post把 数据放在HTTP的包体内（requrest body） </p>
 <ul>
