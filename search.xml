@@ -3,7 +3,7 @@
   <entry>
     <title>网络安全题库</title>
     <url>/2024/04/02/%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93/</url>
-    <content><![CDATA[<h1 id="网络安全面试题"><a href="#网络安全面试题" class="headerlink" title="网络安全面试题"></a>网络安全面试题</h1><h2 id="1-php爆绝对路径的方法？"><a href="#1-php爆绝对路径的方法？" class="headerlink" title="1.php爆绝对路径的方法？"></a>1.php爆绝对路径的方法？</h2><h3 id="1-1单引号引起数据库报错"><a href="#1-1单引号引起数据库报错" class="headerlink" title="1.1单引号引起数据库报错"></a>1.1单引号引起数据库报错</h3><ul>
+    <content><![CDATA[<h1 id="网络安全题库"><a href="#网络安全题库" class="headerlink" title="网络安全题库"></a>网络安全题库</h1><h2 id="1-php爆绝对路径的方法？"><a href="#1-php爆绝对路径的方法？" class="headerlink" title="1.php爆绝对路径的方法？"></a>1.php爆绝对路径的方法？</h2><h3 id="1-1单引号引起数据库报错"><a href="#1-1单引号引起数据库报错" class="headerlink" title="1.1单引号引起数据库报错"></a>1.1单引号引起数据库报错</h3><ul>
 <li>说明：直接在URL后面加单引号，要求单引号没有被过滤(gpc&#x3D;off)且服务器默认返回错误信息。</li>
 <li>举例：<a href="https://www.xxx.com/news.php?id=149">https://www.xxx.com/news.php?id=149</a>‘</li>
 </ul>
