@@ -12,18 +12,22 @@
 <li>举例：<a href="https://www.xxx.com/researcharchive.php?id=-1">https://www.xxx.com/researcharchive.php?id=-1</a></li>
 </ul>
 <h3 id="1-3扫描开发未删除的测时文件-探针类文件如phpinfo"><a href="#1-3扫描开发未删除的测时文件-探针类文件如phpinfo" class="headerlink" title="1.3扫描开发未删除的测时文件&#x2F;探针类文件如phpinfo"></a>1.3扫描开发未删除的测时文件&#x2F;探针类文件如phpinfo</h3><ul>
-<li>说明：部分开发人员和测试人员会将测试文件留着，这样可以借助扫描工具将其扫描出来也可以爆绝对路径。很多网站的根目录下都存在测试文件，脚本代码通常都是phpinfo()</li>
-<li>举例：</li>
-<li><a href="https://www.xxx.com/test.php">https://www.xxx.com/test.php</a><ul>
-<li><a href="https://www.xxx.com/ceshi.php">https://www.xxx.com/ceshi.php</a></li>
-</ul>
+<li><p>说明：部分开发人员和测试人员会将测试文件留着，这样可以借助扫描工具将其扫描出来也可以爆绝对路径。很多网站的根目录下都存在测试文件，脚本代码通常都是phpinfo()</p>
 </li>
-<li><a href="https://www.xxx.com/info.php">https://www.xxx.com/info.php</a><ul>
-<li><a href="https://www.xxx.com/phpinfo.php">https://www.xxx.com/phpinfo.php</a></li>
-</ul>
+<li><p>举例：</p>
+<ul>
+<li><p><a href="https://www.xxx.com/test.php">https://www.xxx.com/test.php</a></p>
 </li>
-<li><a href="https://www.xxx.com/php_info.php">https://www.xxx.com/php_info.php</a><ul>
-<li><a href="https://www.xxx.com/1.php">https://www.xxx.com/1.php</a></li>
+<li><p><a href="https://www.xxx.com/ceshi.php">https://www.xxx.com/ceshi.php</a></p>
+</li>
+<li><p><a href="https://www.xxx.com/info.php">https://www.xxx.com/info.php</a></p>
+</li>
+<li><p><a href="https://www.xxx.com/phpinfo.php">https://www.xxx.com/phpinfo.php</a></p>
+</li>
+<li><p><a href="https://www.xxx.com/php_info.php">https://www.xxx.com/php_info.php</a></p>
+</li>
+<li><p><a href="https://www.xxx.com/1.php">https://www.xxx.com/1.php</a></p>
+</li>
 </ul>
 </li>
 </ul>
@@ -662,7 +666,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="76-重要协议分布图"><a href="#76-重要协议分布图" class="headerlink" title="76.重要协议分布图"></a>76.重要协议分布图</h2><p><img src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402101059425.png" alt="image-20240402101059425"></p>
+<h2 id="76-重要协议分布图"><a href="#76-重要协议分布图" class="headerlink" title="76.重要协议分布图"></a>76.重要协议分布图</h2><p><img src="file:///D:/%E5%9B%BE%E7%89%87/%E9%87%8D%E8%A6%81%E5%8D%8F%E8%AE%AE%E5%88%86%E5%B8%83%E5%9B%BE.png" alt="重要协议分布图"></p>
 <h2 id="77-arp协议的工作原理"><a href="#77-arp协议的工作原理" class="headerlink" title="77.arp协议的工作原理"></a>77.arp协议的工作原理</h2><ul>
 <li>地址解析协议，即ARP（Address Resolution Protocol），是根据IP地址获取物理地址的一个TCP&#x2F;IP协议。<ul>
 <li>发送ARP请求的以太网数据帧 广播 到以太网上的每个主机，ARP请求帧中包含了目的主机的IP地址。 </li>
@@ -692,7 +696,7 @@
 </ul>
 <h2 id="79-dns是什么？dns的工作原理"><a href="#79-dns是什么？dns的工作原理" class="headerlink" title="79.dns是什么？dns的工作原理"></a>79.dns是什么？dns的工作原理</h2><p>将主机域名转换为ip地址，属于应用层协议，使用UDP传输。（DNS应用层协议，以前有个考官问过） </p>
 <ul>
-<li><p>过程： <img src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402103621998.png" alt="image-20240402103621998"></p>
+<li><p>过程： <img src="D:\图片\1.png" alt="image-20240402103621998"></p>
 </li>
 <li><p>总结： 浏览器缓存，系统缓存，路由器缓存，IPS服务器缓存，根域名服务器缓存，顶级域名服务器缓 存，主域名服务器缓存。 </p>
 <ul>
@@ -710,7 +714,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402103653198.png" alt="image-20240402103653198"></p>
+<p><img src="D:\图片\dns.png" alt="image-20240402103653198"></p>
 <h2 id="80-rip协议是什么？rip的工作原理"><a href="#80-rip协议是什么？rip的工作原理" class="headerlink" title="80.rip协议是什么？rip的工作原理"></a>80.rip协议是什么？rip的工作原理</h2><p>RIP动态路由选择协议（网络层协议） </p>
 <p>RIP是一种基于距离矢量（Distance-Vector）算法的协议，它使用跳数（Hop Count）作为度量来衡量 到达目的网络的路由距离。RIP通过UDP报文进行路由信息的交换，使用的端口号520。</p>
 <p><strong>工作原理：</strong> RIP路由协议用“更新（UNPDATES）”和“请求（REQUESTS）”这两种分组来传输信息的。每个具有RIP协 议功能的路由器每隔30秒用UDP520端口给与之直接相连的机器广播更新信息。并且在（ 用“路程段数” （即“跳数”）作为网络距离的尺度。每个路由器在）给相邻路由器发出路由信息时，都会给每个路径加 上内部距离。</p>
@@ -756,7 +760,7 @@
 </li>
 </ul>
 <p>完成三次握手，客户端与服务器开始传送数据 </p>
-<p><img src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402105242397.png" alt="image-20240402105242397"></p>
+<p><img src="D:\图片\三次握手.png" alt="image-20240402105242397"></p>
 <ul>
 <li><p>客户端先发送FIN，进入FIN_WAIT1状态，用来关闭Client到Server的数据传送 </p>
 </li>
@@ -771,7 +775,7 @@
 <p>第二次挥手：被动关闭方收到FIN包后，发送一个ACK给对方，确认序号为收到序号+1（与SYN相同，一 个FIN占用一个序号）。 </p>
 <p>第三次挥手：被动关闭方发送一个FIN，用来关闭被动关闭方到主动关闭方的数据传送，也就是告诉主动 关闭方，我的数据也发送完了，不会再给你发数据了。</p>
 <p> 第四次挥手：主动关闭方收到FIN后，发送一个ACK给被动关闭方，确认序号为收到序号+1，至此，完成 四次挥手</p>
-<p><img src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240402105325904.png" alt="image-20240402105325904"></p>
+<p><img src="D:\图片\四次挥手.png" alt="image-20240402105325904"></p>
 <h2 id="85-GET-和-POST-的区别"><a href="#85-GET-和-POST-的区别" class="headerlink" title="85.GET 和 POST 的区别"></a>85.GET 和 POST 的区别</h2><p>get是获取数据，post是修改数据 </p>
 <p>get把请求的数据放在url上， 以?分割URL和传输数据，参数之间以&amp;相连，所以get不太安全。而post把 数据放在HTTP的包体内（requrest body） </p>
 <ul>
@@ -822,13 +826,7 @@
 </ul>
 <h2 id="91-http长连接和短连接的区别"><a href="#91-http长连接和短连接的区别" class="headerlink" title="91.http长连接和短连接的区别"></a>91.http长连接和短连接的区别</h2><p>在HTTP&#x2F;1.0中默认使用短连接。也就是说，客户端和服务器每进行一次HTTP操作，就建立一次连接， 任务结束就中断连接。而从HTTP&#x2F;1.1起，默认使用长连接，用以保持连接特性。</p>
 <h2 id="92-什么是TCP粘包-拆包？-发生原因？解决方案"><a href="#92-什么是TCP粘包-拆包？-发生原因？解决方案" class="headerlink" title="92.什么是TCP粘包&#x2F;拆包？ 发生原因？解决方案"></a>92.什么是TCP粘包&#x2F;拆包？ 发生原因？解决方案</h2><p>一个完整的业务可能会被TCP拆分成多个包进行发送，也有可能把多个小的包封装 成一个大的数据包发送，这个就是TCP的拆包和粘包问题。</p>
-<p>原因：</p>
-<pre><code>1. 应用程序写入数据的字节大小大于 套接字发送缓冲区的大小.
-
-2. 进行MSS大小的TCP分段。( MSS=TCP报文段长度-TCP首部长度)
-
-3. 以太网的 payload大于MTU进行IP分片。（ MTU指：一种通信协议的某一层上面所能通过的最大数据包大小。） 
-</code></pre>
+<p>原因：<br>    1. 应用程序写入数据的字节大小大于 套接字发送缓冲区的大小.<br>    1. 进行MSS大小的TCP分段。( MSS&#x3D;TCP报文段长度-TCP首部长度)<br>    1. 以太网的 payload大于MTU进行IP分片。（ MTU指：一种通信协议的某一层上面所能通过的最大数据包大小。） </p>
 <p>解决方案：<br>    1. 消息定长。<br>    2. 在包尾部增加回车或者空格符等特殊字符进行分割<br>    3. 将消息分为消息头和消 息尾。<br>    4. 使用其它复杂的协议，如RTMP协议等。</p>
 <h2 id="93-TCP如何保证可靠传输？"><a href="#93-TCP如何保证可靠传输？" class="headerlink" title="93.TCP如何保证可靠传输？"></a>93.TCP如何保证可靠传输？</h2><ol>
 <li>三次握手。</li>
