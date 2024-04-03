@@ -6,7 +6,7 @@
   <link href="https://coolajui.github.io/atom.xml" rel="self"/>
   
   <link href="https://coolajui.github.io/"/>
-  <updated>2024-04-02T15:00:10.155Z</updated>
+  <updated>2024-04-03T04:12:42.673Z</updated>
   <id>https://coolajui.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://coolajui.github.io/2024/04/02/%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93/"/>
     <id>https://coolajui.github.io/2024/04/02/%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93/</id>
     <published>2024-04-02T03:37:54.000Z</published>
-    <updated>2024-04-02T15:00:10.155Z</updated>
+    <updated>2024-04-03T04:12:42.673Z</updated>
     
     
     <summary type="html">总结网络安全面试题库</summary>
@@ -34,44 +34,6 @@
     <category term="网络安全，护网" scheme="https://coolajui.github.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%EF%BC%8C%E6%8A%A4%E7%BD%91/"/>
     
     <category term="面试" scheme="https://coolajui.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DC-9</title>
-    <link href="https://coolajui.github.io/2024/04/01/DC-9/"/>
-    <id>https://coolajui.github.io/2024/04/01/DC-9/</id>
-    <published>2024-03-31T16:10:31.000Z</published>
-    <updated>2024-04-02T15:41:02.750Z</updated>
-    
-    
-    <summary type="html">VulnHub/DC系列靶场/DC-9渗透教程</summary>
-    
-    
-    
-    <category term="靶场，DC系列" scheme="https://coolajui.github.io/categories/%E9%9D%B6%E5%9C%BA%EF%BC%8CDC%E7%B3%BB%E5%88%97/"/>
-    
-    
-    <category term="靶场" scheme="https://coolajui.github.io/tags/%E9%9D%B6%E5%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>好杂</title>
-    <link href="https://coolajui.github.io/2024/03/31/ni-hao/"/>
-    <id>https://coolajui.github.io/2024/03/31/ni-hao/</id>
-    <published>2024-03-31T08:28:32.934Z</published>
-    <updated>2024-04-02T16:52:18.049Z</updated>
-    
-    
-    <summary type="html">生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞。</summary>
-    
-    
-    
-    <category term="Blog" scheme="https://coolajui.github.io/categories/Blog/"/>
-    
-    
-    <category term="Hexo" scheme="https://coolajui.github.io/tags/Hexo/"/>
     
   </entry>
   
