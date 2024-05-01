@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>q</title>
+    <url>/2024/05/01/q/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>blues-4</title>
     <url>/2024/04/08/blues-4%EF%BC%88DRIFTINGBLUES%204)/</url>
     <content><![CDATA[<h1 id="blues-4"><a href="#blues-4" class="headerlink" title="blues-4"></a>blues-4</h1><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><h3 id="主机扫描"><a href="#主机扫描" class="headerlink" title="主机扫描"></a>主机扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -sP 192.168.217.129/24</span><br></pre></td></tr></table></figure>
