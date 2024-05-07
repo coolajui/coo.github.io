@@ -177,6 +177,66 @@
       </tags>
   </entry>
   <entry>
+    <title>VulnHub-BASICPENTESTING:2</title>
+    <url>/2024/05/06/BASICPENTESTING%202/</url>
+    <content><![CDATA[<h1 id="BASICPENTESTING-2"><a href="#BASICPENTESTING-2" class="headerlink" title="BASICPENTESTING: 2"></a>BASICPENTESTING: 2</h1><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><h3 id="主机扫描"><a href="#主机扫描" class="headerlink" title="主机扫描"></a>主机扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -sP 192.168.217.175/24</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507193128820.png" alt="image-20240507193128820"></p>
+<h3 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -A -sV -T4 -p-  192.168.217.186</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507193326299.png" alt="image-20240507193326299"></p>
+<h3 id="80端口"><a href="#80端口" class="headerlink" title="80端口"></a>80端口</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507193408541.png" alt="image-20240507193408541"></p>
+<p>查看源码发现一句提示，说要查看开发说明</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507193605555.png" alt="image-20240507193605555"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507193643712.png" alt="image-20240507193643712"></p>
+<h3 id="扫描目录"><a href="#扫描目录" class="headerlink" title="扫描目录"></a>扫描目录</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dirsearch -u 192.168.217.186 -x 403 --random-agent</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507194027495.png" alt="image-20240507194027495"></p>
+<p>访问目录&#x2F;development&#x2F;</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507194104396.png" alt="image-20240507194104396"></p>
+<p>查看dve.txt文件，文件中提到了两个用户名<code>k和j</code></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507194134393.png" alt="image-20240507194134393"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507194204365.png" alt="image-20240507194204365"></p>
+<p>查看文件j.txt，再次提到用户<code>k和j</code></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507194335475.png" alt="image-20240507194335475"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507194418564.png" alt="image-20240507194418564"></p>
+<h2 id="渗透"><a href="#渗透" class="headerlink" title="渗透"></a>渗透</h2><h3 id="ssh登录"><a href="#ssh登录" class="headerlink" title="ssh登录"></a>ssh登录</h3><p>使用工具<code>enum4linux</code> 进行用户名补全</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507194916756.png" alt="image-20240507194916756"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enum4linux 192.168.217.186</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507195110675.png" alt="image-20240507195110675"></p>
+<p>成功获得用户名<code>kay和jan</code> </p>
+<p>使用工具九头蛇进行密码爆破</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hydra -l jan -P /usr/share/wordlists/rockyou.txt 192.168.217.186 ssh</span><br><span class="line">hydra -l kay -P /usr/share/wordlists/rockyou.txt 192.168.217.186 ssh</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507200056578.png" alt="image-20240507200056578"></p>
+<p>成功得到用户<code>jan</code>的密码<code>armando</code>，进行ssh登录</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507200336376.png" alt="image-20240507200336376"></p>
+<p>在&#x2F;home&#x2F;kay&#x2F;下发现文件pass.bak 通过命令<code>cat</code> 查看发现命令无权限，尝试命令<code>vim</code>成功读取文件</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507200543658.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim pass.bak</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507200740653.png" alt="image-20240507200740653"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">heresareallystrongpasswordthatfollowsthepasswordpolicy$$</span><br></pre></td></tr></table></figure>
+
+<p>猜测是用户kay的密码，尝试进行登录</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507201031063.png" alt="image-20240507201031063"></p>
+<p>成功登录！</p>
+<h2 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h2><p>执行命令<code>sudo -l</code> 查看文件权限，尝试进行提权</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507201238801.png" alt="image-20240507201238801"></p>
+<p>发现可以直接执行，使用命令<code>sudo su</code>进行提权。切换到&#x2F;root目录下发现最后一个flag</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240507201429936.png" alt="image-20240507201429936"></p>
+]]></content>
+      <categories>
+        <category>靶场，BASICPENTESTING系列，渗透笔记</category>
+      </categories>
+      <tags>
+        <tag>靶场，BASICPENTESTING系列，渗透笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VulnHub--DRIFTINGBLUES: 7</title>
     <url>/2024/05/01/blues-7%EF%BC%88DRIFTINGBLUES%207)/</url>
     <content><![CDATA[<h1 id="VulnHub–DRIFTINGBLUES-7"><a href="#VulnHub–DRIFTINGBLUES-7" class="headerlink" title="VulnHub–DRIFTINGBLUES: 7"></a>VulnHub–DRIFTINGBLUES: 7</h1><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><h3 id="主机扫描"><a href="#主机扫描" class="headerlink" title="主机扫描"></a>主机扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -sP 192.168.217.129/24</span><br></pre></td></tr></table></figure>
