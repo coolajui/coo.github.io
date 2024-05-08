@@ -237,6 +237,67 @@
       </tags>
   </entry>
   <entry>
+    <title>VulnHub-nightfall</title>
+    <url>/2024/05/06/nightfall/</url>
+    <content><![CDATA[<h1 id="VulnHub-nightfall"><a href="#VulnHub-nightfall" class="headerlink" title="VulnHub-nightfall"></a>VulnHub-nightfall</h1><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><h3 id="主机扫描"><a href="#主机扫描" class="headerlink" title="主机扫描"></a>主机扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -sP 192.168.217.175/24</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240508173534868.png" alt="image-20240508173534868"></p>
+<h3 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -A -sV -T4 -p-  192.168.217.189</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240508173619354.png" alt="image-20240508173619354"></p>
+<h3 id="80端口"><a href="#80端口" class="headerlink" title="80端口"></a>80端口</h3><p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240508173840643.png" alt="image-20240508173840643"></p>
+<p>并没有什么线索，后面查看了源码并对其目录进行了扫描，依然没有线索，80端口放弃</p>
+<h2 id="渗透"><a href="#渗透" class="headerlink" title="渗透"></a>渗透</h2><h3 id="FTP登录"><a href="#FTP登录" class="headerlink" title="FTP登录"></a>FTP登录</h3><p>发现端口开启了Samba服务，使用工具enum4linux进行用户名收集</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enum4linux 192.168.217.189</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240508174257568.png" alt="image-20240508174257568"></p>
+<p>成功获得用户名<code>nightfall</code>和<code>matt</code></p>
+<p>使用工具九头蛇(hydra)进行21端口的密码爆破</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hydra -l nightfall -P /usr/share/wordlists/rockyou.txt 192.168.217.189 ftp</span><br><span class="line">hydra -l matt -P /usr/share/wordlists/rockyou.txt 192.168.217.189 ftp</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240508174707742.png" alt="image-20240508174707742"></p>
+<p>成功获得密码<code>cheese</code>对21端口进行登录</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ftp 192.168.217.189</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240508174940570.png" alt="image-20240508174940570"></p>
+<p>经过查看发现是用户matt的&#x2F;home目录</p>
+<p>思路：将ssh的密钥传到matt用户的&#x2F;.ssh目录，实现ssh登录 [参考文章](<a href="https://blog.csdn.net/weixin_46356409/article/details/135345283">【authorized_keys配置及常见问题】_windows中的 authorized key文件; }-CSDN博客</a>)</p>
+<h3 id="SSH登录"><a href="#SSH登录" class="headerlink" title="SSH登录"></a>SSH登录</h3><h4 id="上传公钥"><a href="#上传公钥" class="headerlink" title="上传公钥"></a>上传公钥</h4><p>在本地kali机生成ssh密钥</p>
+<p>切换到&#x2F;root&#x2F;.ssh 使用命令<code>ssh-keygen -t rsa</code> 后三次回车</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240508180252049.png" alt="image-20240508180252049"></p>
+<p>发现生成两个文件 <code>id_rsa.pub</code>和<code>id_rsa</code></p>
+<p>文件id_rsa.pub是公钥，将里面的内容复制到新建的文件authorized_keys中。随后进行ftp登录，因为没有.ssh文件夹，所以需要使用命令<code>mkdir .ssh</code> 创建ssh目录。</p>
+<p>使用命令<code>put authorized_keys</code>将文件上传到ssh目录下</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240508214623230.png" alt="image-20240508214623230"></p>
+<p>上传成功后进行ssh登录，你会发现不用密码就可以登录进来</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240508214747856.png" alt="image-20240508214747856"></p>
+<p>进来之后发现没有有用的文件，只在&#x2F;home&#x2F;nightfall 目录发现了一个flag，但是有限制。使用同样的方法将密钥上传到nightfall用户的.ssh目录下 ，成功登录nightfall用户的ssh</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240508215331078.png" alt="image-20240508215331078"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240508215353140.png" alt="image-20240508215353140"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240508215434759.png" alt="image-20240508215434759"></p>
+<h3 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h3><p>使用命令<code>sudo -l</code> 查看是否具有sudo提权的方法</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240508215601482.png" alt="image-20240508215601482"></p>
+<p>发现符合cat 的sudo提权条件</p>
+<p>套用命令查看用户的<code>/etc/shadow</code> 文件尝试获取root密码</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240508215833668.png" alt="image-20240508215833668"></p>
+<p>保存下来使用工具john进行破解（我这里保存到了a.txt）文案</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240508220023823.png" alt="image-20240508220023823"></p>
+<p>成功得到密码，切换到root用户</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240508220113349.png" alt="image-20240508220113349"></p>
+<p>得到两个flag，一个是&#x2F;home&#x2F;nightfall&#x2F;user.txt 一个是&#x2F;root&#x2F;root_super_secret_flag.txt</p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240508220338831.png" alt="image-20240508220338831"></p>
+<p><img src="https://raw.githubusercontent.com/coolajui/pictures/main/image-20240508220401539.png" alt="image-20240508220401539"></p>
+]]></content>
+      <categories>
+        <category>靶场，nightfall系列，渗透笔记</category>
+      </categories>
+      <tags>
+        <tag>靶场，nightfall系列，渗透笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VulnHub--DRIFTINGBLUES: 7</title>
     <url>/2024/05/01/blues-7%EF%BC%88DRIFTINGBLUES%207)/</url>
     <content><![CDATA[<h1 id="VulnHub–DRIFTINGBLUES-7"><a href="#VulnHub–DRIFTINGBLUES-7" class="headerlink" title="VulnHub–DRIFTINGBLUES: 7"></a>VulnHub–DRIFTINGBLUES: 7</h1><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><h3 id="主机扫描"><a href="#主机扫描" class="headerlink" title="主机扫描"></a>主机扫描</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -sP 192.168.217.129/24</span><br></pre></td></tr></table></figure>
